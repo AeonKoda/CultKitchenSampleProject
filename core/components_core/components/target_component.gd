@@ -108,8 +108,8 @@ func _on_rect_changed()-> void:
 	entity_special_area_rect = get_special_rect(entity_global_rect)
 
 func _on_entity_mouse_entered()-> void:
-	if targetable:
-		entity_mouse_entered.emit(entity)
+	#if targetable:
+	entity_mouse_entered.emit(entity)
 
 
 func _on_entity_mouse_exited()-> void:
@@ -117,11 +117,13 @@ func _on_entity_mouse_exited()-> void:
 
 
 func _on_entity_special_area_mouse_entered()-> void:
-	if targetable:
-		entity_special_area_entered.emit(entity)
+	#if targetable:
+	entity_special_area_entered.emit(entity)
+
 
 func _on_entity_special_area_mouse_exited()-> void:
 	entity_special_area_exited.emit(entity)
+
 
 func _on_entity_visibility_changed()-> void:
 	if targetable_item.is_visible_in_tree():

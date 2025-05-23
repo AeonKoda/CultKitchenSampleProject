@@ -12,10 +12,11 @@ signal skip_tutorial_pressed
 
 
 var debug_variables:Array = [
-	{"name":"Current target", "callable":"_target","show":true},
-	{"name":"Current special target", "callable":"special_area_target","show":false},
-	{"name":"Current held entities", "callable":"held_entities","show":false},
-	{"name":"Current target state", "callable":"state","show":false},
+	{"name":"Current target", "property":"_target","show":false},
+	{"name":"Current targets", "property":"targets","show":false},
+	{"name":"Current special target", "property":"special_area_target","show":false},
+	{"name":"Current held entities", "property":"held_entities","show":false},
+	{"name":"Current target state", "property":"state","show":false},
 ]
 
 func _ready() -> void:
@@ -38,7 +39,7 @@ func _process(_delta: float) -> void:
 	var labels:Array = debug_info.get_children()
 	for i:int in labels.size():
 		var label:HBoxContainer = labels[i]
-		label.get_child(1).text = str(TargetController.get(debug_variables[i]["callable"]))
+		label.get_child(1).text = str(TargetController.get(debug_variables[i]["property"]))
 		label.visible = debug_variables[i]["show"]
 
 func set_vis(value:bool,index:int)-> void:

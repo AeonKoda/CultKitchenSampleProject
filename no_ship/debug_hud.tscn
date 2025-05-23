@@ -55,6 +55,8 @@ text = "Data Name"
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 4.0
+offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
@@ -77,14 +79,14 @@ mouse_filter = 2
 
 [node name="Name" type="Label" parent="Control/DebugInfo/InfoLables"]
 layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 12
 text = "Data Name"
 
 [node name="Infol" type="Label" parent="Control/DebugInfo/InfoLables"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 12
 text = "[Info, Info, Info, Info, Info]"
 autowrap_mode = 3

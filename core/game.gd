@@ -150,13 +150,12 @@ func _on_board_button_pressed(index:int)-> void:
 	if not active_boards.is_empty():
 		var boards:Array[BoardComponent] = active_boards.duplicate()
 		for i:int in boards.size():
-			i = boards.size() - (i+1)
-			if i == index: break
+			var i_r:int = boards.size() - (i+1)
+			if i_r <= index: return
 			
-			var board_component:BoardComponent = active_boards[i]
+			var board_component:BoardComponent = active_boards[i_r]
 			board_component.toggle_board()
 			
-		#hud.reduce_board_buttons_to_size(index)
 
 func _on_board_toggled(entity:Control,on:bool)-> void:
 	var board_component:BoardComponent = BoardComponent.get_component_or_null(entity)
