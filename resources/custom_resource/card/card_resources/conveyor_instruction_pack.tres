@@ -29,7 +29,7 @@ text = "DOUGH BOYs are auto clickers. Place them under a CARD and they'll click 
 [resource]
 script = ExtResource("2_y12xh")
 card_name = "CONVEYOR_INSTRUCTIONS"
-unique_prime_identifier = 0
+unique_prime_identifier = 41
 text_color = Color(0, 0, 0, 1)
 color = Color(0.45098, 0.435294, 0.498039, 1)
 rare_alt = false

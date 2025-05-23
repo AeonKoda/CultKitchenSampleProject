@@ -47,9 +47,8 @@ gdscript/warnings/untyped_declaration=2
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
-window/size/mode=4
 window/size/initial_position_type=3
-window/size/borderless=true
+window/subwindows/embed_subwindows=false
 window/stretch/mode="canvas_items"
 mouse_cursor/custom_image="res://assets/textures/hand_point.png"
 mouse_cursor/custom_image_hotspot=Vector2(5, 3)

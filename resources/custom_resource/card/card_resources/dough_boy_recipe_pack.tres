@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="CardResource" load_steps=11 format=3 uid="uid://chphddnyxrx1p"]
+
+[ext_resource type="Script" uid="uid://b1g8xbktqcsx6" path="res://core/cards/actions_clicker/click_spawn.gd" id="1_1gnim"]
+[ext_resource type="Script" uid="uid://bdypw102tume0" path="res://resources/custom_resource/card/card_resource.gd" id="2_cj7nf"]
+[ext_resource type="Script" uid="uid://cbotblw4lsjob" path="res://resources/custom_resource/recipe/recipe.gd" id="3_4l6o2"]
+[ext_resource type="Script" uid="uid://d2nwqyg808jry" path="res://resources/custom_resource/letters/letter_resource.gd" id="4_8ynxc"]
+[ext_resource type="Resource" uid="uid://dx6r12f4736cw" path="res://resources/custom_resource/card/card_resources/dough_boy.tres" id="5_8ynxc"]
+[ext_resource type="Resource" uid="uid://c3rr1dcbj5gmj" path="res://resources/custom_resource/card/card_resources/ritual_dough.tres" id="6_u14op"]
+[ext_resource type="Resource" uid="uid://ckjrn48egb2y8" path="res://resources/custom_resource/card/card_resources/egg.tres" id="7_1ra4o"]
+[ext_resource type="Resource" uid="uid://j7i38nhkso5g" path="res://resources/custom_resource/card/card_resources/straw_doll.tres" id="7_4fa3k"]
+[ext_resource type="Resource" uid="uid://c3xk1l72ej3dn" path="res://resources/custom_resource/card/card_resources/bone.tres" id="8_1ra4o"]
+[ext_resource type="Resource" uid="uid://dkh0gllqqo145" path="res://resources/custom_resource/card/card_resources/chicken.tres" id="9_beq6b"]
+
+[resource]
+script = ExtResource("2_cj7nf")
+card_name = "DOUGH_BOY_RECIPE"
+unique_prime_identifier = 47
+text_color = Color(1, 1, 1, 1)
+color = Color(0.3048, 0.252, 0.45, 1)
+rare_alt = false
+recipes = Array[ExtResource("3_4l6o2")]([])
+value = 10.0
+sellable = false
+has_speech = false
+occult = false
+can_burn = false
+meal = false
+meal_level = 1
+extended_class = 0
+progress_max_value = 5
+one_shot = true
+locked = false
+fuel_cards = Array[ExtResource("2_cj7nf")]([])
+spawn_cards = Array[ExtResource("2_cj7nf")]([])
+spawn_recipes = Array[ExtResource("2_cj7nf")]([ExtResource("5_8ynxc"), ExtResource("6_u14op"), ExtResource("7_4fa3k"), ExtResource("8_1ra4o"), ExtResource("9_beq6b"), ExtResource("7_1ra4o")])
+spawn_letters = Array[ExtResource("4_8ynxc")]([])
+clicker = true
+click_action = ExtResource("1_1gnim")
+ticker = false
+auto_on = false
+disable_control = false
+tick_speed = 1.0
+board = false
+board_lock = false
+ritual_circle = false
+salts = 2
+is_storage = false
+max_storage = 0

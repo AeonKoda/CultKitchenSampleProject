@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://c5me41j3fn6qw"]
+[gd_scene load_steps=33 format=3 uid="uid://c5me41j3fn6qw"]
 
 [ext_resource type="Texture2D" uid="uid://cm6x1eddcjx6p" path="res://assets/textures/blurred_kitchen_image.png" id="1_qsr2d"]
 [ext_resource type="Script" uid="uid://di17xl46qnht8" path="res://core/game.gd" id="1_r0jmx"]
@@ -18,6 +18,7 @@
 [ext_resource type="Resource" uid="uid://o438i6k3cfqc" path="res://resources/custom_resource/card/card_resources/pancake_recipe_pack.tres" id="26_ydnun"]
 [ext_resource type="Resource" uid="uid://kgydwbxltkb3" path="res://resources/custom_resource/card/card_resources/crepe_recipe_pack.tres" id="27_clfb1"]
 [ext_resource type="Resource" uid="uid://dyic2hnid86gc" path="res://resources/custom_resource/card/card_resources/fertilizer_recipe_pack.tres" id="28_t57gq"]
+[ext_resource type="Resource" uid="uid://chphddnyxrx1p" path="res://resources/custom_resource/card/card_resources/dough_boy_recipe_pack.tres" id="30_clfb1"]
 [ext_resource type="Script" uid="uid://heo5fct00eym" path="res://core/grid_overlay.gd" id="36_f6jgh"]
 [ext_resource type="Shader" uid="uid://vn2qcuixcqdc" path="res://assets/shaders/grid_overlay.gdshader" id="36_kia8q"]
 [ext_resource type="Resource" uid="uid://bnynos1yk4m4j" path="res://resources/custom_resource/card/card_resources/the_family_farm.tres" id="40_3crti"]
@@ -211,5 +212,6 @@ unique_name_in_owner = true
 visible = false
 shop_cards = Array[ExtResource("10_w2p4l")]([ExtResource("11_if2nl"), ExtResource("56_bq3im"), ExtResource("55_jbuku"), ExtResource("5_0byn5"), ExtResource("46_otpo4"), ExtResource("66_irs0d"), ExtResource("22_87tkx"), ExtResource("47_tq54n")])
 shop_recipes = Array[ExtResource("10_w2p4l")]([ExtResource("25_vghoq"), ExtResource("26_ydnun"), ExtResource("27_clfb1"), ExtResource("28_t57gq")])
+market_cards = Array[ExtResource("10_w2p4l")]([ExtResource("30_clfb1")])
 
 [node name="DebugHUD" parent="." instance=ExtResource("25_1l6lb")]

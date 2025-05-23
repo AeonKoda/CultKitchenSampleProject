@@ -14,6 +14,8 @@ func _ready() -> void:
 	
 	input_hide.pressed.connect(_on_input_hide)
 	input_show.pressed.connect(_on_input_show)
+	
+	await get_tree().process_frame
 	if Global.game.show_input_help if Global.game else false:
 		_on_input_show()
 	else:
