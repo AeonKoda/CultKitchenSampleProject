@@ -10,7 +10,9 @@
 
 ## Installation
 
-Download the .zip and open in Godot
+Download the .zip and open in Godot.
+
+game.tscn is the main scene.
 
 ### Requirements
 
