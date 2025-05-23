@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Letter" load_steps=2 format=3 uid="uid://co723k0k1ived"]
+
+[ext_resource type="Script" uid="uid://d2nwqyg808jry" path="res://resources/custom_resource/letters/letter_resource.gd" id="1_k5s0s"]
+
+[resource]
+script = ExtResource("1_k5s0s")
+type = 0
+snippet_owner = ""
+occult = false
+text = "If you're running a farm, try buying FARMER TIPS
+	-Love Dad"

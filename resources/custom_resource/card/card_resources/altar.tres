@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="CardResource" load_steps=5 format=3 uid="uid://dlbprjmxe020p"]
+
+[ext_resource type="Script" uid="uid://cbotblw4lsjob" path="res://resources/custom_resource/recipe/recipe.gd" id="1_57atv"]
+[ext_resource type="Script" uid="uid://bnhxr7ngi78cw" path="res://core/cards/actions_clicker/click_discover_altar.gd" id="1_sux0f"]
+[ext_resource type="Script" uid="uid://bdypw102tume0" path="res://resources/custom_resource/card/card_resource.gd" id="2_lgf3d"]
+[ext_resource type="Script" uid="uid://d2nwqyg808jry" path="res://resources/custom_resource/letters/letter_resource.gd" id="3_6a3rq"]
+
+[resource]
+script = ExtResource("2_lgf3d")
+card_name = "MYSTERIOUS_ALTAR"
+unique_prime_identifier = 43
+text_color = Color(1, 1, 1, 1)
+color = Color(0.244776, 0.244776, 0.244776, 1)
+rare_alt = false
+recipes = Array[ExtResource("1_57atv")]([])
+value = 0.0
+sellable = false
+has_speech = true
+occult = true
+can_burn = false
+meal = false
+meal_level = 1
+extended_class = 0
+board = false
+board_lock = false
+progress_max_value = 4
+one_shot = false
+locked = false
+fuel_cards = Array[ExtResource("2_lgf3d")]([])
+spawn_cards = Array[ExtResource("2_lgf3d")]([])
+spawn_recipes = Array[ExtResource("2_lgf3d")]([])
+spawn_letters = Array[ExtResource("3_6a3rq")]([])
+clicker = true
+click_action = ExtResource("1_sux0f")
+ticker = false
+auto_on = false
+disable_control = false
+tick_speed = 1.0
+ritual_circle = false
+salts = 2
+is_storage = false
+max_storage = 0

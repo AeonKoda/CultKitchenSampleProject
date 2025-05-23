@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ConveyorSleeveResource" load_steps=3 format=3 uid="uid://bqa86mlca2kib"]
+
+[ext_resource type="Script" uid="uid://x86l5lnecws0" path="res://resources/custom_resource/sleeve/conveyor_sleeve/conveyor_sleeve_resource.gd" id="1_l5xxk"]
+[ext_resource type="PackedScene" uid="uid://bww37ghp31g23" path="res://core/cards/sleeves/conveyor/conveyor_sleeve.tscn" id="2_vlwug"]
+
+[resource]
+script = ExtResource("1_l5xxk")
+transfer_time = 2.0
+transfer_rate = 1.0
+sleeve_scene = ExtResource("2_vlwug")
+metadata/_custom_type_script = "uid://x86l5lnecws0"

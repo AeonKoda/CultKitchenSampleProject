@@ -1,0 +1,30 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://bs40ock2blus6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i2crk"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i2crk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_boe54"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_color = Color(0, 0, 0, 1)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jvmug"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4r0fy"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[resource]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_focus_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_color = Color(0.151275, 0.151276, 0.151277, 1)
+Button/colors/font_hover_pressed_color = Color(0.165656, 0.165656, 0.165656, 1)
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/font_sizes/font_size = 8
+Button/styles/disabled = SubResource("StyleBoxFlat_i2crk")
+Button/styles/focus = SubResource("StyleBoxEmpty_i2crk")
+Button/styles/hover = SubResource("StyleBoxFlat_boe54")
+Button/styles/normal = SubResource("StyleBoxFlat_jvmug")
+Button/styles/pressed = SubResource("StyleBoxFlat_4r0fy")

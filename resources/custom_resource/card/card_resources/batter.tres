@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="CardResource" load_steps=5 format=3 uid="uid://c1uu34x72attx"]
+
+[ext_resource type="Script" uid="uid://cbotblw4lsjob" path="res://resources/custom_resource/recipe/recipe.gd" id="1_f7yxh"]
+[ext_resource type="Script" uid="uid://bdypw102tume0" path="res://resources/custom_resource/card/card_resource.gd" id="1_hs223"]
+[ext_resource type="Resource" uid="uid://jcq4dcts7yk7" path="res://resources/custom_resource/recipe/receipe_resources/batter_recipe.tres" id="2_kfege"]
+[ext_resource type="Script" uid="uid://d2nwqyg808jry" path="res://resources/custom_resource/letters/letter_resource.gd" id="3_tuaci"]
+
+[resource]
+script = ExtResource("1_hs223")
+card_name = "BATTER"
+text_color = Color(0, 0, 0, 1)
+color = Color(0.960784, 0.87451, 0.529412, 1)
+rare_alt = false
+recipes = Array[ExtResource("1_f7yxh")]([ExtResource("2_kfege")])
+value = 0.0
+sellable = true
+occult = false
+can_burn = true
+meal = false
+meal_level = 1
+unique_prime_identifier = 53
+extended_class = 0
+character = false
+character_basic = false
+board = false
+progress_max_value = 0
+one_shot = false
+locked = false
+fuel_cards = Array[ExtResource("1_hs223")]([])
+spawn_cards = Array[ExtResource("1_hs223")]([])
+spawn_recipes = Array[ExtResource("1_hs223")]([])
+spawn_letters = Array[ExtResource("3_tuaci")]([])
+clicker = false
+ticker = false
+auto_on = false
+disable_control = false
+tick_speed = 1.0
+ritual_circle = false
+salts = 2
+is_storage = false
+max_storage = 0

@@ -1,0 +1,82 @@
+{
+  "hidden_columns": {
+    "res://cards/card_resources/": {
+      "alternate_art_texture": true,
+      "art_texture": true,
+      "auto_on": true,
+      "board": true,
+      "character": true,
+      "character_basic": true,
+      "character_resource": true,
+      "click_action": true,
+      "clicker": true,
+      "creation_effect": true,
+      "disable_control": true,
+      "fuel_cards": true,
+      "is_storage": true,
+      "locked": true,
+      "max_storage": true,
+      "metadata/_custom_type_script": true,
+      "one_shot": true,
+      "progress_max_value": true,
+      "resource_local_to_scene": true,
+      "resource_name": true,
+      "resource_path": true,
+      "ritual_circle": true,
+      "salts": true,
+      "sfx": true,
+      "spawn_cards": true,
+      "spawn_letters": true,
+      "spawn_recipes": true,
+      "text_color": true,
+      "tick_action": true,
+      "ticker": true
+    },
+    "res://characters/character_resources/": {
+      "auto_on": true,
+      "charcter_unique_action": true,
+      "clicker": true,
+      "disable_control": true,
+      "hidden": true,
+      "resource_local_to_scene": true,
+      "resource_name": true,
+      "resource_path": true,
+      "spawn_cards": true,
+      "tick_speed": true,
+      "ticker": true
+    },
+    "res://letters/guide_resource/": {
+      "resource_local_to_scene": true,
+      "resource_name": true
+    },
+    "res://letters/letter_resource/": {
+      "resource_local_to_scene": true,
+      "resource_name": true
+    },
+    "res://recipe/receipe_resources/": {
+      "index": true,
+      "resource_local_to_scene": true,
+      "resource_name": true
+    },
+    "res://recipe/recipe_dictionary_resources/": {
+      "resource_local_to_scene": true,
+      "resource_name": true
+    }
+  },
+  "recent_paths": [
+    "res://cards/card_resources/",
+    "res://characters/character_resources/",
+    "res://letters/letter_resource/",
+    "res://recipe/receipe_resources/",
+    "res://letters/guide_resource/",
+    "res://recipe/recipe_dictionary_resources/"
+  ],
+  "table_functions": {
+    "filter": [
+      "return true"
+    ],
+    "process": [
+      "return value"
+    ]
+  }
+}

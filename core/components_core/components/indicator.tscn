@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0xv6mrbaegyc"]
+
+[ext_resource type="Texture2D" uid="uid://y74uru1tvduj" path="res://assets/textures/indicator_opening.png" id="1_u727v"]
+[ext_resource type="Script" uid="uid://0bp5qqkdg8vh" path="res://core/components_core/components/indicator.gd" id="2_cchnx"]
+
+[node name="Indicator" type="NinePatchRect"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = -5.0
+offset_right = 4.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("1_u727v")
+patch_margin_left = 2
+patch_margin_top = 1
+patch_margin_right = 2
+patch_margin_bottom = 1
+script = ExtResource("2_cchnx")

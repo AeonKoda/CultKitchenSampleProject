@@ -1,0 +1,47 @@
+[gd_resource type="Resource" script_class="CardResource" load_steps=8 format=3 uid="uid://dywc2bqdn3bhc"]
+
+[ext_resource type="Script" uid="uid://b1g8xbktqcsx6" path="res://core/cards/actions_clicker/click_spawn.gd" id="1_nv3gy"]
+[ext_resource type="Script" uid="uid://bdypw102tume0" path="res://resources/custom_resource/card/card_resource.gd" id="1_px7sv"]
+[ext_resource type="Texture2D" uid="uid://qn6wftr7s1gb" path="res://assets/textures/well.png" id="1_r4lbb"]
+[ext_resource type="Script" uid="uid://cbotblw4lsjob" path="res://resources/custom_resource/recipe/recipe.gd" id="2_t3x5b"]
+[ext_resource type="Resource" uid="uid://cgy7bonsdxi8a" path="res://resources/custom_resource/card/card_resources/water.tres" id="3_0puro"]
+[ext_resource type="Script" uid="uid://d2nwqyg808jry" path="res://resources/custom_resource/letters/letter_resource.gd" id="4_r7acs"]
+[ext_resource type="AudioStream" uid="uid://x3p645xgydy7" path="res://assets/sound/pop_wet.mp3" id="6_3mw8v"]
+
+[resource]
+script = ExtResource("1_px7sv")
+card_name = "WELL"
+unique_prime_identifier = 1019
+text_color = Color(0, 0, 0, 1)
+color = Color(0.439216, 0.729412, 0.980392, 1)
+art_texture = ExtResource("1_r4lbb")
+rare_alt = false
+sfx = ExtResource("6_3mw8v")
+recipes = Array[ExtResource("2_t3x5b")]([])
+value = 100.0
+sellable = true
+has_speech = false
+occult = false
+can_burn = false
+meal = false
+meal_level = 1
+extended_class = 0
+board = false
+board_lock = false
+progress_max_value = 4
+one_shot = false
+locked = false
+fuel_cards = Array[ExtResource("1_px7sv")]([])
+spawn_cards = Array[ExtResource("1_px7sv")]([ExtResource("3_0puro")])
+spawn_recipes = Array[ExtResource("1_px7sv")]([])
+spawn_letters = Array[ExtResource("4_r7acs")]([])
+clicker = true
+click_action = ExtResource("1_nv3gy")
+ticker = false
+auto_on = false
+disable_control = false
+tick_speed = 1.0
+ritual_circle = false
+salts = 2
+is_storage = false
+max_storage = 0

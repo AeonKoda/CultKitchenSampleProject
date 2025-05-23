@@ -1,0 +1,24 @@
+[gd_scene load_steps=11 format=3 uid="uid://c70vvrmwrkstt"]
+
+[ext_resource type="Script" uid="uid://dls7tmgp8tnpi" path="res://core/global.gd" id="1_7upfj"]
+[ext_resource type="PackedScene" uid="uid://dwwtfxiofo1cn" path="res://core/cards/card.tscn" id="2_li363"]
+[ext_resource type="Resource" uid="uid://c05sjm4twkksk" path="res://resources/custom_resource/card/card_resources/recipe.tres" id="3_uayoh"]
+[ext_resource type="Resource" uid="uid://800m6eyyqytm" path="res://resources/custom_resource/card/card_resources/letter.tres" id="4_h0fyv"]
+[ext_resource type="PackedScene" uid="uid://ce408ax4lr0ht" path="res://core/camera/camera_2d.tscn" id="5_uayoh"]
+[ext_resource type="Resource" uid="uid://butrxw55rbnqy" path="res://resources/custom_resource/card/card_resources/door.tres" id="6_ft311"]
+[ext_resource type="PackedScene" uid="uid://b77ks41e1vtyn" path="res://core/components_core/components/card_progress_bar.tscn" id="6_sr043"]
+[ext_resource type="PackedScene" uid="uid://d0xv6mrbaegyc" path="res://core/components_core/components/indicator.tscn" id="7_ft311"]
+[ext_resource type="Resource" uid="uid://dlbprjmxe020p" path="res://resources/custom_resource/card/card_resources/altar.tres" id="7_sxgwh"]
+[ext_resource type="PackedScene" uid="uid://cu0m6e0us06qq" path="res://core/components_core/components/speech_bubble.tscn" id="10_45sf1"]
+
+[node name="Global" type="Node2D"]
+script = ExtResource("1_7upfj")
+card_scene = ExtResource("2_li363")
+recipe_resource = ExtResource("3_uayoh")
+letter_resource = ExtResource("4_h0fyv")
+camera_scene = ExtResource("5_uayoh")
+door_resource = ExtResource("6_ft311")
+altar_resource = ExtResource("7_sxgwh")
+card_progress_bar_scene = ExtResource("6_sr043")
+card_indicator_scene = ExtResource("7_ft311")
+speech_bubble_scene = ExtResource("10_45sf1")

@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="CardResource" load_steps=5 format=3 uid="uid://c3xk1l72ej3dn"]
+
+[ext_resource type="Script" uid="uid://bdypw102tume0" path="res://resources/custom_resource/card/card_resource.gd" id="1_vax06"]
+[ext_resource type="Script" uid="uid://cbotblw4lsjob" path="res://resources/custom_resource/recipe/recipe.gd" id="1_wv017"]
+[ext_resource type="Resource" uid="uid://be6cnmjox1eil" path="res://resources/custom_resource/recipe/receipe_resources/bone_recipe.tres" id="2_lib70"]
+[ext_resource type="Script" uid="uid://d2nwqyg808jry" path="res://resources/custom_resource/letters/letter_resource.gd" id="4_1nvxu"]
+
+[resource]
+script = ExtResource("1_vax06")
+card_name = "BONE"
+text_color = Color(0, 0, 0, 1)
+color = Color(1, 1, 1, 1)
+rare_alt = false
+recipes = Array[ExtResource("1_wv017")]([ExtResource("2_lib70")])
+value = 0.0
+sellable = true
+occult = true
+can_burn = true
+meal = false
+meal_level = 1
+unique_prime_identifier = 103
+extended_class = 0
+character = false
+character_basic = false
+board = false
+progress_max_value = 0
+one_shot = false
+locked = false
+fuel_cards = Array[ExtResource("1_vax06")]([])
+spawn_cards = Array[ExtResource("1_vax06")]([])
+spawn_recipes = Array[ExtResource("1_vax06")]([])
+spawn_letters = Array[ExtResource("4_1nvxu")]([])
+clicker = false
+ticker = false
+auto_on = false
+disable_control = false
+tick_speed = 1.0
+ritual_circle = false
+salts = 2
+is_storage = false
+max_storage = 0

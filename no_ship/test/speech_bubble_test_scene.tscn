@@ -1,0 +1,68 @@
+[gd_scene load_steps=4 format=3 uid="uid://cwyfs587bpxoy"]
+
+[ext_resource type="Script" uid="uid://c78bmoqxy7m30" path="res://no_ship/test/speech_bubble_test_scene.gd" id="1_u18p1"]
+[ext_resource type="PackedScene" uid="uid://dwwtfxiofo1cn" path="res://core/cards/card.tscn" id="1_uccpq"]
+[ext_resource type="Script" uid="uid://c1ib7v6eqs5o4" path="res://core/components_core/components/speech_component.gd" id="2_uccpq"]
+
+[node name="SpeechBubbleTestScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_u18p1")
+
+[node name="Button" type="Button" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 392.0
+offset_top = 541.0
+offset_right = 707.0
+offset_bottom = 665.0
+text = "Start Speech"
+
+[node name="Button2" type="Button" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 786.0
+offset_top = 585.0
+offset_right = 950.0
+offset_bottom = 709.0
+text = "Send Notice"
+
+[node name="CheckButton" type="CheckButton" parent="."]
+layout_mode = 0
+offset_left = 727.0
+offset_top = 621.0
+offset_right = 775.0
+offset_bottom = 666.0
+
+[node name="LineEdit" type="TextEdit" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 818.0
+offset_top = 300.0
+offset_right = 1136.0
+offset_bottom = 569.0
+pivot_offset = Vector2(604, -453)
+text = "Something to get [shake rate=20.0 level=6 connected=1]IT[/shake] started.
+	-%#&@#"
+wrap_mode = 1
+
+[node name="Card" parent="." instance=ExtResource("1_uccpq")]
+offset_left = 523.0
+offset_top = 307.0
+offset_right = 613.0
+offset_bottom = 433.0
+
+[node name="SpeechComponent" type="Node" parent="Card"]
+unique_name_in_owner = true
+script = ExtResource("2_uccpq")
+metadata/_custom_type_script = "uid://c1ib7v6eqs5o4"
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="button_down" from="Button2" to="." method="_on_button_2_button_down"]
+
+[editable path="Card"]

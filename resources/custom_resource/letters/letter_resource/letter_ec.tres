@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Letter" load_steps=2 format=3 uid="uid://crr4b8ufyff4m"]
+
+[ext_resource type="Script" uid="uid://d2nwqyg808jry" path="res://resources/custom_resource/letters/letter_resource.gd" id="1_wr0nt"]
+
+[resource]
+script = ExtResource("1_wr0nt")
+type = 0
+snippet_owner = ""
+occult = true
+text = "P.S. Some OCCULT BOOKs might have the SKETCHES you'll need
+	-%#&@#"

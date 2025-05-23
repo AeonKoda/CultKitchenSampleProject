@@ -1,0 +1,46 @@
+[gd_resource type="Resource" script_class="CardResource" load_steps=9 format=3 uid="uid://7e032ptan4ky"]
+
+[ext_resource type="Script" uid="uid://b1g8xbktqcsx6" path="res://core/cards/actions_clicker/click_spawn.gd" id="1_emm6q"]
+[ext_resource type="Script" uid="uid://bdypw102tume0" path="res://resources/custom_resource/card/card_resource.gd" id="1_xskbr"]
+[ext_resource type="Script" uid="uid://cbotblw4lsjob" path="res://resources/custom_resource/recipe/recipe.gd" id="2_g7eth"]
+[ext_resource type="Script" uid="uid://d2nwqyg808jry" path="res://resources/custom_resource/letters/letter_resource.gd" id="4_pfyqd"]
+[ext_resource type="Resource" uid="uid://bra25cf8fm2dq" path="res://resources/custom_resource/card/card_resources/bread.tres" id="5_p5drr"]
+[ext_resource type="Resource" uid="uid://cbnqr45jcyqyh" path="res://resources/custom_resource/letters/letter_resource/letter_a.tres" id="5_psca7"]
+[ext_resource type="Resource" uid="uid://drpk3mlt286du" path="res://resources/custom_resource/card/card_resources/dough.tres" id="6_f6q78"]
+[ext_resource type="Resource" uid="uid://c5a0rpe183xui" path="res://resources/custom_resource/card/card_resources/flour.tres" id="8_30kbj"]
+
+[resource]
+script = ExtResource("1_xskbr")
+card_name = "OLD_ENVELOPE"
+unique_prime_identifier = 673
+text_color = Color(0, 0, 0, 1)
+color = Color(0.807843, 0.678431, 0.52549, 1)
+rare_alt = false
+recipes = Array[ExtResource("2_g7eth")]([])
+value = 0.0
+sellable = false
+has_speech = false
+occult = false
+can_burn = false
+meal = false
+meal_level = 1
+extended_class = 0
+board = false
+board_lock = false
+progress_max_value = 5
+one_shot = true
+locked = false
+fuel_cards = Array[ExtResource("1_xskbr")]([])
+spawn_cards = Array[ExtResource("1_xskbr")]([])
+spawn_recipes = Array[ExtResource("1_xskbr")]([ExtResource("5_p5drr"), ExtResource("6_f6q78"), ExtResource("8_30kbj")])
+spawn_letters = Array[ExtResource("4_pfyqd")]([ExtResource("5_psca7")])
+clicker = true
+click_action = ExtResource("1_emm6q")
+ticker = false
+auto_on = false
+disable_control = false
+tick_speed = 1.0
+ritual_circle = false
+salts = 2
+is_storage = false
+max_storage = 0

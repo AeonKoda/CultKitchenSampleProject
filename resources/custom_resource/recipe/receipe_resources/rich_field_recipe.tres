@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://big5f5n5bdfe"]
+
+[ext_resource type="Script" uid="uid://bdypw102tume0" path="res://resources/custom_resource/card/card_resource.gd" id="1_qeark"]
+[ext_resource type="Resource" uid="uid://cike4ni3xsl3s" path="res://resources/custom_resource/card/card_resources/fertilizer.tres" id="2_3oej4"]
+[ext_resource type="Resource" uid="uid://cumy4e7oq33r4" path="res://resources/custom_resource/card/card_resources/field.tres" id="3_wpmmq"]
+[ext_resource type="Script" uid="uid://cbotblw4lsjob" path="res://resources/custom_resource/recipe/recipe.gd" id="4_qoa48"]
+
+[resource]
+script = ExtResource("4_qoa48")
+index = 0
+tier = 1
+occult = false
+uses_tool = false
+recipe = Array[ExtResource("1_qeark")]([ExtResource("2_3oej4"), ExtResource("2_3oej4"), ExtResource("3_wpmmq")])
+result_path = "res://resources/custom_resource/card/card_resources/rich_field.tres"
+result_uid = 0

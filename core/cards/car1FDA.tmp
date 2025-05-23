@@ -1,0 +1,87 @@
+[gd_scene load_steps=6 format=3 uid="uid://djsd563agjbcb"]
+
+[ext_resource type="Script" path="res://cards/card.gd" id="1_vsb6m"]
+[ext_resource type="Theme" uid="uid://cq3ewcurlhd84" path="res://cards/card_theme.tres" id="2_gbiqt"]
+
+[sub_resource type="GDScript" id="GDScript_1qlqp"]
+script/source = "class_name CardArea extends Area2D
+
+var card:Card
+
+func _ready() -> void:
+	await get_parent().ready
+	card = get_parent()
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_brryg"]
+size = Vector2(70, 100)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vgb3w"]
+
+[node name="Card" type="Control"]
+custom_minimum_size = Vector2(70, 100)
+layout_mode = 3
+anchors_preset = 0
+offset_left = 327.0
+offset_top = 293.0
+offset_right = 397.0
+offset_bottom = 393.0
+pivot_offset = Vector2(35, 50)
+focus_mode = 1
+mouse_filter = 1
+mouse_default_cursor_shape = 6
+script = ExtResource("1_vsb6m")
+metadata/_edit_group_ = true
+
+[node name="ColorRect" type="Panel" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("2_gbiqt")
+
+[node name="Label" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 18.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "1"
+horizontal_alignment = 1
+
+[node name="CardArea" type="Area2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(35, 50)
+collision_mask = 0
+script = SubResource("GDScript_1qlqp")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CardArea"]
+shape = SubResource("RectangleShape2D_brryg")
+
+[node name="DropSelect" type="Area2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(35, 50)
+collision_layer = 0
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DropSelect"]
+shape = SubResource("CircleShape2D_vgb3w")
+
+[node name="Stack" type="CenterContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_top = 22.0
+offset_right = 70.0
+offset_bottom = 62.0
+mouse_filter = 2

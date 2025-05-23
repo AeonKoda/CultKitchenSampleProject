@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Letter" load_steps=2 format=3 uid="uid://bcbki7x07xki4"]
+
+[ext_resource type="Script" uid="uid://d2nwqyg808jry" path="res://resources/custom_resource/letters/letter_resource.gd" id="1_8dn7y"]
+
+[resource]
+script = ExtResource("1_8dn7y")
+type = 1
+snippet_owner = "FARMER TIP"
+occult = false
+text = "Two fertilizers turn a FIELD into a RICH FIELD!"

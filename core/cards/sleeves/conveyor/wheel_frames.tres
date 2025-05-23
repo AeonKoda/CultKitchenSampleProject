@@ -1,0 +1,50 @@
+[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://bjjhrso3uoed7"]
+
+[ext_resource type="Texture2D" uid="uid://dbkexsjp86snb" path="res://assets/textures/conveyor_wheel_sheet.png" id="1_fyal2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1fcuo"]
+atlas = ExtResource("1_fyal2")
+region = Rect2(0, 0, 13, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iee0f"]
+atlas = ExtResource("1_fyal2")
+region = Rect2(13, 0, 13, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b3q2b"]
+atlas = ExtResource("1_fyal2")
+region = Rect2(26, 0, 13, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wehxq"]
+atlas = ExtResource("1_fyal2")
+region = Rect2(39, 0, 13, 13)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1fcuo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iee0f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b3q2b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wehxq")
+}],
+"loop": true,
+"name": &"spin",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1fcuo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iee0f")
+}],
+"loop": true,
+"name": &"stall",
+"speed": 5.0
+}]

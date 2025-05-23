@@ -1,0 +1,138 @@
+[gd_scene load_steps=10 format=3 uid="uid://dwwtfxiofo1cn"]
+
+[ext_resource type="Script" uid="uid://dqk26417iduub" path="res://core/cards/card.gd" id="1_jsqqk"]
+[ext_resource type="Texture2D" uid="uid://bglq5qigvqo02" path="res://assets/textures/card.png" id="2_kyyme"]
+[ext_resource type="PackedScene" uid="uid://u8lwl50mwi41" path="res://effects/poof_animation.tscn" id="3_geen5"]
+[ext_resource type="Script" uid="uid://dldlgc6k6tvlt" path="res://core/components_core/animation_container.gd" id="3_jsqqk"]
+[ext_resource type="FontFile" uid="uid://hvgltkctjutu" path="res://assets/fonts/CHNOPixelCodePro-Regular.otf" id="4_gj7h2"]
+[ext_resource type="PackedScene" uid="uid://ctjbhwen44485" path="res://core/cards/recipe_cards/recipe_container.tscn" id="4_ql4yk"]
+[ext_resource type="Script" uid="uid://cdbosa1tl14tg" path="res://core/components_core/components/lift_component.gd" id="6_auvip"]
+[ext_resource type="Script" uid="uid://deh5iniquerhn" path="res://core/components_core/components/stack_component.gd" id="7_geen5"]
+[ext_resource type="Script" uid="uid://rpmkrxcm1hip" path="res://core/components_core/components/target_component.gd" id="8_iruc6"]
+
+[node name="Card" type="Control"]
+custom_minimum_size = Vector2(90, 126)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1190.0
+offset_bottom = -594.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(45, 63)
+mouse_filter = 2
+mouse_default_cursor_shape = 6
+script = ExtResource("1_jsqqk")
+poof_effect_scene = ExtResource("3_geen5")
+recipe_container_scene = ExtResource("4_ql4yk")
+metadata/_edit_horizontal_guides_ = [811.0, -36.0]
+metadata/_edit_vertical_guides_ = [1440.0]
+
+[node name="PhantomCard" type="NinePatchRect" parent="."]
+unique_name_in_owner = true
+visible = false
+modulate = Color(0.5, 0.5, 0.5, 0.235294)
+use_parent_material = true
+custom_minimum_size = Vector2(90, 126)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_kyyme")
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+
+[node name="AnimationContainer" type="Control" parent="." node_paths=PackedStringArray("phantom_card")]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("3_jsqqk")
+phantom_card = NodePath("../PhantomCard")
+
+[node name="Texture" type="NinePatchRect" parent="AnimationContainer"]
+unique_name_in_owner = true
+use_parent_material = true
+custom_minimum_size = Vector2(90, 126)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+texture = ExtResource("2_kyyme")
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+
+[node name="CardContainer" type="MarginContainer" parent="AnimationContainer"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="AnimationContainer/CardContainer"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Control" type="Control" parent="AnimationContainer/CardContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="CardArt" type="TextureRect" parent="AnimationContainer/CardContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_filter = 2
+stretch_mode = 2
+
+[node name="TitleLabel" type="RichTextLabel" parent="AnimationContainer/CardContainer/VBoxContainer"]
+unique_name_in_owner = true
+texture_filter = 1
+clip_contents = false
+layout_mode = 2
+size_flags_vertical = 10
+mouse_filter = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = 1
+theme_override_fonts/normal_font = ExtResource("4_gj7h2")
+theme_override_font_sizes/normal_font_size = 10
+bbcode_enabled = true
+text = "[center]FIELD[/center]"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="LiftComponent" type="Node" parent="."]
+script = ExtResource("6_auvip")
+metadata/_custom_type_script = "uid://cdbosa1tl14tg"
+
+[node name="StackComponent" type="Node" parent="."]
+script = ExtResource("7_geen5")
+metadata/_custom_type_script = "uid://deh5iniquerhn"
+
+[node name="TargetComponent" type="Node" parent="." node_paths=PackedStringArray("targetable_item")]
+script = ExtResource("8_iruc6")
+targetable_item = NodePath("../AnimationContainer/Texture")
+metadata/_custom_type_script = "uid://rpmkrxcm1hip"

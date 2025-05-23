@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="CardResource" load_steps=6 format=3 uid="uid://2q4vailsufxs"]
+
+[ext_resource type="Script" uid="uid://bdypw102tume0" path="res://resources/custom_resource/card/card_resource.gd" id="1_w8spq"]
+[ext_resource type="Script" uid="uid://cbotblw4lsjob" path="res://resources/custom_resource/recipe/recipe.gd" id="2_wwrig"]
+[ext_resource type="Resource" uid="uid://b5tablyap0yok" path="res://resources/custom_resource/recipe/receipe_resources/guide_4_recipe.tres" id="3_4f0n5"]
+[ext_resource type="Script" uid="uid://d2nwqyg808jry" path="res://resources/custom_resource/letters/letter_resource.gd" id="4_dji8c"]
+[ext_resource type="Script" uid="uid://bcft57ubkmgua" path="res://core/cards/actions_ticker/tick_tutorial_4.gd" id="5_ylxmj"]
+
+[resource]
+script = ExtResource("1_w8spq")
+card_name = "GUIDE_4"
+unique_prime_identifier = 449
+text_color = Color(0, 0, 0, 1)
+color = Color(1, 1, 1, 1)
+rare_alt = false
+recipes = Array[ExtResource("2_wwrig")]([ExtResource("3_4f0n5")])
+value = 0.0
+sellable = false
+has_speech = false
+occult = false
+can_burn = false
+meal = false
+meal_level = 1
+extended_class = 0
+board = false
+board_lock = false
+progress_max_value = 5
+one_shot = true
+locked = false
+fuel_cards = Array[ExtResource("1_w8spq")]([])
+spawn_cards = Array[ExtResource("1_w8spq")]([])
+spawn_recipes = Array[ExtResource("1_w8spq")]([])
+spawn_letters = Array[ExtResource("4_dji8c")]([])
+clicker = false
+ticker = true
+auto_on = false
+disable_control = false
+tick_action = ExtResource("5_ylxmj")
+tick_speed = 1.0
+ritual_circle = false
+salts = 2
+is_storage = false
+max_storage = 0

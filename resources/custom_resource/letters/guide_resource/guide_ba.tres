@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Letter" load_steps=2 format=3 uid="uid://bnsljlv6uvune"]
+
+[ext_resource type="Script" uid="uid://d2nwqyg808jry" path="res://resources/custom_resource/letters/letter_resource.gd" id="1_en4e7"]
+
+[resource]
+script = ExtResource("1_en4e7")
+type = 1
+snippet_owner = "GUIDE"
+occult = false
+text = "Double click mouse wheel to re-center
+"

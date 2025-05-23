@@ -1,0 +1,400 @@
+[gd_scene load_steps=16 format=3 uid="uid://clkfojx0jl4k1"]
+
+[ext_resource type="Script" uid="uid://b3jaigtnemj3y" path="res://core/scenes/popup_menus/shop/shop.gd" id="1_a73qu"]
+[ext_resource type="PackedScene" uid="uid://diqnne54pyqt5" path="res://core/cards/shop_cards/card_pack.tscn" id="2_1fdj8"]
+[ext_resource type="Texture2D" uid="uid://dn4m17xh7cmex" path="res://assets/textures/occult_piggy_bank_icon.png" id="3_1fdj8"]
+[ext_resource type="Script" uid="uid://bdypw102tume0" path="res://resources/custom_resource/card/card_resource.gd" id="3_l4jql"]
+[ext_resource type="Resource" uid="uid://cgico8qwm61k0" path="res://resources/custom_resource/card/card_resources/pestle.tres" id="5_3mitj"]
+[ext_resource type="Texture2D" uid="uid://dfi1vb85koanh" path="res://assets/textures/piggy_bank_icon_sprite_sheet.png" id="10_siglm"]
+[ext_resource type="FontFile" uid="uid://hvgltkctjutu" path="res://assets/fonts/CHNOPixelCodePro-Regular.otf" id="11_siglm"]
+[ext_resource type="Resource" uid="uid://bbu6gnkmdmosl" path="res://resources/custom_resource/card/card_resources/muffin_recipe_pack.tres" id="15_noaqw"]
+[ext_resource type="Theme" uid="uid://pqrpvnauasd2" path="res://resources/themes/shop_theme.tres" id="18_ji5m4"]
+[ext_resource type="FontFile" uid="uid://b5v3erupngsmf" path="res://assets/fonts/dogicapixel.otf" id="19_pychd"]
+[ext_resource type="Texture2D" uid="uid://lswr24scrkbf" path="res://assets/textures/piggy_bank_icon.png" id="20_pyqm2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uokke"]
+atlas = ExtResource("10_siglm")
+region = Rect2(0, 0, 70, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5qlm7"]
+bg_color = Color(0.94902, 0.74902, 0.74902, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uokkt"]
+bg_color = Color(0.886275, 0.286275, 0.282353, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1fdj8"]
+bg_color = Color(0.3432, 0.37488, 0.66, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+anti_aliasing = false
+
+[node name="Shop" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_a73qu")
+cardpack_scene = ExtResource("2_1fdj8")
+normal_pig = ExtResource("20_pyqm2")
+occult_pig = ExtResource("3_1fdj8")
+shop_cards = Array[ExtResource("3_l4jql")]([ExtResource("5_3mitj")])
+shop_recipes = Array[ExtResource("3_l4jql")]([ExtResource("15_noaqw")])
+
+[node name="ShopBox" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Background" type="Button" parent="ShopBox"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 1
+mouse_default_cursor_shape = 6
+button_mask = 3
+
+[node name="ShopPanel" type="Panel" parent="ShopBox"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -172.0
+offset_top = 59.0
+offset_right = 172.0
+offset_bottom = 142.0
+grow_horizontal = 2
+theme = ExtResource("18_ji5m4")
+theme_type_variation = &"Shop_Panel"
+
+[node name="MainLabel" type="Label" parent="ShopBox/ShopPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -112.0
+offset_top = -28.0
+offset_right = 112.0
+offset_bottom = 28.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("19_pychd")
+theme_override_font_sizes/font_size = 64
+text = "SHOP"
+
+[node name="PiggyBank" type="TextureRect" parent="ShopBox/ShopPanel"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 424.0
+offset_top = -28.0
+offset_right = 494.0
+offset_bottom = 42.0
+scale = Vector2(1.5, 1.5)
+mouse_filter = 0
+texture = SubResource("AtlasTexture_uokke")
+
+[node name="Panel" type="Panel" parent="ShopBox/ShopPanel/PiggyBank"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = -37.0
+offset_top = 44.0
+offset_right = 86.0
+offset_bottom = 68.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5qlm7")
+
+[node name="MarginContainer" type="MarginContainer" parent="ShopBox/ShopPanel/PiggyBank/Panel"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -7.0
+offset_right = 40.0
+offset_bottom = 7.0
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 5
+
+[node name="GoldLabel" type="Label" parent="ShopBox/ShopPanel/PiggyBank/Panel/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("19_pychd")
+theme_override_font_sizes/font_size = 16
+text = "0g"
+vertical_alignment = 1
+uppercase = true
+
+[node name="SalePanel" type="Panel" parent="ShopBox/ShopPanel"]
+unique_name_in_owner = true
+visible = false
+z_index = 1
+layout_mode = 1
+offset_left = -288.0
+offset_top = -36.0
+offset_right = -151.0
+offset_bottom = 18.0
+scale = Vector2(2, 2)
+theme_override_styles/panel = SubResource("StyleBoxFlat_uokkt")
+
+[node name="SalePanelContainer" type="VBoxContainer" parent="ShopBox/ShopPanel/SalePanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -94.5
+offset_top = -20.0
+offset_right = 94.5
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="ShopBox/ShopPanel/SalePanel/SalePanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 32
+text = "SALE"
+horizontal_alignment = 1
+
+[node name="SaleLabel" type="Label" parent="ShopBox/ShopPanel/SalePanel/SalePanelContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 8
+text = "(1 ITEM ONLY)"
+horizontal_alignment = 1
+
+[node name="PacksContainer" type="VBoxContainer" parent="ShopBox"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Spacer4" type="Control" parent="ShopBox/PacksContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.21
+mouse_filter = 2
+
+[node name="PacksContainer2" type="HBoxContainer" parent="ShopBox/PacksContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 4.0
+mouse_filter = 2
+
+[node name="Spacer2" type="Control" parent="ShopBox/PacksContainer/PacksContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="ShopTable" type="Panel" parent="ShopBox/PacksContainer/PacksContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 4.0
+mouse_force_pass_scroll_events = false
+theme = ExtResource("18_ji5m4")
+
+[node name="PacksContainer3" type="MarginContainer" parent="ShopBox/PacksContainer/PacksContainer2/ShopTable"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="PackBoard" type="FlowContainer" parent="ShopBox/PacksContainer/PacksContainer2/ShopTable/PacksContainer3"]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/h_separation = 22
+theme_override_constants/v_separation = 27
+
+[node name="Spacer" type="Control" parent="ShopBox/PacksContainer/PacksContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="Spacer3" type="Control" parent="ShopBox/PacksContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="ButtonsBackInputStopper" type="Control" parent="ShopBox"]
+layout_mode = 2
+anchors_preset = 0
+offset_left = 216.0
+offset_top = 597.0
+offset_right = 1062.0
+offset_bottom = 614.0
+
+[node name="ShopButtons" type="HBoxContainer" parent="ShopBox"]
+layout_mode = 0
+offset_left = 217.0
+offset_top = 611.0
+offset_right = 701.0
+offset_bottom = 676.0
+mouse_filter = 0
+
+[node name="CardButton" type="Button" parent="ShopBox/ShopButtons"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+theme = ExtResource("18_ji5m4")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "CARDS"
+
+[node name="RecipeButton" type="Button" parent="ShopBox/ShopButtons"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+theme = ExtResource("18_ji5m4")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "RECIPES
+"
+
+[node name="BlackMarketButton" type="Button" parent="ShopBox/ShopButtons"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+theme = ExtResource("18_ji5m4")
+theme_type_variation = &"Occult"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "BLACKMARKET"
+
+[node name="FirstTimePanel" type="ColorRect" parent="."]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.643137)
+
+[node name="FirstTime" type="PanelContainer" parent="FirstTimePanel"]
+custom_minimum_size = Vector2(400, 300)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -289.5
+offset_top = -150.0
+offset_right = 289.5
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1fdj8")
+
+[node name="FirstTimeButton" type="Button" parent="FirstTimePanel/FirstTime"]
+unique_name_in_owner = true
+texture_filter = 1
+custom_minimum_size = Vector2(14, 14)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("19_pychd")
+theme_override_font_sizes/font_size = 16
+text = "X"
+
+[node name="HBoxContainer" type="VBoxContainer" parent="FirstTimePanel/FirstTime"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Control2" type="Control" parent="FirstTimePanel/FirstTime/HBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="FirstTimePanel/FirstTime/HBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 10
+
+[node name="Label" type="RichTextLabel" parent="FirstTimePanel/FirstTime/HBoxContainer/MarginContainer"]
+texture_filter = 1
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/line_separation = 8
+theme_override_fonts/normal_font = ExtResource("11_siglm")
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "Welcome to the shop!
+
+To [color=yellow]buy[/color] a [color=green]Card[/color] drag and 
+drop it out of the shop! 
+
+To [color=red]close[/color] the shop click 
+anywhere outside of 
+the shop.
+
+Thank you for
+visiting :)"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="FirstTimePanel/FirstTime/HBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Control3" type="Control" parent="FirstTimePanel/FirstTime/HBoxContainer"]
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+mouse_filter = 2
+
+[connection signal="pressed" from="ShopBox/ShopButtons/CardButton" to="ShopBox" method="_on_card_button_pressed"]
+[connection signal="pressed" from="ShopBox/ShopButtons/RecipeButton" to="ShopBox" method="_on_recipe_button_pressed"]
+[connection signal="pressed" from="ShopBox/ShopButtons/BlackMarketButton" to="ShopBox" method="_on_black_market_button_pressed"]
+[connection signal="pressed" from="FirstTimePanel/FirstTime/FirstTimeButton" to="." method="_on_first_time_button_pressed"]

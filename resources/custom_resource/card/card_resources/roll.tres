@@ -1,0 +1,46 @@
+[gd_resource type="Resource" script_class="CardResource" load_steps=7 format=3 uid="uid://bffyvjqqcftxi"]
+
+[ext_resource type="Script" uid="uid://cbotblw4lsjob" path="res://resources/custom_resource/recipe/recipe.gd" id="1_6prr0"]
+[ext_resource type="Texture2D" uid="uid://dfphmv6jcsitb" path="res://assets/textures/roll.png" id="1_kxi4s"]
+[ext_resource type="Script" uid="uid://bdypw102tume0" path="res://resources/custom_resource/card/card_resource.gd" id="1_u2111"]
+[ext_resource type="Resource" uid="uid://cy7n1vq87k1uu" path="res://resources/custom_resource/recipe/receipe_resources/roll_recipe.tres" id="2_8u84d"]
+[ext_resource type="Script" uid="uid://d2nwqyg808jry" path="res://resources/custom_resource/letters/letter_resource.gd" id="4_mo86c"]
+[ext_resource type="AudioStream" uid="uid://x3p645xgydy7" path="res://assets/sound/pop_wet.mp3" id="5_so56q"]
+
+[resource]
+script = ExtResource("1_u2111")
+card_name = "ROLL"
+unique_prime_identifier = 811
+text_color = Color(0, 0, 0, 1)
+color = Color(0.97, 0.713597, 0.3783, 1)
+art_texture = ExtResource("1_kxi4s")
+rare_alt = false
+sfx = ExtResource("5_so56q")
+recipes = Array[ExtResource("1_6prr0")]([ExtResource("2_8u84d")])
+value = 10.0
+sellable = true
+has_speech = false
+occult = false
+can_burn = true
+meal = true
+meal_level = 1
+extended_class = 0
+character = false
+character_basic = false
+board = false
+progress_max_value = 0
+one_shot = false
+locked = false
+fuel_cards = Array[ExtResource("1_u2111")]([])
+spawn_cards = Array[ExtResource("1_u2111")]([])
+spawn_recipes = Array[ExtResource("1_u2111")]([])
+spawn_letters = Array[ExtResource("4_mo86c")]([])
+clicker = false
+ticker = false
+auto_on = false
+disable_control = false
+tick_speed = 1.0
+ritual_circle = false
+salts = 2
+is_storage = false
+max_storage = 0

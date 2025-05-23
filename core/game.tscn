@@ -1,0 +1,215 @@
+[gd_scene load_steps=32 format=3 uid="uid://c5me41j3fn6qw"]
+
+[ext_resource type="Texture2D" uid="uid://cm6x1eddcjx6p" path="res://assets/textures/blurred_kitchen_image.png" id="1_qsr2d"]
+[ext_resource type="Script" uid="uid://di17xl46qnht8" path="res://core/game.gd" id="1_r0jmx"]
+[ext_resource type="PackedScene" uid="uid://dwwtfxiofo1cn" path="res://core/cards/card.tscn" id="1_vtfvl"]
+[ext_resource type="Resource" uid="uid://cumy4e7oq33r4" path="res://resources/custom_resource/card/card_resources/field.tres" id="5_0byn5"]
+[ext_resource type="Resource" uid="uid://7e032ptan4ky" path="res://resources/custom_resource/card/card_resources/old_envelope1.tres" id="10_4cgmi"]
+[ext_resource type="Script" uid="uid://bdypw102tume0" path="res://resources/custom_resource/card/card_resource.gd" id="10_w2p4l"]
+[ext_resource type="Resource" uid="uid://cgico8qwm61k0" path="res://resources/custom_resource/card/card_resources/pestle.tres" id="11_if2nl"]
+[ext_resource type="Resource" uid="uid://daa71cevacu78" path="res://resources/custom_resource/card/card_resources/loose_stone_in_wall.tres" id="11_l560s"]
+[ext_resource type="Resource" uid="uid://maupffw6l2tf" path="res://resources/custom_resource/card/card_resources/family_pig.tres" id="11_llpni"]
+[ext_resource type="Resource" uid="uid://cjv46yricn3d" path="res://resources/custom_resource/card/card_resources/conveyor_instruction_pack.tres" id="11_ydnun"]
+[ext_resource type="Resource" uid="uid://drpk3mlt286du" path="res://resources/custom_resource/card/card_resources/dough.tres" id="17_k4tob"]
+[ext_resource type="Resource" uid="uid://c868f33pjyfer" path="res://resources/custom_resource/card/card_resources/guide_1.tres" id="18_2eqin"]
+[ext_resource type="Resource" uid="uid://dx6r12f4736cw" path="res://resources/custom_resource/card/card_resources/dough_boy.tres" id="22_87tkx"]
+[ext_resource type="PackedScene" uid="uid://s4pl608hrhpk" path="res://no_ship/debug_hud.tscn" id="25_1l6lb"]
+[ext_resource type="Resource" uid="uid://bbu6gnkmdmosl" path="res://resources/custom_resource/card/card_resources/muffin_recipe_pack.tres" id="25_vghoq"]
+[ext_resource type="Resource" uid="uid://o438i6k3cfqc" path="res://resources/custom_resource/card/card_resources/pancake_recipe_pack.tres" id="26_ydnun"]
+[ext_resource type="Resource" uid="uid://kgydwbxltkb3" path="res://resources/custom_resource/card/card_resources/crepe_recipe_pack.tres" id="27_clfb1"]
+[ext_resource type="Resource" uid="uid://dyic2hnid86gc" path="res://resources/custom_resource/card/card_resources/fertilizer_recipe_pack.tres" id="28_t57gq"]
+[ext_resource type="Script" uid="uid://heo5fct00eym" path="res://core/grid_overlay.gd" id="36_f6jgh"]
+[ext_resource type="Shader" uid="uid://vn2qcuixcqdc" path="res://assets/shaders/grid_overlay.gdshader" id="36_kia8q"]
+[ext_resource type="Resource" uid="uid://bnynos1yk4m4j" path="res://resources/custom_resource/card/card_resources/the_family_farm.tres" id="40_3crti"]
+[ext_resource type="Resource" uid="uid://cs0jp8v1rt1cu" path="res://resources/custom_resource/card/card_resources/family_kitchen.tres" id="41_1paru"]
+[ext_resource type="Resource" uid="uid://c73vbihab5kvm" path="res://resources/custom_resource/card/card_resources/farmers_weekly_1.tres" id="41_tq54n"]
+[ext_resource type="Resource" uid="uid://dywc2bqdn3bhc" path="res://resources/custom_resource/card/card_resources/well.tres" id="46_otpo4"]
+[ext_resource type="Resource" uid="uid://bo4qnyaumjg6f" path="res://resources/custom_resource/card/card_resources/conveyor.tres" id="47_tq54n"]
+[ext_resource type="PackedScene" uid="uid://cpxm2pyh0nx40" path="res://core/scenes/hud/hud.tscn" id="51_jbuku"]
+[ext_resource type="Resource" uid="uid://bqen7kskci445" path="res://resources/custom_resource/card/card_resources/stove.tres" id="55_jbuku"]
+[ext_resource type="Resource" uid="uid://cj610gn2ouohn" path="res://resources/custom_resource/card/card_resources/coop.tres" id="56_bq3im"]
+[ext_resource type="Resource" uid="uid://ctgl2w2mgowq6" path="res://resources/custom_resource/card/card_resources/oven.tres" id="66_irs0d"]
+[ext_resource type="PackedScene" uid="uid://clkfojx0jl4k1" path="res://core/scenes/popup_menus/shop/shop.tscn" id="76_mh1fh"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_udvod"]
+shader = ExtResource("36_kia8q")
+shader_parameter/circle_center = Vector2(0.5, 0)
+shader_parameter/circle_radius = 0.5
+shader_parameter/control_size = Vector2(0, 0)
+
+[node name="Game" type="Node2D" node_paths=PackedStringArray("guide_1", "family_farm", "farm_starting_cards", "farm_stack_cards", "kitchen_starting_cards", "shop", "debug", "hud")]
+script = ExtResource("1_r0jmx")
+guide_1 = NodePath("Board/TutorialCard")
+family_farm = NodePath("Board/TheFamilyFarm")
+farm_starting_cards = [NodePath("Board/FamilyKitchen"), NodePath("Board/Envl"), NodePath("Board/Envl2"), NodePath("Board/Field"), NodePath("Board/Well"), NodePath("Board/Pig")]
+farm_stack_cards = [NodePath("Board/Field"), NodePath("Board/Well"), NodePath("Board/Pig")]
+kitchen_starting_cards = [NodePath("Board/LooseStone"), NodePath("Board/Envl3"), NodePath("Board/Oven"), NodePath("Board/Dough"), NodePath("Board/Dough2"), NodePath("Board/Conveyor"), NodePath("Board/Conveyor2")]
+gold = 3000
+shop = NodePath("Shop")
+debug = NodePath("DebugHUD")
+hud = NodePath("HUD")
+sleeve_upgrade_path = "res://no_ship/test_game_data/sleeve_upgrades.json"
+metadata/_edit_vertical_guides_ = [640.0]
+metadata/_edit_horizontal_guides_ = [360.0]
+
+[node name="Control2" type="TextureRect" parent="."]
+z_index = -4
+offset_right = 1280.0
+offset_bottom = 720.0
+mouse_filter = 2
+texture = ExtResource("1_qsr2d")
+metadata/_edit_lock_ = true
+
+[node name="Board" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="GridOverlay" type="Control" parent="Board"]
+unique_name_in_owner = true
+visible = false
+z_index = 9
+material = SubResource("ShaderMaterial_udvod")
+custom_minimum_size = Vector2(1280, 720)
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_right = 1280.0
+offset_bottom = 720.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+script = ExtResource("36_f6jgh")
+
+[node name="TheFamilyFarm" parent="Board" instance=ExtResource("1_vtfvl")]
+offset_left = 901.0
+offset_top = 139.0
+offset_right = 991.0
+offset_bottom = 265.0
+card_resource = ExtResource("40_3crti")
+metadata/_edit_horizontal_guides_ = [811.0]
+
+[node name="FamilyKitchen" parent="Board" instance=ExtResource("1_vtfvl")]
+offset_left = 1144.0
+offset_top = 533.0
+offset_right = 1234.0
+offset_bottom = 659.0
+card_resource = ExtResource("41_1paru")
+metadata/_edit_horizontal_guides_ = [811.0]
+
+[node name="Field" parent="Board" instance=ExtResource("1_vtfvl")]
+offset_left = 558.0
+offset_top = 288.0
+offset_right = 648.0
+offset_bottom = 414.0
+card_resource = ExtResource("5_0byn5")
+metadata/_edit_horizontal_guides_ = [811.0]
+
+[node name="Envl" parent="Board" instance=ExtResource("1_vtfvl")]
+offset_left = 666.0
+offset_top = 288.0
+offset_right = 756.0
+offset_bottom = 414.0
+card_resource = ExtResource("41_tq54n")
+metadata/_edit_horizontal_guides_ = [811.0]
+
+[node name="Envl2" parent="Board" instance=ExtResource("1_vtfvl")]
+offset_left = 810.0
+offset_top = 288.0
+offset_right = 900.0
+offset_bottom = 414.0
+card_resource = ExtResource("10_4cgmi")
+metadata/_edit_horizontal_guides_ = [811.0]
+
+[node name="Envl3" parent="Board" instance=ExtResource("1_vtfvl")]
+offset_left = 648.0
+offset_top = 216.0
+offset_right = 738.0
+offset_bottom = 342.0
+card_resource = ExtResource("11_ydnun")
+metadata/_edit_horizontal_guides_ = [811.0]
+
+[node name="Dough2" parent="Board" instance=ExtResource("1_vtfvl")]
+offset_left = 900.0
+offset_top = 378.0
+offset_right = 990.0
+offset_bottom = 504.0
+card_resource = ExtResource("17_k4tob")
+metadata/_edit_horizontal_guides_ = [811.0]
+
+[node name="Dough" parent="Board" instance=ExtResource("1_vtfvl")]
+offset_left = 648.0
+offset_top = 378.0
+offset_right = 738.0
+offset_bottom = 504.0
+card_resource = ExtResource("17_k4tob")
+metadata/_edit_horizontal_guides_ = [811.0]
+
+[node name="Conveyor" parent="Board" instance=ExtResource("1_vtfvl")]
+offset_left = 756.0
+offset_top = 378.0
+offset_right = 846.0
+offset_bottom = 504.0
+card_resource = ExtResource("47_tq54n")
+metadata/_edit_horizontal_guides_ = [811.0]
+
+[node name="Conveyor2" parent="Board" instance=ExtResource("1_vtfvl")]
+offset_left = 1008.0
+offset_top = 378.0
+offset_right = 1098.0
+offset_bottom = 504.0
+card_resource = ExtResource("47_tq54n")
+metadata/_edit_horizontal_guides_ = [811.0]
+
+[node name="Pig" parent="Board" instance=ExtResource("1_vtfvl")]
+offset_left = 36.0
+offset_top = 36.0
+offset_right = 126.0
+offset_bottom = 162.0
+card_resource = ExtResource("11_llpni")
+metadata/_edit_horizontal_guides_ = [811.0]
+
+[node name="LooseStone" parent="Board" instance=ExtResource("1_vtfvl")]
+offset_left = 1144.0
+offset_top = 533.0
+offset_right = 1234.0
+offset_bottom = 659.0
+card_resource = ExtResource("11_l560s")
+metadata/_edit_horizontal_guides_ = [811.0]
+
+[node name="Well" parent="Board" instance=ExtResource("1_vtfvl")]
+offset_left = 144.0
+offset_top = 36.0
+offset_right = 234.0
+offset_bottom = 162.0
+card_resource = ExtResource("46_otpo4")
+metadata/_edit_horizontal_guides_ = [811.0]
+
+[node name="Oven" parent="Board" instance=ExtResource("1_vtfvl")]
+offset_left = 396.0
+offset_top = 288.0
+offset_right = 486.0
+offset_bottom = 414.0
+card_resource = ExtResource("66_irs0d")
+metadata/_edit_horizontal_guides_ = [811.0]
+
+[node name="TutorialCard" parent="Board" instance=ExtResource("1_vtfvl")]
+offset_left = 594.0
+offset_top = 288.0
+offset_right = 684.0
+offset_bottom = 414.0
+card_resource = ExtResource("18_2eqin")
+metadata/_edit_horizontal_guides_ = [811.0]
+
+[node name="HUD" parent="." instance=ExtResource("51_jbuku")]
+
+[node name="Shop" parent="." instance=ExtResource("76_mh1fh")]
+unique_name_in_owner = true
+visible = false
+shop_cards = Array[ExtResource("10_w2p4l")]([ExtResource("11_if2nl"), ExtResource("56_bq3im"), ExtResource("55_jbuku"), ExtResource("5_0byn5"), ExtResource("46_otpo4"), ExtResource("66_irs0d"), ExtResource("22_87tkx"), ExtResource("47_tq54n")])
+shop_recipes = Array[ExtResource("10_w2p4l")]([ExtResource("25_vghoq"), ExtResource("26_ydnun"), ExtResource("27_clfb1"), ExtResource("28_t57gq")])
+
+[node name="DebugHUD" parent="." instance=ExtResource("25_1l6lb")]

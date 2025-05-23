@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://b77ks41e1vtyn"]
+
+[ext_resource type="Texture2D" uid="uid://bteh5ohyxl6y7" path="res://assets/textures/pro_test_full.png" id="1_q2orn"]
+[ext_resource type="Texture2D" uid="uid://b57m8vvgfgt2s" path="res://assets/textures/pro_test_empty.png" id="2_r0ghb"]
+[ext_resource type="Script" uid="uid://lvm6p1u1uqjn" path="res://core/components_core/components/card_progress_bar.gd" id="3_q7pxp"]
+
+[node name="CardProgressBar" type="TextureProgressBar"]
+use_parent_material = true
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -41.0
+offset_top = -5.0
+offset_right = 41.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+max_value = 5.0
+nine_patch_stretch = true
+stretch_margin_left = 3
+stretch_margin_top = 1
+stretch_margin_right = 3
+stretch_margin_bottom = 2
+texture_under = ExtResource("1_q2orn")
+texture_over = ExtResource("2_r0ghb")
+texture_progress = ExtResource("1_q2orn")
+tint_over = Color(0, 0, 0, 1)
+tint_progress = Color(0.524, 0.44, 1, 1)
+script = ExtResource("3_q7pxp")

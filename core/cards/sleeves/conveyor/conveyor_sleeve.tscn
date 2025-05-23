@@ -1,0 +1,96 @@
+[gd_scene load_steps=9 format=3 uid="uid://bww37ghp31g23"]
+
+[ext_resource type="Script" uid="uid://c1vc1a7yw0nl" path="res://core/cards/sleeves/conveyor/conveyor_sleeve.gd" id="1_4v0lq"]
+[ext_resource type="Texture2D" uid="uid://ba50v4tbokitv" path="res://assets/textures/conveyor_sleeve.png" id="2_oysn6"]
+[ext_resource type="Texture2D" uid="uid://c60ppad1bidu3" path="res://assets/textures/conveyor_wheel.png" id="3_cidjt"]
+[ext_resource type="Texture2D" uid="uid://bbd7qweo0fird" path="res://assets/textures/conveyor_wheel_hover.png" id="4_i2gl4"]
+[ext_resource type="SpriteFrames" uid="uid://bjjhrso3uoed7" path="res://core/cards/sleeves/conveyor/wheel_frames.tres" id="5_baef7"]
+[ext_resource type="Script" uid="uid://lacvwpakw5cb" path="res://core/cards/sleeves/conveyor/conveyor_button.gd" id="5_hura4"]
+[ext_resource type="Script" uid="uid://4k1ovnk0jin" path="res://core/cards/sleeves/conveyor/conveyor_line.gd" id="6_1slni"]
+[ext_resource type="PackedScene" uid="uid://b66eeaji7b7k6" path="res://core/cards/sleeves/conveyor/wheel.tscn" id="7_uqmn6"]
+
+[node name="ConveyorSleeve" type="MarginContainer"]
+custom_minimum_size = Vector2(90, 126)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = -4
+theme_override_constants/margin_top = -4
+theme_override_constants/margin_right = -4
+theme_override_constants/margin_bottom = -4
+script = ExtResource("1_4v0lq")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="ConveyorButton" type="TextureButton" parent="Control" node_paths=PackedStringArray("line")]
+unique_name_in_owner = true
+layout_mode = 2
+offset_left = 85.0
+offset_top = 60.0
+offset_right = 98.0
+offset_bottom = 73.0
+size_flags_horizontal = 8
+size_flags_vertical = 4
+mouse_filter = 1
+button_mask = 3
+texture_normal = ExtResource("3_cidjt")
+texture_pressed = ExtResource("3_cidjt")
+texture_hover = ExtResource("4_i2gl4")
+stretch_mode = 3
+script = ExtResource("5_hura4")
+frames = ExtResource("5_baef7")
+line = NodePath("ConveyorLine")
+metadata/_custom_type_script = "uid://lacvwpakw5cb"
+
+[node name="ConveyorLine" type="Line2D" parent="Control/ConveyorButton"]
+unique_name_in_owner = true
+show_behind_parent = true
+position = Vector2(6.5, 6.5)
+width = 1.0
+default_color = Color(0, 0, 0, 1)
+script = ExtResource("6_1slni")
+metadata/_custom_type_script = "uid://4k1ovnk0jin"
+
+[node name="SleeveTexture" type="NinePatchRect" parent="."]
+unique_name_in_owner = true
+use_parent_material = true
+custom_minimum_size = Vector2(90, 126)
+layout_mode = 2
+texture = ExtResource("2_oysn6")
+patch_margin_left = 20
+patch_margin_top = 21
+patch_margin_right = 20
+patch_margin_bottom = 21
+
+[node name="Wheel1" parent="." instance=ExtResource("7_uqmn6")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+mouse_filter = 2
+
+[node name="Wheel2" parent="." instance=ExtResource("7_uqmn6")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+mouse_filter = 2
+
+[node name="Wheel3" parent="." instance=ExtResource("7_uqmn6")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+mouse_filter = 2
+
+[node name="Wheel4" parent="." instance=ExtResource("7_uqmn6")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+mouse_filter = 2

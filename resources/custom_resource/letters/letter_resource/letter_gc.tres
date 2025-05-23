@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Letter" load_steps=2 format=3 uid="uid://bbk0sb7bc42j4"]
+
+[ext_resource type="Script" uid="uid://d2nwqyg808jry" path="res://resources/custom_resource/letters/letter_resource.gd" id="1_mumao"]
+
+[resource]
+script = ExtResource("1_mumao")
+type = 0
+snippet_owner = ""
+occult = true
+text = "Next you must welcome another
+	-%#&@#"

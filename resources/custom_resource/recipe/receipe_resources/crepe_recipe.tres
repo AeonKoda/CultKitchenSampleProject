@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://d18wtcjl2m5hj"]
+
+[ext_resource type="Script" uid="uid://bdypw102tume0" path="res://resources/custom_resource/card/card_resource.gd" id="1_cuwr3"]
+[ext_resource type="Resource" uid="uid://c1uu34x72attx" path="res://resources/custom_resource/card/card_resources/batter.tres" id="2_wnjgv"]
+[ext_resource type="Script" uid="uid://cbotblw4lsjob" path="res://resources/custom_resource/recipe/recipe.gd" id="3_ngcty"]
+[ext_resource type="Resource" uid="uid://bqen7kskci445" path="res://resources/custom_resource/card/card_resources/stove.tres" id="4_crm5l"]
+
+[resource]
+script = ExtResource("3_ngcty")
+index = 0
+tier = 1
+occult = false
+uses_tool = true
+tool = ExtResource("4_crm5l")
+recipe = Array[ExtResource("1_cuwr3")]([ExtResource("2_wnjgv")])
+result_path = "res://resources/custom_resource/card/card_resources/crepe.tres"
+result_uid = 0

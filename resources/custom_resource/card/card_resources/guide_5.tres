@@ -1,0 +1,56 @@
+[gd_resource type="Resource" script_class="CardResource" load_steps=8 format=3 uid="uid://eyqdk3nyk6f4"]
+
+[ext_resource type="Script" uid="uid://bdypw102tume0" path="res://resources/custom_resource/card/card_resource.gd" id="1_3ith2"]
+[ext_resource type="Script" uid="uid://cbotblw4lsjob" path="res://resources/custom_resource/recipe/recipe.gd" id="1_ecg3s"]
+[ext_resource type="Script" uid="uid://cyiqifrgly48p" path="res://core/cards/actions_clicker/click_tutorial_5.gd" id="1_r1cdl"]
+[ext_resource type="Resource" uid="uid://ilkmo5enkm4p" path="res://resources/custom_resource/card/card_resources/guide_2.tres" id="3_ae6bc"]
+[ext_resource type="Resource" uid="uid://2q4vailsufxs" path="res://resources/custom_resource/recipe/receipe_resources/guide_5_recipe.tres" id="4_r1cdl"]
+[ext_resource type="Script" uid="uid://d2nwqyg808jry" path="res://resources/custom_resource/letters/letter_resource.gd" id="5_yqgud"]
+
+[sub_resource type="Resource" id="Resource_r0mcm"]
+script = ExtResource("1_ecg3s")
+index = 0
+tier = 1
+occult = false
+uses_tool = true
+tool = ExtResource("4_r1cdl")
+recipe = Array[ExtResource("1_3ith2")]([ExtResource("3_ae6bc")])
+result_path = "res://resources/custom_resource/card/card_resources/guide_5.tres"
+result_uid = 0
+metadata/_custom_type_script = "uid://cbotblw4lsjob"
+
+[resource]
+script = ExtResource("1_3ith2")
+card_name = "GUIDE_5"
+unique_prime_identifier = 457
+text_color = Color(0, 0, 0, 1)
+color = Color(1, 1, 1, 1)
+rare_alt = false
+recipes = Array[ExtResource("1_ecg3s")]([SubResource("Resource_r0mcm")])
+value = 2.0
+sellable = true
+has_speech = false
+occult = false
+can_burn = false
+meal = false
+meal_level = 1
+extended_class = 0
+progress_max_value = 8
+one_shot = true
+locked = false
+fuel_cards = Array[ExtResource("1_3ith2")]([])
+spawn_cards = Array[ExtResource("1_3ith2")]([])
+spawn_recipes = Array[ExtResource("1_3ith2")]([])
+spawn_letters = Array[ExtResource("5_yqgud")]([])
+clicker = true
+click_action = ExtResource("1_r1cdl")
+ticker = false
+auto_on = false
+disable_control = false
+tick_speed = 1.0
+board = false
+board_lock = false
+ritual_circle = false
+salts = 2
+is_storage = false
+max_storage = 0

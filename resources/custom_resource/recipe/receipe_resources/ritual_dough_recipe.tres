@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://o1p741bw1l87"]
+
+[ext_resource type="Script" uid="uid://bdypw102tume0" path="res://resources/custom_resource/card/card_resource.gd" id="1_7kk45"]
+[ext_resource type="Resource" uid="uid://drpk3mlt286du" path="res://resources/custom_resource/card/card_resources/dough.tres" id="2_07ph5"]
+[ext_resource type="Resource" uid="uid://uu646i3ogpvd" path="res://resources/custom_resource/card/card_resources/blood.tres" id="3_wtxmt"]
+[ext_resource type="Script" uid="uid://cbotblw4lsjob" path="res://resources/custom_resource/recipe/recipe.gd" id="4_lhrh2"]
+
+[resource]
+script = ExtResource("4_lhrh2")
+index = 0
+tier = 1
+occult = true
+uses_tool = false
+recipe = Array[ExtResource("1_7kk45")]([ExtResource("2_07ph5"), ExtResource("3_wtxmt")])
+result_path = "res://resources/custom_resource/card/card_resources/ritual_dough.tres"
+result_uid = 0

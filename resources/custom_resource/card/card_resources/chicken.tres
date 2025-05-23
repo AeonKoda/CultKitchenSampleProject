@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="CardResource" load_steps=6 format=3 uid="uid://dkh0gllqqo145"]
+
+[ext_resource type="Script" uid="uid://bdypw102tume0" path="res://resources/custom_resource/card/card_resource.gd" id="1_52qjg"]
+[ext_resource type="Texture2D" uid="uid://b5pibb5xphllp" path="res://assets/textures/chicken_hen.png" id="1_cwh0c"]
+[ext_resource type="Script" uid="uid://cbotblw4lsjob" path="res://resources/custom_resource/recipe/recipe.gd" id="1_extdw"]
+[ext_resource type="Resource" uid="uid://cmiqy0qu8eydy" path="res://resources/custom_resource/recipe/receipe_resources/chicken_recipe.tres" id="2_komwq"]
+[ext_resource type="Script" uid="uid://d2nwqyg808jry" path="res://resources/custom_resource/letters/letter_resource.gd" id="4_0oc0g"]
+
+[resource]
+script = ExtResource("1_52qjg")
+card_name = "CHICKEN"
+text_color = Color(0, 0, 0, 1)
+color = Color(1, 0.950167, 0.87, 1)
+art_texture = ExtResource("1_cwh0c")
+rare_alt = false
+recipes = Array[ExtResource("1_extdw")]([ExtResource("2_komwq")])
+value = 16.0
+sellable = true
+occult = false
+can_burn = true
+meal = false
+meal_level = 1
+unique_prime_identifier = 149
+extended_class = 0
+character = false
+character_basic = false
+board = false
+progress_max_value = 0
+one_shot = false
+locked = false
+fuel_cards = Array[ExtResource("1_52qjg")]([])
+spawn_cards = Array[ExtResource("1_52qjg")]([])
+spawn_recipes = Array[ExtResource("1_52qjg")]([])
+spawn_letters = Array[ExtResource("4_0oc0g")]([])
+clicker = false
+ticker = false
+auto_on = false
+disable_control = false
+tick_speed = 1.0
+ritual_circle = false
+salts = 2
+is_storage = false
+max_storage = 0

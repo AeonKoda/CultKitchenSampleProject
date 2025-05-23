@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="RecipeDictionary" load_steps=2 format=3 uid="uid://cky1ybccwaeqd"]
+
+[ext_resource type="Script" uid="uid://bcinnfdithjms" path="res://resources/custom_resource/recipe/recipe_dictionary.gd" id="1_coyjc"]
+
+[resource]
+script = ExtResource("1_coyjc")
+dict = {
+"BATTER": [Array[String](["EGG", "DOUGH"])],
+"COMPOST": [Array[String](["WHEAT", "SOIL", "WATER"])],
+"DOUGH": [Array[String](["FLOUR", "WATER"])],
+"DOUGH_BOY": [Array[String](["RITUAL_DOUGH", "STRAW_DOLL"])],
+"FERTILIZER": [Array[String](["COMPOST", "COMPOST", "COMPOST"])],
+"GUIDE_4": [Array[String](["GUIDE_1", "GUIDE_3"])],
+"MUD": [Array[String](["DIRT", "WATER"])],
+"RICH_FIELD": [Array[String](["FERTILIZER", "FERTILIZER", "FIELD"]), Array[String](["FIELD", "FIELD"])],
+"RITUAL_DOUGH": [Array[String](["DOUGH", "BLOOD"])],
+"SOIL": [Array[String](["DIRT", "DIRT"])],
+"STRAW_DOLL": [Array[String](["WHEAT", "BONE"])],
+"WILD_CROPS": [Array[String](["SOIL", "WATER"])]
+}

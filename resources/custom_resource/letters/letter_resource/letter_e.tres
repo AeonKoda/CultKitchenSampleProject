@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Letter" load_steps=2 format=3 uid="uid://ba2eof1wtg662"]
+
+[ext_resource type="Script" uid="uid://d2nwqyg808jry" path="res://resources/custom_resource/letters/letter_resource.gd" id="1_p58da"]
+
+[resource]
+script = ExtResource("1_p58da")
+type = 0
+snippet_owner = ""
+occult = true
+text = "This book guides one in becoming FAITHFUL to
+[center][shake rate=20.0 level=6 connected=1]THE DEVOURER[/shake][/center]
+	-%#&@#"

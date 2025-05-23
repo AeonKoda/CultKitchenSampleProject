@@ -1,0 +1,2604 @@
+[gd_scene load_steps=150 format=3 uid="uid://c5me41j3fn6qw"]
+
+[ext_resource type="Texture2D" uid="uid://cm6x1eddcjx6p" path="res://art/blurred_kitchen_image.png" id="1_qsr2d"]
+[ext_resource type="Script" uid="uid://di17xl46qnht8" path="res://game/game.gd" id="1_r0jmx"]
+[ext_resource type="PackedScene" uid="uid://dwwtfxiofo1cn" path="res://cards/card.tscn" id="1_vtfvl"]
+[ext_resource type="Script" uid="uid://mgkirra718ma" path="res://game/progress/progression.gd" id="2_bgm8s"]
+[ext_resource type="Script" uid="uid://dlpb5yp1dvux6" path="res://game/vistor_spawner.gd" id="2_r4i1i"]
+[ext_resource type="Script" uid="uid://bnvt0c4w4evs4" path="res://game/progress/progression_event.gd" id="3_inlmt"]
+[ext_resource type="Resource" uid="uid://cumy4e7oq33r4" path="res://cards/card_resources/field.tres" id="5_0byn5"]
+[ext_resource type="FontFile" uid="uid://b5v3erupngsmf" path="res://art/fonts/dogicapixel.otf" id="7_c03e4"]
+[ext_resource type="Resource" uid="uid://hxs2mossriep" path="res://game/progress/progression_events/grow_the_cult.tres" id="8_ayhi7"]
+[ext_resource type="Resource" uid="uid://cc52n27wy0ta4" path="res://cards/card_resources/humble_farm.tres" id="8_fq6f4"]
+[ext_resource type="Resource" uid="uid://cj610gn2ouohn" path="res://cards/card_resources/coop.tres" id="8_lt3rr"]
+[ext_resource type="Script" uid="uid://bdypw102tume0" path="res://cards/card_resource.gd" id="10_w2p4l"]
+[ext_resource type="Resource" uid="uid://cgico8qwm61k0" path="res://cards/card_resources/pestle.tres" id="11_if2nl"]
+[ext_resource type="Script" uid="uid://cbs86bildmiy" path="res://shop/shop_box.gd" id="12_8ubig"]
+[ext_resource type="Resource" uid="uid://bx5qsxxxmffm4" path="res://cards/card_resources/clay_pot.tres" id="12_gywgt"]
+[ext_resource type="Texture2D" uid="uid://c88xnxqkyfl3o" path="res://art/shop_icon.png" id="12_occfm"]
+[ext_resource type="Texture2D" uid="uid://bjvrjkct07e5n" path="res://art/shop_icon_hover.png" id="13_8x3og"]
+[ext_resource type="Resource" uid="uid://bqen7kskci445" path="res://cards/card_resources/stove.tres" id="13_46p1a"]
+[ext_resource type="Texture2D" uid="uid://lswr24scrkbf" path="res://art/piggy_bank_icon.png" id="13_doesi"]
+[ext_resource type="Script" uid="uid://d2nwqyg808jry" path="res://letters/letter_resource.gd" id="14_3jro5"]
+[ext_resource type="Script" uid="uid://c5yfdv47oknom" path="res://shop/shop_button.gd" id="15_cbwd1"]
+[ext_resource type="Resource" uid="uid://c4apfc1qniv77" path="res://cards/card_resources/sourdough_recipe_pack.tres" id="16_isad4"]
+[ext_resource type="Resource" uid="uid://h57pdrxyrc73" path="res://cards/card_resources/beer_recipe_pack.tres" id="17_jhrd3"]
+[ext_resource type="Theme" uid="uid://pqrpvnauasd2" path="res://art/ShopTheme.tres" id="17_kqibb"]
+[ext_resource type="Script" uid="uid://bbudwfstbv0yg" path="res://game/recipe_board.gd" id="17_rwnq3"]
+[ext_resource type="Script" uid="uid://sdtblqqghh4c" path="res://shop/pig.gd" id="18_f8sj2"]
+[ext_resource type="Texture2D" uid="uid://dmgyv1n2bdnr3" path="res://art/recipe_book.png" id="19_td7xh"]
+[ext_resource type="Texture2D" uid="uid://cb875xqy2em1h" path="res://art/recipe_book_hover.png" id="20_dws5j"]
+[ext_resource type="Resource" uid="uid://dl5qaqjwaimgb" path="res://game/progress/progression_events/discover_doughboy.tres" id="21_eoal3"]
+[ext_resource type="Script" uid="uid://dxinqh6x3hw78" path="res://game/recipe_book_button.gd" id="21_i3vpv"]
+[ext_resource type="Resource" uid="uid://cgt6ealprgp1" path="res://game/progress/progression_events/first_visit.tres" id="22_egcfi"]
+[ext_resource type="Resource" uid="uid://b44crc70bnqxs" path="res://game/progress/progression_events/rank_up_to_faithful.tres" id="23_gvft4"]
+[ext_resource type="Resource" uid="uid://f47gsrxo1rss" path="res://game/progress/progression_events/cat_in_a_bag.tres" id="24_41n36"]
+[ext_resource type="Resource" uid="uid://btw5vuolglsm6" path="res://game/progress/progression_events/first_witch.tres" id="24_xihdg"]
+[ext_resource type="Resource" uid="uid://lo8wsuu54g35" path="res://cards/card_resources/sorting_table.tres" id="25_emi0f"]
+[ext_resource type="Resource" uid="uid://wxo5lu2dmdax" path="res://game/progress/progression_events/rank_up_to_witness.tres" id="25_y7nam"]
+[ext_resource type="Resource" uid="uid://di26s4utyxlhc" path="res://game/progress/progression_events/first_authorities.tres" id="26_057yv"]
+[ext_resource type="Resource" uid="uid://dyic2hnid86gc" path="res://cards/card_resources/fertilizer_recipe_pack.tres" id="26_60i0e"]
+[ext_resource type="Resource" uid="uid://bslxftcv64uxc" path="res://cards/card_resources/farmer_tips.tres" id="27_b442l"]
+[ext_resource type="Script" uid="uid://dmu4aunijdwp5" path="res://cards/recipe.gd" id="28_b2omj"]
+[ext_resource type="Resource" uid="uid://bjaolaui7qb13" path="res://cards/card_resources/crops_pack.tres" id="28_u54so"]
+[ext_resource type="Resource" uid="uid://bw0tk1617il5k" path="res://cards/card_resources/occult_book_1.tres" id="29_4otxr"]
+[ext_resource type="Resource" uid="uid://dipamuls0x7f" path="res://cards/card_resources/salt_rock.tres" id="29_fpukp"]
+[ext_resource type="Resource" uid="uid://db8incf26q5p2" path="res://cards/card_resources/cow.tres" id="31_stxt3"]
+[ext_resource type="Resource" uid="uid://bfnbnpdnraxlp" path="res://cards/card_resources/occult_chest_1.tres" id="32_3mv7f"]
+[ext_resource type="Resource" uid="uid://d0edft7uouqq0" path="res://cards/card_resources/warehouse.tres" id="33_8higj"]
+[ext_resource type="Resource" uid="uid://c0ov4uuy87ecy" path="res://cards/card_resources/mashed_potatoes_recipe_pack.tres" id="33_pdb64"]
+[ext_resource type="Resource" uid="uid://rr3xw3e11mgm" path="res://cards/card_resources/mochi_recipe_pack.tres" id="34_8r3jv"]
+[ext_resource type="Resource" uid="uid://kgydwbxltkb3" path="res://cards/card_resources/crepe_recipe_pack.tres" id="35_0rpgg"]
+[ext_resource type="Script" uid="uid://bs3lvtqfo2xao" path="res://game/board.gd" id="35_1nt7t"]
+[ext_resource type="Resource" uid="uid://dhmfutweodsfs" path="res://cards/card_resources/pudding_recipe_pack.tres" id="35_hl1rc"]
+[ext_resource type="Resource" uid="uid://0hovbh2srapp" path="res://cards/card_resources/roll_recipe_pack.tres" id="36_1a2yx"]
+[ext_resource type="Script" uid="uid://heo5fct00eym" path="res://game/grid_overlay.gd" id="36_f6jgh"]
+[ext_resource type="Shader" uid="uid://vn2qcuixcqdc" path="res://game/grid_overlay.gdshader" id="36_kia8q"]
+[ext_resource type="Script" uid="uid://eb7n0s3yo1ae" path="res://game/slection_box.gd" id="36_uirr8"]
+[ext_resource type="Resource" uid="uid://bbu6gnkmdmosl" path="res://cards/card_resources/muffin_recipe_pack.tres" id="37_2kp7s"]
+[ext_resource type="Resource" uid="uid://ccmv35wtulbww" path="res://cards/card_resources/mixer_pack.tres" id="37_3w0qc"]
+[ext_resource type="Resource" uid="uid://memdr6lt0mmc" path="res://cards/card_resources/factory.tres" id="38_1bfti"]
+[ext_resource type="Resource" uid="uid://bumiksbrgrol5" path="res://cards/card_resources/storage_box.tres" id="38_4qyk2"]
+[ext_resource type="Resource" uid="uid://o438i6k3cfqc" path="res://cards/card_resources/pancake_recipe_pack.tres" id="38_26tp2"]
+[ext_resource type="Resource" uid="uid://c5qfwew315pd" path="res://cards/card_resources/conveyor_pack.tres" id="39_8btt4"]
+[ext_resource type="Resource" uid="uid://cimk8r13t8e5e" path="res://cards/card_resources/pig.tres" id="39_td122"]
+[ext_resource type="Resource" uid="uid://7e032ptan4ky" path="res://cards/card_resources/old_envelope1.tres" id="43_emfj3"]
+[ext_resource type="Script" uid="uid://u6wwf4tx2kfx" path="res://game/altar_button.gd" id="43_glqtw"]
+[ext_resource type="Resource" uid="uid://maupffw6l2tf" path="res://cards/card_resources/family_pig.tres" id="44_f4rug"]
+[ext_resource type="Resource" uid="uid://dlbprjmxe020p" path="res://cards/card_resources/altar.tres" id="45_f4rug"]
+[ext_resource type="Resource" uid="uid://c7oqg1qc3ior8" path="res://cards/card_resources/loose_stone_in_kitchen.tres" id="45_j0ths"]
+[ext_resource type="FontFile" uid="uid://b2eteey2wpa0n" path="res://art/fonts/my_pixel_bmpf_12pt.bmp" id="46_cviky"]
+[ext_resource type="Resource" uid="uid://cqqkrw88vtehi" path="res://cards/card_resources/thicket.tres" id="46_yl5of"]
+[ext_resource type="Script" uid="uid://c7xbjm32r3p56" path="res://game/merge.gd" id="47_e0rf7"]
+[ext_resource type="Texture2D" uid="uid://dfuraubrvvorj" path="res://art/mail_box_normal.png" id="49_018iv"]
+[ext_resource type="Texture2D" uid="uid://d4hxgdnu078dj" path="res://art/mail_box.png" id="49_ek2p2"]
+[ext_resource type="Script" uid="uid://m6ha27a0hgxr" path="res://cards/agenda_temp.gd" id="50_ho1tw"]
+[ext_resource type="Script" uid="uid://ck6m408rsursv" path="res://game/contacts_button.gd" id="51_a3i08"]
+[ext_resource type="Resource" uid="uid://rql2770qe20u" path="res://characters/an_unknown_visitor.tres" id="51_oifdr"]
+[ext_resource type="Texture2D" uid="uid://bglq5qigvqo02" path="res://art/card.png" id="52_wtqiv"]
+[ext_resource type="Script" uid="uid://7ub1mtfyqqit" path="res://cards/components/stack.gd" id="53_211dw"]
+[ext_resource type="Script" uid="uid://b6si5tejr536c" path="res://game/input_panel.gd" id="53_c1qks"]
+[ext_resource type="Texture2D" uid="uid://ba0gnf2g5rbt2" path="res://art/mouse_left.png" id="53_ih5x3"]
+[ext_resource type="Texture2D" uid="uid://dqk78s2mufpee" path="res://art/mouse_right.png" id="54_1542f"]
+[ext_resource type="Script" uid="uid://dn6bnh7c04rke" path="res://cards/components/mixer.gd" id="54_xe8ds"]
+[ext_resource type="Texture2D" uid="uid://el5yyeojskp1" path="res://art/keyboard_space.png" id="55_c15vp"]
+[ext_resource type="AudioStream" uid="uid://c4rvehcohxoaf" path="res://art/sound/door_bell.mp3" id="56_7h5jq"]
+[ext_resource type="Texture2D" uid="uid://yn1801wpely4" path="res://art/mouse_scroll.png" id="56_pn4sm"]
+[ext_resource type="Script" uid="uid://cto1hd0sksykk" path="res://game/guest_box.gd" id="59_cmc2p"]
+[ext_resource type="Script" uid="uid://cpcjqqma25i0k" path="res://cards/recipe_cards/new_tag.gd" id="60_2lx04"]
+[ext_resource type="Script" uid="uid://duef4u1hrl6be" path="res://game/recipe_box.gd" id="60_qwxkj"]
+[ext_resource type="Script" uid="uid://b262iyd4dhvo8" path="res://game/contacts_board.gd" id="63_64un6"]
+[ext_resource type="Texture2D" uid="uid://cfppw8ta1h3id" path="res://art/welcome.png" id="66_8c6w5"]
+[ext_resource type="Resource" uid="uid://ctgl2w2mgowq6" path="res://cards/card_resources/oven.tres" id="66_irs0d"]
+[ext_resource type="Resource" uid="uid://p8ooh1okfdjr" path="res://cards/card_resources/empty_envelope.tres" id="66_lhos1"]
+[ext_resource type="Script" uid="uid://1sh3cnuwt7hf" path="res://game/filter_board.gd" id="66_vadvp"]
+[ext_resource type="Texture2D" uid="uid://cx3glpulsemep" path="res://art/no_soliciting.png" id="67_gcly1"]
+[ext_resource type="Texture2D" uid="uid://c1u2cctoeu0jx" path="res://art/closed_envelope.png" id="67_qjmxg"]
+[ext_resource type="Texture2D" uid="uid://dbpct01kqvuki" path="res://art/open_envelope.png" id="67_tbyqs"]
+[ext_resource type="Script" uid="uid://bkyqij12g5r" path="res://game/solicit_button.gd" id="68_7mm8j"]
+[ext_resource type="Script" uid="uid://bndjk1esxnq7a" path="res://game/mail_button.gd" id="69_yxiws"]
+[ext_resource type="Texture2D" uid="uid://c5xqf3jwcd2ov" path="res://art/envelope_cover.png" id="70_27v5x"]
+[ext_resource type="PackedScene" uid="uid://cxwcmokjnbjfr" path="res://altar/stat_bar.tscn" id="74_w8p33"]
+[ext_resource type="Script" uid="uid://cd6p1qg3r76n5" path="res://game/panel.gd" id="83_16er4"]
+[ext_resource type="Resource" uid="uid://bl58t8nydctrc" path="res://cards/card_resources/old_well.tres" id="90_gvurk"]
+[ext_resource type="Script" uid="uid://bg71uaymmlxrl" path="res://game/cursor.gd" id="94_or4wd"]
+[ext_resource type="Texture2D" uid="uid://d00ygi2x5o8n7" path="res://cursors/hand_point.png" id="95_g28sr"]
+[ext_resource type="Texture2D" uid="uid://lny7008n7lsl" path="res://cursors/hand_open.png" id="99_75su0"]
+[ext_resource type="Texture2D" uid="uid://dsdde5ck6y2w2" path="res://cursors/hand_closed.png" id="100_2twj2"]
+[ext_resource type="Texture2D" uid="uid://ceqwtfw16l1vg" path="res://cursors/hand_pressing.png" id="101_stvjl"]
+[ext_resource type="Texture2D" uid="uid://lb1x4ty70v8g" path="res://cursors/hand_point_pressing.png" id="102_1j32p"]
+[ext_resource type="Texture2D" uid="uid://b70f0haqhu6is" path="res://cursors/gear.png" id="106_emfj3"]
+
+[sub_resource type="Resource" id="Resource_1xv8c"]
+script = ExtResource("3_inlmt")
+event_name = ""
+setup_event = 0
+visitor_spawn_card = Array[ExtResource("10_w2p4l")]([])
+visitor_spawn_recipe = Array[ExtResource("10_w2p4l")]([])
+visitor_spawn_letter = Array[ExtResource("14_3jro5")]([])
+setup_mail_type = 0
+setup_timer = 20
+setup_mail_cards = Array[ExtResource("10_w2p4l")]([])
+setup_mail_recipes = Array[ExtResource("10_w2p4l")]([])
+setup_mail_letters = Array[ExtResource("14_3jro5")]([])
+event_trigger = 0
+rank_up = false
+result_mail_type = 0
+mail_cards = Array[ExtResource("10_w2p4l")]([])
+mail_recipes = Array[ExtResource("10_w2p4l")]([])
+mail_letters = Array[ExtResource("14_3jro5")]([])
+
+[sub_resource type="GDScript" id="GDScript_yf72h"]
+script/source = "extends Script
+
+static func click(card:Card,card_resource:Resource = card.card_resource) ->void:
+	if not card_resource.spawn_cards.is_empty():
+		var new_card:Card
+		var new_resource:CardResource
+		var conveyor:Card
+		var belt:Card
+		var belt2:Card
+		var mixer:Card
+		var elf:Card
+		
+		for spawn:CardResource in card_resource.spawn_cards:
+			new_resource = spawn
+			if card_resource.card_name in Global.land_cards:
+				var above:Card = card.head.stack.get_above(card)
+				if above:
+					if above.card_resource.card_name in Global.crop_cards:
+						new_resource = above.card_resource
+					elif above.card_resource.card_name in Global.spawn_crop_cards:
+						
+						new_resource = above.card_resource.spawn_cards[0]
+			
+			new_card = Global.create_card(new_resource,card.get_board())
+			new_card.global_position = card.global_position
+			
+			if new_card.card_resource.card_name == \"CONVEYOR\":
+				conveyor = new_card
+			if new_card.card_resource.card_name == \"BELT\":
+				if belt:
+					belt2 = new_card
+				else:
+					belt = new_card
+			if new_card.card_resource.card_name == \"MIXER\":
+				mixer = new_card
+			if new_card.card_resource.card_name == \"ELF\":
+				elf = new_card
+			
+			card.head.stack.add_to_stack(new_card)
+			
+			var double_resource_chance:float = Global.game.altar_stats_dict[\"double_resource_chance\"][0]
+			if new_resource.card_name in Global.resource_cards:
+				var chance:float = randf_range(0.0,100.0)
+				if chance < double_resource_chance:
+					new_card = Global.create_card(new_resource)
+					card.head.stack.add_to_stack(new_card)
+		
+		if conveyor:
+			set_up_conveyor(conveyor,belt)
+		if elf:
+			set_up_elf(elf,belt)
+		if mixer:
+			set_up_mixer(mixer,belt,belt2)
+	if not card_resource.spawn_recipes.is_empty():
+		var new_recipe:CardRecipe
+		
+		for recipe_resource:CardResource in card_resource.spawn_recipes:
+			new_recipe = Global.create_recipe(recipe_resource,card.get_board())
+			card.head.stack.add_to_stack(new_recipe)
+			
+	if not card_resource.spawn_letters.is_empty():
+		var new_letter:CardRecipe
+		
+		for letter_resource:Letter in card_resource.spawn_letters:
+			new_letter = Global.create_letter(letter_resource,card.get_board())
+			card.head.stack.add_to_stack(new_letter)
+	
+		
+	if card.card_resource.card_name == \"GUIDE_1\":
+		card.clicker.progress.queue_free()
+		card.clicker.queue_free()
+		card.title_label.text = \"[center]GUIDE 1\"
+		
+	if card.card_resource.one_shot:
+		card.head.stack.pull_card(card)
+		card.queue_release()
+
+static func set_up_conveyor(conveyor:Card, belt:Card) ->void:
+	var tether:Tether = load(\"res://cards/components/tether.tscn\").instantiate()
+	tether.linked_cards = [conveyor,belt]
+	conveyor.add_child(tether)
+	conveyor.linked_with_cards = [belt]
+	belt.linked_to_cards = [conveyor]
+
+static func set_up_elf(elf:Card, porter:Card) ->void:
+	var tether:Tether = load(\"res://cards/components/tether.tscn\").instantiate()
+	tether.linked_cards = [elf,porter]
+	elf.add_child(tether)
+	elf.linked_with_cards = [porter]
+	porter.linked_to_cards = [elf]
+	porter.card_resource = porter.card_resource.duplicate()
+	porter.default_text = \"[center]PORTER[/center]\"
+	porter.title_label.text = porter.default_text
+	porter.texture.self_modulate = elf.card_resource.color
+
+static func set_up_mixer(mixer:Card, belt:Card, belt2:Card) ->void:
+	var tether:Tether = load(\"res://cards/components/tether.tscn\").instantiate()
+	var tether2:Tether = tether.duplicate()
+	tether.linked_cards = [mixer,belt]
+	tether2.linked_cards = [mixer,belt2]
+
+	mixer.add_child(tether)
+	mixer.add_child(tether2)
+	
+	mixer.linked_with_cards = [belt,belt2]
+	belt.linked_to_cards = [mixer]
+	belt2.linked_to_cards = [mixer]
+	
+"
+
+[sub_resource type="Resource" id="Resource_ot4xg"]
+script = ExtResource("14_3jro5")
+type = 1
+snippet_owner = "FARMER WARNING"
+occult = false
+text = "Strange red mushrooms are appearing on FIELDs with CORPSEs under them! Stay safe out there."
+
+[sub_resource type="Resource" id="Resource_rxqq3"]
+script = ExtResource("10_w2p4l")
+card_name = "FARMER_NEWS"
+unique_prime_identifier = 0
+color = Color(1, 1, 1, 1)
+rare_alt = false
+text_color = Color(0, 0, 0, 1)
+value = 3.0
+sellable = true
+occult = false
+can_burn = false
+meal = false
+meal_level = 1
+recipes = Array[ExtResource("28_b2omj")]([])
+character = false
+character_basic = false
+board = false
+progress_max_value = 5
+one_shot = true
+spawn_cards = Array[ExtResource("10_w2p4l")]([])
+spawn_recipes = Array[ExtResource("10_w2p4l")]([])
+spawn_letters = Array[ExtResource("14_3jro5")]([SubResource("Resource_ot4xg")])
+clicker = true
+click_action = SubResource("GDScript_yf72h")
+ticker = false
+auto_on = false
+disable_control = false
+tick_speed = 1.0
+ritual_circle = false
+salts = 2
+is_storage = false
+max_storage = 0
+
+[sub_resource type="Gradient" id="Gradient_me8w0"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(0.98, 0.96922, 0.7644, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_p7u8i"]
+gradient = SubResource("Gradient_me8w0")
+width = 1180
+height = 620
+
+[sub_resource type="Gradient" id="Gradient_t4v75"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(0.771587, 0.98, 0.7644, 0.282353)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_0ff56"]
+gradient = SubResource("Gradient_t4v75")
+width = 1280
+height = 720
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_udvod"]
+shader = ExtResource("36_kia8q")
+shader_parameter/circle_center = Vector2(0.5, 0)
+shader_parameter/circle_radius = 0.5
+shader_parameter/control_size = Vector2(0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sr1v1"]
+bg_color = Color(0.6864, 0.6688, 0.88, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ikjpf"]
+bg_color = Color(1, 0.260006, 0.200835, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_igurr"]
+bg_color = Color(0.94902, 0.74902, 0.74902, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6dpcf"]
+bg_color = Color(0.94902, 0.74902, 0.74902, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0fav4"]
+bg_color = Color(0, 0, 0, 0.572549)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_03rf7"]
+bg_color = Color(0.647059, 0.419608, 0.360784, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_color = Color(0.376471, 0.27451, 0.203922, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dxdga"]
+bg_color = Color(0.909804, 0.878431, 0.827451, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.376471, 0.27451, 0.203922, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_td8uk"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.376471, 0.27451, 0.203922, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_32icw"]
+bg_color = Color(0.647059, 0.419608, 0.360784, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.384314, 0.298039, 0.223529, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_omudk"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(0.647059, 0.419608, 0.360784, 1)
+border_color = Color(0.384314, 0.298039, 0.223529, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7d7gb"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(0.65, 0.4212, 0.364, 0)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.384314, 0.298039, 0.223529, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5qlm7"]
+bg_color = Color(0.94902, 0.74902, 0.74902, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uokkt"]
+bg_color = Color(0.886275, 0.286275, 0.282353, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_huwrx"]
+bg_color = Color(0.53622, 0.4266, 0.54, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.17874, 0.1422, 0.18, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lv5i0"]
+bg_color = Color(0, 0, 0, 0.917647)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_emfj3"]
+atlas = ExtResource("106_emfj3")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2rfb7"]
+atlas = ExtResource("100_2twj2")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yt40p"]
+atlas = ExtResource("99_75su0")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_svbbk"]
+atlas = ExtResource("101_stvjl")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rlndp"]
+atlas = ExtResource("101_stvjl")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_id71l"]
+atlas = ExtResource("101_stvjl")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k0ptc"]
+atlas = ExtResource("101_stvjl")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dmmk4"]
+atlas = ExtResource("101_stvjl")
+region = Rect2(96, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lholh"]
+atlas = ExtResource("101_stvjl")
+region = Rect2(120, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_trm1w"]
+atlas = ExtResource("102_1j32p")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tvi43"]
+atlas = ExtResource("102_1j32p")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_65rnv"]
+atlas = ExtResource("102_1j32p")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x6ocs"]
+atlas = ExtResource("102_1j32p")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jlyvm"]
+atlas = ExtResource("102_1j32p")
+region = Rect2(96, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6toph"]
+atlas = ExtResource("102_1j32p")
+region = Rect2(120, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sd55p"]
+atlas = ExtResource("95_g28sr")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j1pg8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_emfj3")
+}],
+"loop": true,
+"name": &"augment",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2rfb7")
+}],
+"loop": false,
+"name": &"drag",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yt40p")
+}],
+"loop": false,
+"name": &"hover",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_svbbk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rlndp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_id71l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k0ptc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dmmk4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lholh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_svbbk")
+}],
+"loop": false,
+"name": &"hover_click",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_trm1w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tvi43")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_65rnv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x6ocs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jlyvm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6toph")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_trm1w")
+}],
+"loop": false,
+"name": &"point_click",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sd55p")
+}],
+"loop": false,
+"name": &"pointer",
+"speed": 5.0
+}]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_r0jmx")
+
+[node name="Timers" type="Node" parent="."]
+unique_name_in_owner = true
+
+[node name="Progression" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("2_bgm8s")
+current_event = ExtResource("21_eoal3")
+progression = Array[ExtResource("3_inlmt")]([ExtResource("21_eoal3"), ExtResource("22_egcfi"), ExtResource("23_gvft4"), ExtResource("8_ayhi7"), ExtResource("24_41n36"), ExtResource("24_xihdg"), ExtResource("25_y7nam"), ExtResource("26_057yv"), SubResource("Resource_1xv8c")])
+level_0_shop_cards = Array[ExtResource("10_w2p4l")]([ExtResource("12_gywgt"), ExtResource("28_u54so"), ExtResource("29_fpukp"), ExtResource("31_stxt3")])
+level_0_shop_recipes = Array[ExtResource("10_w2p4l")]([ExtResource("16_isad4"), ExtResource("17_jhrd3"), ExtResource("33_pdb64"), ExtResource("34_8r3jv"), ExtResource("35_hl1rc")])
+level_0_market_cards = Array[ExtResource("10_w2p4l")]([ExtResource("32_3mv7f")])
+faithful_shop_cards = Array[ExtResource("10_w2p4l")]([ExtResource("39_8btt4"), ExtResource("37_3w0qc"), ExtResource("38_4qyk2"), ExtResource("39_td122")])
+faithful_shop_recipes = Array[ExtResource("10_w2p4l")]([SubResource("Resource_rxqq3")])
+faithful_market_cards = Array[ExtResource("10_w2p4l")]([ExtResource("29_4otxr")])
+witness_shop_cards = Array[ExtResource("10_w2p4l")]([ExtResource("33_8higj"), ExtResource("38_1bfti"), ExtResource("25_emi0f")])
+witness_market_cards = Array[ExtResource("10_w2p4l")]([ExtResource("32_3mv7f")])
+
+[node name="VistorSpawner" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("2_r4i1i")
+
+[node name="SpawnTimer" type="Timer" parent="VistorSpawner"]
+unique_name_in_owner = true
+wait_time = 3.0
+
+[node name="Control2" type="TextureRect" parent="."]
+z_index = -4
+offset_right = 1280.0
+offset_bottom = 720.0
+mouse_filter = 2
+texture = ExtResource("1_qsr2d")
+metadata/_edit_lock_ = true
+
+[node name="BoardRect" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.917647)
+z_index = -4
+position = Vector2(50, 50)
+texture = SubResource("GradientTexture2D_p7u8i")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="BofuFX" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+visible = false
+z_index = -4
+texture = SubResource("GradientTexture2D_0ff56")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="Screen" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+visible = false
+z_index = -2
+position = Vector2(640, 360)
+texture = ExtResource("1_qsr2d")
+metadata/_edit_group_ = true
+
+[node name="Board" type="Node2D" parent="."]
+unique_name_in_owner = true
+script = ExtResource("35_1nt7t")
+
+[node name="GridOverlay" type="Control" parent="Board"]
+unique_name_in_owner = true
+visible = false
+material = SubResource("ShaderMaterial_udvod")
+custom_minimum_size = Vector2(1280, 720)
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_right = 1280.0
+offset_bottom = 720.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+script = ExtResource("36_f6jgh")
+
+[node name="SelectionBox" type="Control" parent="Board"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 116.0
+offset_top = 86.0
+offset_right = 156.0
+offset_bottom = 126.0
+script = ExtResource("36_uirr8")
+
+[node name="ReferenceRect" type="ReferenceRect" parent="Board/SelectionBox"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+editor_only = false
+
+[node name="Field" parent="Board" instance=ExtResource("1_vtfvl")]
+offset_left = 266.0
+offset_top = 205.0
+offset_right = 356.0
+offset_bottom = 331.0
+card_resource = ExtResource("5_0byn5")
+metadata/_edit_horizontal_guides_ = [811.0]
+
+[node name="Envl" parent="Board" instance=ExtResource("1_vtfvl")]
+offset_left = 601.0
+offset_top = 304.0
+offset_right = 691.0
+offset_bottom = 430.0
+card_resource = ExtResource("43_emfj3")
+metadata/_edit_horizontal_guides_ = [811.0]
+
+[node name="Pig" parent="Board" instance=ExtResource("1_vtfvl")]
+offset_left = 400.0
+offset_top = 161.0
+offset_right = 490.0
+offset_bottom = 287.0
+card_resource = ExtResource("44_f4rug")
+metadata/_edit_horizontal_guides_ = [811.0]
+
+[node name="Altar" parent="Board" instance=ExtResource("1_vtfvl")]
+visible = false
+offset_left = 577.0
+offset_top = 294.0
+offset_right = 667.0
+offset_bottom = 420.0
+card_resource = ExtResource("45_f4rug")
+metadata/_edit_horizontal_guides_ = [811.0]
+
+[node name="LooseStone" parent="Board" instance=ExtResource("1_vtfvl")]
+offset_left = 781.0
+offset_top = 153.0
+offset_right = 871.0
+offset_bottom = 279.0
+card_resource = ExtResource("45_j0ths")
+metadata/_edit_horizontal_guides_ = [811.0]
+
+[node name="Thicket" parent="Board" instance=ExtResource("1_vtfvl")]
+offset_left = 968.0
+offset_top = 194.0
+offset_right = 1058.0
+offset_bottom = 320.0
+card_resource = ExtResource("46_yl5of")
+metadata/_edit_horizontal_guides_ = [811.0]
+
+[node name="OldWell" parent="Board" instance=ExtResource("1_vtfvl")]
+offset_left = 552.0
+offset_top = 190.0
+offset_right = 642.0
+offset_bottom = 316.0
+card_resource = ExtResource("90_gvurk")
+metadata/_edit_horizontal_guides_ = [811.0]
+
+[node name="HUD" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Control" type="HBoxContainer" parent="HUD"]
+z_index = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+theme_override_constants/separation = 3
+alignment = 2
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="Control3" type="Control" parent="HUD/Control"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 13.25
+mouse_filter = 2
+
+[node name="Control7" type="VBoxContainer" parent="HUD/Control"]
+visible = false
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Control3" type="Control" parent="HUD/Control/Control7"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 20.0
+mouse_filter = 2
+
+[node name="CultistRank" type="Panel" parent="HUD/Control/Control7"]
+unique_name_in_owner = true
+visible = false
+show_behind_parent = true
+z_index = -1
+texture_filter = 1
+custom_minimum_size = Vector2(150, 30)
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_sr1v1")
+
+[node name="MarginContainer" type="MarginContainer" parent="HUD/Control/Control7/CultistRank"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 5
+
+[node name="Rank" type="Label" parent="HUD/Control/Control7/CultistRank/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("7_c03e4")
+theme_override_font_sizes/font_size = 16
+text = "faithful
+"
+vertical_alignment = 1
+uppercase = true
+
+[node name="Control4" type="Control" parent="HUD/Control/Control7"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.98
+mouse_filter = 2
+
+[node name="Control4" type="VBoxContainer" parent="HUD/Control"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="Control3" type="Control" parent="HUD/Control/Control4"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 20.0
+mouse_filter = 2
+
+[node name="Control4" type="Control" parent="HUD/Control/Control4"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.98
+mouse_filter = 2
+
+[node name="Control6" type="Control" parent="HUD/Control"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 4.95
+mouse_filter = 2
+
+[node name="Control" type="VBoxContainer" parent="HUD/Control"]
+layout_mode = 2
+size_flags_stretch_ratio = 1.81
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HUD/Control/Control"]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="Control3" type="Control" parent="HUD/Control/Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.95
+mouse_filter = 2
+
+[node name="ShopButton" type="TextureButton" parent="HUD/Control/Control/VBoxContainer"]
+unique_name_in_owner = true
+process_mode = 3
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+tooltip_text = "Click to open the shop. Drag cards out to buy them."
+mouse_default_cursor_shape = 6
+texture_normal = ExtResource("12_occfm")
+texture_hover = ExtResource("13_8x3og")
+texture_focused = ExtResource("12_occfm")
+script = ExtResource("15_cbwd1")
+
+[node name="Label" type="Label" parent="HUD/Control/Control/VBoxContainer/ShopButton"]
+visible = false
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -14.0
+offset_right = 54.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_ikjpf")
+text = "SALE"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="RecipeBookButton" type="TextureButton" parent="HUD/Control/Control/VBoxContainer"]
+unique_name_in_owner = true
+process_mode = 3
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+tooltip_text = "Click to open the recipe book. Drag recipes over the book to store them."
+mouse_default_cursor_shape = 6
+texture_normal = ExtResource("19_td7xh")
+texture_hover = ExtResource("20_dws5j")
+script = ExtResource("21_i3vpv")
+
+[node name="NewTag" type="RichTextLabel" parent="HUD/Control/Control/VBoxContainer/RecipeBookButton"]
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+script = ExtResource("60_2lx04")
+
+[node name="ContactsButton" type="TextureButton" parent="HUD/Control/Control/VBoxContainer"]
+unique_name_in_owner = true
+process_mode = 3
+visible = false
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+tooltip_text = "Click to see your contancts. Drag contact cards to the envelope to invite them."
+mouse_default_cursor_shape = 6
+texture_normal = ExtResource("49_018iv")
+texture_hover = ExtResource("49_ek2p2")
+script = ExtResource("51_a3i08")
+
+[node name="AltarButton" type="Button" parent="HUD/Control/Control/VBoxContainer"]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+tooltip_text = "Click to open the recipe book. Drag recipes over the book to store them."
+mouse_default_cursor_shape = 6
+theme_override_fonts/font = ExtResource("46_cviky")
+text = "ALTAR"
+text_overrun_behavior = 1
+script = ExtResource("43_glqtw")
+
+[node name="Merge" type="Button" parent="HUD/Control/Control/VBoxContainer"]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+tooltip_text = "Click to open the recipe book. Drag recipes over the book to store them."
+mouse_default_cursor_shape = 6
+theme_override_fonts/font = ExtResource("46_cviky")
+toggle_mode = true
+text = "MERGE"
+text_overrun_behavior = 1
+clip_text = true
+script = ExtResource("47_e0rf7")
+
+[node name="Control" type="Control" parent="HUD/Control/Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 20.0
+mouse_filter = 2
+
+[node name="Pig" type="TextureButton" parent="HUD/Control/Control/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+tooltip_text = "Drag cards over the pig to sell them."
+texture_normal = ExtResource("13_doesi")
+texture_pressed = ExtResource("13_doesi")
+texture_hover = ExtResource("13_doesi")
+texture_disabled = ExtResource("13_doesi")
+texture_focused = ExtResource("13_doesi")
+script = ExtResource("18_f8sj2")
+
+[node name="SellPrice" type="Panel" parent="HUD/Control/Control/VBoxContainer/Pig"]
+unique_name_in_owner = true
+visible = false
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -64.0
+offset_top = -22.0
+offset_right = -8.0
+offset_bottom = 2.0
+grow_horizontal = 0
+grow_vertical = 0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_igurr")
+
+[node name="MarginContainer" type="MarginContainer" parent="HUD/Control/Control/VBoxContainer/Pig/SellPrice"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -9.5
+offset_top = -3.5
+offset_right = 9.5
+offset_bottom = 3.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="PricePreview" type="Label" parent="HUD/Control/Control/VBoxContainer/Pig/SellPrice/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("7_c03e4")
+theme_override_font_sizes/font_size = 8
+text = "0g"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="GoldPanel" type="Panel" parent="HUD/Control/Control/VBoxContainer"]
+unique_name_in_owner = true
+show_behind_parent = true
+z_index = -1
+texture_filter = 1
+custom_minimum_size = Vector2(150, 30)
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6dpcf")
+
+[node name="MarginContainer" type="MarginContainer" parent="HUD/Control/Control/VBoxContainer/GoldPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_right = 2
+
+[node name="Gold1" type="Label" parent="HUD/Control/Control/VBoxContainer/GoldPanel/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("7_c03e4")
+theme_override_font_sizes/font_size = 16
+text = "0g"
+horizontal_alignment = 2
+vertical_alignment = 1
+uppercase = true
+
+[node name="Control2" type="Control" parent="HUD/Control/Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.64
+mouse_filter = 2
+
+[node name="Control5" type="Control" parent="HUD/Control"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.0
+mouse_filter = 2
+
+[node name="Panel" type="PanelContainer" parent="HUD"]
+visible = false
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.0
+offset_top = -141.0
+offset_right = -847.0
+offset_bottom = 127.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.5, 0.5)
+size_flags_horizontal = 0
+size_flags_vertical = 8
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_0fav4")
+script = ExtResource("53_c1qks")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HUD/Panel"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+mouse_filter = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HUD/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="HUD/Panel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("53_ih5x3")
+
+[node name="Label" type="Label" parent="HUD/Panel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "GRAB STACK"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="HUD/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="HUD/Panel/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("54_1542f")
+
+[node name="Label" type="Label" parent="HUD/Panel/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "CLICK ALL/ POWER ONE"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="HUD/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="HUD/Panel/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("53_ih5x3")
+
+[node name="Label2" type="Label" parent="HUD/Panel/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+text = "+"
+
+[node name="TextureRect2" type="TextureRect" parent="HUD/Panel/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("55_c15vp")
+
+[node name="Label" type="Label" parent="HUD/Panel/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+text = "GRAB ONE/DROP IN"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="HUD/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="HUD/Panel/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("54_1542f")
+
+[node name="Label2" type="Label" parent="HUD/Panel/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+text = "+"
+
+[node name="TextureRect2" type="TextureRect" parent="HUD/Panel/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("55_c15vp")
+
+[node name="Label" type="Label" parent="HUD/Panel/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+text = "CLICK ONE/ POWER ALL"
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="HUD/Panel/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="HUD/Panel/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("56_pn4sm")
+
+[node name="Label" type="Label" parent="HUD/Panel/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+text = "MOVE CAMERA"
+
+[node name="InputHide" type="Button" parent="HUD/Panel"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+text = "X"
+
+[node name="InputShow" type="Button" parent="HUD"]
+unique_name_in_owner = true
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 7.0
+offset_top = -29.0
+offset_right = 29.0
+offset_bottom = -7.0
+grow_vertical = 0
+size_flags_horizontal = 0
+size_flags_vertical = 8
+text = "?"
+
+[node name="TargetLabel" type="Label" parent="HUD"]
+unique_name_in_owner = true
+offset_right = 335.0
+offset_bottom = 97.0
+theme_override_font_sizes/font_size = 36
+text = "rgee"
+
+[node name="RecipeBook" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+process_mode = 3
+
+[node name="RecipeBox" type="Control" parent="RecipeBook"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("60_qwxkj")
+
+[node name="Background2" type="Button" parent="RecipeBook/RecipeBox"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 1
+mouse_default_cursor_shape = 6
+
+[node name="ColorRect2" type="Panel" parent="RecipeBook/RecipeBox"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -202.0
+offset_top = 41.0
+offset_right = 202.0
+offset_bottom = 124.0
+grow_horizontal = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_03rf7")
+
+[node name="BookTitle" type="Label" parent="RecipeBook/RecipeBox/ColorRect2"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -112.0
+offset_top = -28.0
+offset_right = 112.0
+offset_bottom = 28.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.909804, 0.878431, 0.827451, 1)
+theme_override_fonts/font = ExtResource("7_c03e4")
+theme_override_font_sizes/font_size = 64
+text = "RECIPES
+"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="RecipeBook/RecipeBox"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Spacer4" type="Control" parent="RecipeBook/RecipeBox/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="RecipeBook/RecipeBox/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 4.0
+mouse_filter = 2
+
+[node name="Spacer2" type="Control" parent="RecipeBook/RecipeBox/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="BookTable" type="Panel" parent="RecipeBook/RecipeBox/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 4.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_dxdga")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="RecipeBook/RecipeBox/VBoxContainer/HBoxContainer/BookTable"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="RecipeBook/RecipeBox/VBoxContainer/HBoxContainer/BookTable/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 4.0
+mouse_filter = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="RecipeBoard" type="FlowContainer" parent="RecipeBook/RecipeBox/VBoxContainer/HBoxContainer/BookTable/HBoxContainer/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/h_separation = 22
+theme_override_constants/v_separation = 27
+script = ExtResource("17_rwnq3")
+
+[node name="MarginContainer2" type="MarginContainer" parent="RecipeBook/RecipeBox/VBoxContainer/HBoxContainer/BookTable"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -164.0
+offset_top = -148.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_horizontal = 6
+size_flags_vertical = 4
+mouse_filter = 2
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="BookTable2" type="Panel" parent="RecipeBook/RecipeBox/VBoxContainer/HBoxContainer/BookTable/MarginContainer2"]
+custom_minimum_size = Vector2(140, 100)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+size_flags_stretch_ratio = 4.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_td8uk")
+
+[node name="TitleLabel" type="Label" parent="RecipeBook/RecipeBox/VBoxContainer/HBoxContainer/BookTable/MarginContainer2/BookTable2"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.376471, 0.27451, 0.203922, 1)
+theme_override_fonts/font = ExtResource("7_c03e4")
+theme_override_font_sizes/font_size = 8
+text = "place recipe
+
+ [here]
+
+to filter for
+ ingredients"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="RecipeBook/RecipeBox/VBoxContainer/HBoxContainer/BookTable/MarginContainer2"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="FilterBoard" type="FlowContainer" parent="RecipeBook/RecipeBox/VBoxContainer/HBoxContainer/BookTable/MarginContainer2/VBoxContainer" node_paths=PackedStringArray("my_box")]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/h_separation = 22
+theme_override_constants/v_separation = 27
+script = ExtResource("66_vadvp")
+my_box = NodePath("../../../../../..")
+
+[node name="Spacer" type="Control" parent="RecipeBook/RecipeBox/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="Spacer3" type="Control" parent="RecipeBook/RecipeBox/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="Panel" type="Control" parent="RecipeBook/RecipeBox"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 242.0
+offset_top = 666.0
+offset_right = 1197.0
+offset_bottom = 768.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="RecipeBook/RecipeBox"]
+layout_mode = 0
+offset_left = 218.0
+offset_top = 596.0
+offset_right = 533.0
+offset_bottom = 636.0
+
+[node name="RegCheck" type="CheckButton" parent="RecipeBook/RecipeBox/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("17_kqibb")
+theme_override_colors/font_disabled_color = Color(0.909804, 0.878431, 0.827451, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.909804, 0.878431, 0.827451, 1)
+theme_override_colors/font_hover_color = Color(0.909804, 0.878431, 0.827451, 1)
+theme_override_colors/font_color = Color(0.909804, 0.878431, 0.827451, 1)
+theme_override_colors/font_focus_color = Color(0.909804, 0.878431, 0.827451, 1)
+theme_override_colors/font_pressed_color = Color(0.909804, 0.878431, 0.827451, 1)
+theme_override_fonts/font = ExtResource("7_c03e4")
+button_pressed = true
+text = "Regular"
+flat = true
+
+[node name="OccultCheck" type="CheckButton" parent="RecipeBook/RecipeBox/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("17_kqibb")
+theme_override_colors/font_disabled_color = Color(0.909804, 0.878431, 0.827451, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.909804, 0.878431, 0.827451, 1)
+theme_override_colors/font_hover_color = Color(0.909804, 0.878431, 0.827451, 1)
+theme_override_colors/font_color = Color(0.909804, 0.878431, 0.827451, 1)
+theme_override_colors/font_focus_color = Color(0.909804, 0.878431, 0.827451, 1)
+theme_override_colors/font_pressed_color = Color(0.909804, 0.878431, 0.827451, 1)
+theme_override_fonts/font = ExtResource("7_c03e4")
+button_pressed = true
+text = "Occult"
+flat = true
+
+[node name="GuestBook" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+
+[node name="GuestBox" type="Control" parent="GuestBook"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("59_cmc2p")
+mail_cards = Array[ExtResource("10_w2p4l")]([ExtResource("66_lhos1"), ExtResource("66_lhos1"), ExtResource("66_lhos1")])
+stack_max = 17
+
+[node name="AgendaVisitor" type="Control" parent="GuestBook/GuestBox"]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(80, 110)
+layout_mode = 2
+anchors_preset = 0
+offset_left = 33.0
+offset_top = 75.0
+offset_right = 515.0
+offset_bottom = 185.0
+pivot_offset = Vector2(40, 55)
+focus_mode = 1
+mouse_filter = 2
+mouse_default_cursor_shape = 6
+script = ExtResource("50_ho1tw")
+card_resource = ExtResource("51_oifdr")
+metadata/_edit_horizontal_guides_ = [811.0]
+metadata/_edit_vertical_guides_ = [1440.0]
+
+[node name="Texture" type="TextureRect" parent="GuestBook/GuestBox/AgendaVisitor"]
+texture_filter = 1
+custom_minimum_size = Vector2(80, 110)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+pivot_offset = Vector2(40, 55)
+mouse_filter = 2
+texture = ExtResource("52_wtqiv")
+expand_mode = 3
+
+[node name="TitleLabel" type="RichTextLabel" parent="GuestBook/GuestBox/AgendaVisitor"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 5.0
+offset_top = 8.0
+offset_right = 573.0
+offset_bottom = 776.0
+scale = Vector2(0.125, 0.125)
+mouse_filter = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = 24
+theme_override_fonts/normal_font = ExtResource("7_c03e4")
+theme_override_font_sizes/normal_font_size = 64
+bbcode_enabled = true
+text = "[center]Unknown Visitor[/center]"
+fit_content = true
+scroll_active = false
+
+[node name="Stack" type="Control" parent="GuestBook/GuestBox/AgendaVisitor"]
+anchors_preset = 0
+offset_top = 16.0
+offset_right = 68.0
+offset_bottom = 53.0
+mouse_filter = 2
+script = ExtResource("53_211dw")
+
+[node name="Mixer" type="Node" parent="GuestBook/GuestBox/AgendaVisitor"]
+script = ExtResource("54_xe8ds")
+
+[node name="Background3" type="Button" parent="GuestBook/GuestBox"]
+unique_name_in_owner = true
+process_mode = 3
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 1
+mouse_default_cursor_shape = 6
+
+[node name="ColorRect2" type="Panel" parent="GuestBook/GuestBox"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -400.0
+offset_top = 28.0
+offset_right = 400.0
+offset_bottom = 111.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_03rf7")
+
+[node name="GuestTitle" type="Label" parent="GuestBook/GuestBox/ColorRect2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -328.0
+offset_top = -23.5
+offset_right = 328.0
+offset_bottom = 32.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.909804, 0.878431, 0.827451, 1)
+theme_override_fonts/font = ExtResource("7_c03e4")
+theme_override_font_sizes/font_size = 64
+text = "TOWNS PEOPLE
+"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GuestBook/GuestBox"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Spacer4" type="Control" parent="GuestBook/GuestBox/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GuestBook/GuestBox/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 4.0
+mouse_filter = 2
+theme_override_constants/separation = 0
+alignment = 2
+
+[node name="Spacer2" type="Control" parent="GuestBook/GuestBox/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.61
+mouse_filter = 2
+
+[node name="GuestTable" type="Panel" parent="GuestBook/GuestBox/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+z_index = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.96
+theme_override_styles/panel = SubResource("StyleBoxFlat_dxdga")
+
+[node name="MarginContainer" type="MarginContainer" parent="GuestBook/GuestBox/VBoxContainer/HBoxContainer/GuestTable"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="GuestBoard" type="FlowContainer" parent="GuestBook/GuestBox/VBoxContainer/HBoxContainer/GuestTable/MarginContainer"]
+unique_name_in_owner = true
+z_index = 1
+layout_mode = 2
+theme_override_constants/h_separation = 22
+theme_override_constants/v_separation = 27
+script = ExtResource("63_64un6")
+
+[node name="MailTable" type="Panel" parent="GuestBook/GuestBox/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 3.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_dxdga")
+
+[node name="ColorRect2" type="Panel" parent="GuestBook/GuestBox/VBoxContainer/HBoxContainer/MailTable"]
+layout_mode = 2
+offset_left = 24.0
+offset_top = 44.0
+offset_right = 235.0
+offset_bottom = 70.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_32icw")
+
+[node name="ScheduleTitle" type="Label" parent="GuestBook/GuestBox/VBoxContainer/HBoxContainer/MailTable/ColorRect2"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -108.0
+offset_top = -7.0
+offset_bottom = 7.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.909804, 0.878431, 0.827451, 1)
+theme_override_fonts/font = ExtResource("7_c03e4")
+theme_override_font_sizes/font_size = 16
+text = "AGENDA
+"
+horizontal_alignment = 1
+
+[node name="Panel" type="ScrollContainer" parent="GuestBook/GuestBox/VBoxContainer/HBoxContainer/MailTable"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+offset_left = 24.0
+offset_top = 66.0
+offset_right = 524.0
+offset_bottom = 194.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_omudk")
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 0
+
+[node name="Schedule" type="HBoxContainer" parent="GuestBook/GuestBox/VBoxContainer/HBoxContainer/MailTable/Panel"]
+unique_name_in_owner = true
+clip_contents = true
+custom_minimum_size = Vector2(487, 0)
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="Panel2" type="Panel" parent="GuestBook/GuestBox/VBoxContainer/HBoxContainer/MailTable"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+offset_left = 24.0
+offset_top = 66.0
+offset_right = 528.0
+offset_bottom = 194.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_7d7gb")
+
+[node name="NextVistor" type="Label" parent="GuestBook/GuestBox/VBoxContainer/HBoxContainer/MailTable/Panel2"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 7.0
+offset_top = -9.0
+offset_right = 35.0
+offset_bottom = -2.0
+theme_override_colors/font_color = Color(0.909804, 0.878431, 0.827451, 1)
+theme_override_fonts/font = ExtResource("7_c03e4")
+theme_override_font_sizes/font_size = 8
+text = "NEXT VISIT: 0s"
+
+[node name="Spacer" type="Control" parent="GuestBook/GuestBox/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.67
+mouse_filter = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="GuestBook/GuestBox/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 20
+
+[node name="Control" type="Control" parent="GuestBook/GuestBox/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
+mouse_filter = 2
+
+[node name="SolicitButton" type="TextureButton" parent="GuestBook/GuestBox/VBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
+process_mode = 3
+layout_mode = 2
+size_flags_horizontal = 2
+tooltip_text = "Toggle to accept or deny visitors."
+toggle_mode = true
+texture_normal = ExtResource("66_8c6w5")
+texture_pressed = ExtResource("67_gcly1")
+script = ExtResource("68_7mm8j")
+
+[node name="RegCheck" type="CheckButton" parent="GuestBook/GuestBox/VBoxContainer/HBoxContainer2"]
+visible = false
+layout_mode = 2
+theme = ExtResource("17_kqibb")
+theme_override_colors/font_disabled_color = Color(0.909804, 0.878431, 0.827451, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.909804, 0.878431, 0.827451, 1)
+theme_override_colors/font_hover_color = Color(0.909804, 0.878431, 0.827451, 1)
+theme_override_colors/font_color = Color(0.909804, 0.878431, 0.827451, 1)
+theme_override_colors/font_focus_color = Color(0.909804, 0.878431, 0.827451, 1)
+theme_override_colors/font_pressed_color = Color(0.909804, 0.878431, 0.827451, 1)
+theme_override_fonts/font = ExtResource("7_c03e4")
+button_pressed = true
+text = "Towns People
+"
+flat = true
+
+[node name="OccultCheck2" type="CheckButton" parent="GuestBook/GuestBox/VBoxContainer/HBoxContainer2"]
+visible = false
+layout_mode = 2
+theme = ExtResource("17_kqibb")
+theme_override_colors/font_disabled_color = Color(0.909804, 0.878431, 0.827451, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.909804, 0.878431, 0.827451, 1)
+theme_override_colors/font_hover_color = Color(0.909804, 0.878431, 0.827451, 1)
+theme_override_colors/font_color = Color(0.909804, 0.878431, 0.827451, 1)
+theme_override_colors/font_focus_color = Color(0.909804, 0.878431, 0.827451, 1)
+theme_override_colors/font_pressed_color = Color(0.909804, 0.878431, 0.827451, 1)
+theme_override_fonts/font = ExtResource("7_c03e4")
+button_pressed = true
+text = "Witches"
+flat = true
+
+[node name="OccultCheck3" type="CheckButton" parent="GuestBook/GuestBox/VBoxContainer/HBoxContainer2"]
+visible = false
+layout_mode = 2
+theme = ExtResource("17_kqibb")
+theme_override_colors/font_disabled_color = Color(0.909804, 0.878431, 0.827451, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.909804, 0.878431, 0.827451, 1)
+theme_override_colors/font_hover_color = Color(0.909804, 0.878431, 0.827451, 1)
+theme_override_colors/font_color = Color(0.909804, 0.878431, 0.827451, 1)
+theme_override_colors/font_focus_color = Color(0.909804, 0.878431, 0.827451, 1)
+theme_override_colors/font_pressed_color = Color(0.909804, 0.878431, 0.827451, 1)
+theme_override_fonts/font = ExtResource("7_c03e4")
+button_pressed = true
+text = "Authorities"
+flat = true
+
+[node name="Spacer3" type="Control" parent="GuestBook/GuestBox/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="Panel" type="Control" parent="GuestBook/GuestBox"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 242.0
+offset_top = 666.0
+offset_right = 1197.0
+offset_bottom = 768.0
+mouse_filter = 2
+
+[node name="MailButton" type="TextureButton" parent="GuestBook/GuestBox"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -32.0
+offset_right = 80.0
+offset_bottom = 120.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(80, 100)
+toggle_mode = true
+texture_normal = ExtResource("67_qjmxg")
+texture_pressed = ExtResource("67_tbyqs")
+texture_hover = ExtResource("67_tbyqs")
+texture_disabled = ExtResource("67_qjmxg")
+script = ExtResource("69_yxiws")
+
+[node name="Cover" type="TextureRect" parent="GuestBook/GuestBox/MailButton"]
+visible = false
+z_index = 2
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -76.0
+offset_right = 80.0
+offset_bottom = 76.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("70_27v5x")
+
+[node name="Mask" type="ColorRect" parent="GuestBook/GuestBox/MailButton"]
+unique_name_in_owner = true
+clip_children = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -136.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Shop" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+process_mode = 3
+
+[node name="Shop_Sound" type="AudioStreamPlayer" parent="Shop"]
+unique_name_in_owner = true
+stream = ExtResource("56_7h5jq")
+
+[node name="ShopBox" type="Control" parent="Shop"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("12_8ubig")
+shop_cards = Array[ExtResource("10_w2p4l")]([ExtResource("8_fq6f4"), ExtResource("11_if2nl"), ExtResource("8_lt3rr"), ExtResource("13_46p1a"), ExtResource("66_irs0d"), ExtResource("90_gvurk"), ExtResource("5_0byn5")])
+shop_recipes = Array[ExtResource("10_w2p4l")]([ExtResource("27_b442l"), ExtResource("35_0rpgg"), ExtResource("36_1a2yx"), ExtResource("37_2kp7s"), ExtResource("38_26tp2"), ExtResource("26_60i0e")])
+
+[node name="Background" type="Button" parent="Shop/ShopBox"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 1
+mouse_default_cursor_shape = 6
+
+[node name="Spacer4" type="Control" parent="Shop/ShopBox/Background"]
+layout_mode = 3
+anchors_preset = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.21
+mouse_filter = 2
+
+[node name="ShopPanel" type="Panel" parent="Shop/ShopBox"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -172.0
+offset_top = 59.0
+offset_right = 172.0
+offset_bottom = 142.0
+grow_horizontal = 2
+mouse_filter = 2
+theme = ExtResource("17_kqibb")
+theme_type_variation = &"Shop_Panel"
+
+[node name="Label" type="Label" parent="Shop/ShopBox/ShopPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -112.0
+offset_top = -28.0
+offset_right = 112.0
+offset_bottom = 28.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("7_c03e4")
+theme_override_font_sizes/font_size = 64
+text = "SHOP"
+
+[node name="PiggyBank" type="TextureRect" parent="Shop/ShopBox/ShopPanel"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 424.0
+offset_top = -28.0
+offset_right = 494.0
+offset_bottom = 42.0
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("13_doesi")
+
+[node name="Panel" type="Panel" parent="Shop/ShopBox/ShopPanel/PiggyBank"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = -37.0
+offset_top = 44.0
+offset_right = 86.0
+offset_bottom = 68.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5qlm7")
+
+[node name="MarginContainer" type="MarginContainer" parent="Shop/ShopBox/ShopPanel/PiggyBank/Panel"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -7.0
+offset_right = 40.0
+offset_bottom = 7.0
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+
+[node name="Gold2" type="Label" parent="Shop/ShopBox/ShopPanel/PiggyBank/Panel/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("7_c03e4")
+theme_override_font_sizes/font_size = 16
+text = "0g"
+vertical_alignment = 1
+uppercase = true
+
+[node name="SalePanel" type="Panel" parent="Shop/ShopBox/ShopPanel"]
+unique_name_in_owner = true
+visible = false
+z_index = 1
+layout_mode = 1
+offset_left = -288.0
+offset_top = -36.0
+offset_right = -151.0
+offset_bottom = 18.0
+scale = Vector2(2, 2)
+theme_override_styles/panel = SubResource("StyleBoxFlat_uokkt")
+
+[node name="HBoxContainer" type="VBoxContainer" parent="Shop/ShopBox/ShopPanel/SalePanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -94.5
+offset_top = -20.0
+offset_right = 94.5
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Shop/ShopBox/ShopPanel/SalePanel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 32
+text = "SALE"
+horizontal_alignment = 1
+
+[node name="SaleLabel" type="Label" parent="Shop/ShopBox/ShopPanel/SalePanel/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 8
+text = "(1 ITEM ONLY)"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Shop/ShopBox"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Spacer4" type="Control" parent="Shop/ShopBox/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.21
+mouse_filter = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Shop/ShopBox/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 4.0
+mouse_filter = 2
+
+[node name="Spacer2" type="Control" parent="Shop/ShopBox/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="ShopTable" type="Panel" parent="Shop/ShopBox/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 4.0
+theme = ExtResource("17_kqibb")
+
+[node name="MarginContainer" type="MarginContainer" parent="Shop/ShopBox/VBoxContainer/HBoxContainer/ShopTable"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="PackBoard" type="FlowContainer" parent="Shop/ShopBox/VBoxContainer/HBoxContainer/ShopTable/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/h_separation = 22
+theme_override_constants/v_separation = 27
+
+[node name="Spacer" type="Control" parent="Shop/ShopBox/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="Spacer3" type="Control" parent="Shop/ShopBox/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="Panel" type="Control" parent="Shop/ShopBox"]
+layout_mode = 2
+anchors_preset = 0
+offset_left = 216.0
+offset_top = 597.0
+offset_right = 727.0
+offset_bottom = 676.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Shop/ShopBox"]
+layout_mode = 0
+offset_left = 217.0
+offset_top = 611.0
+offset_right = 701.0
+offset_bottom = 676.0
+mouse_filter = 2
+
+[node name="CardButton" type="Button" parent="Shop/ShopBox/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+theme = ExtResource("17_kqibb")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "CARDS"
+
+[node name="RecipeButton" type="Button" parent="Shop/ShopBox/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+theme = ExtResource("17_kqibb")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "RECIPES
+"
+
+[node name="BlackMarketButton" type="Button" parent="Shop/ShopBox/HBoxContainer"]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+theme = ExtResource("17_kqibb")
+theme_type_variation = &"Occult"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "BLACKMARKET"
+
+[node name="Altar" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+
+[node name="AltarBox" type="Control" parent="Altar"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="AltarBackground" type="Button" parent="Altar/AltarBox"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 1
+mouse_default_cursor_shape = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Altar/AltarBox"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Spacer4" type="Control" parent="Altar/AltarBox/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Altar/AltarBox/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 6.0
+mouse_filter = 2
+
+[node name="Spacer2" type="Control" parent="Altar/AltarBox/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 2
+
+[node name="AltarTable" type="PanelContainer" parent="Altar/AltarBox/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_huwrx")
+
+[node name="MarginContainer" type="MarginContainer" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.13
+
+[node name="Label" type="Label" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("7_c03e4")
+theme_override_font_sizes/font_size = 24
+text = "THE 
+COOK"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("7_c03e4")
+theme_override_font_sizes/font_size = 24
+text = "THE 
+LEADER"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("7_c03e4")
+theme_override_font_sizes/font_size = 24
+text = "THE 
+ASPIRANT"
+horizontal_alignment = 1
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer/HBoxContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="Control2" type="Control" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer/HBoxContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="StatBar3" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer/HBoxContainer/PanelContainer/VBoxContainer" instance=ExtResource("74_w8p33")]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer/HBoxContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PanelContainer4" type="PanelContainer" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer/HBoxContainer/PanelContainer4"]
+layout_mode = 2
+
+[node name="Control2" type="Control" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer/HBoxContainer/PanelContainer4/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="StatBar2" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer/HBoxContainer/PanelContainer4/VBoxContainer" instance=ExtResource("74_w8p33")]
+layout_mode = 2
+stat_type = 1
+
+[node name="StatBar3" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer/HBoxContainer/PanelContainer4/VBoxContainer" instance=ExtResource("74_w8p33")]
+layout_mode = 2
+stat_type = 7
+
+[node name="Control" type="Control" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer/HBoxContainer/PanelContainer4/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Control2" type="Control" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="StatBar3" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("74_w8p33")]
+layout_mode = 2
+stat_type = 7
+
+[node name="Control" type="Control" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer2/HBoxContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="Control2" type="Control" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer2/HBoxContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="StatBar3" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer2/HBoxContainer/PanelContainer/VBoxContainer" instance=ExtResource("74_w8p33")]
+layout_mode = 2
+stat_type = 3
+
+[node name="Control" type="Control" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer2/HBoxContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PanelContainer4" type="PanelContainer" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer2/HBoxContainer/PanelContainer4"]
+layout_mode = 2
+
+[node name="Control2" type="Control" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer2/HBoxContainer/PanelContainer4/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="StatBar2" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer2/HBoxContainer/PanelContainer4/VBoxContainer" instance=ExtResource("74_w8p33")]
+layout_mode = 2
+stat_type = 2
+
+[node name="Control" type="Control" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer2/HBoxContainer/PanelContainer4/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer2/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer2/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Control2" type="Control" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer2/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer2/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="StatBar3" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer2/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("74_w8p33")]
+layout_mode = 2
+stat_type = 7
+
+[node name="Control" type="Control" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer2/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer3"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer3/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer3/HBoxContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="Control2" type="Control" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer3/HBoxContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="StatBar3" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer3/HBoxContainer/PanelContainer/VBoxContainer" instance=ExtResource("74_w8p33")]
+layout_mode = 2
+stat_type = 5
+
+[node name="Control" type="Control" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer3/HBoxContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PanelContainer4" type="PanelContainer" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer3/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer3/HBoxContainer/PanelContainer4"]
+layout_mode = 2
+
+[node name="Control2" type="Control" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer3/HBoxContainer/PanelContainer4/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="StatBar2" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer3/HBoxContainer/PanelContainer4/VBoxContainer" instance=ExtResource("74_w8p33")]
+layout_mode = 2
+stat_type = 4
+
+[node name="StatBar3" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer3/HBoxContainer/PanelContainer4/VBoxContainer" instance=ExtResource("74_w8p33")]
+layout_mode = 2
+stat_type = 6
+
+[node name="Control" type="Control" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer3/HBoxContainer/PanelContainer4/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer3/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer3/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Control2" type="Control" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer3/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer3/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="StatBar3" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer3/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("74_w8p33")]
+layout_mode = 2
+stat_type = 7
+
+[node name="Control" type="Control" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer5/VBoxContainer3/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.25
+
+[node name="Label" type="Label" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("7_c03e4")
+theme_override_font_sizes/font_size = 24
+text = "TRIBUTE:"
+horizontal_alignment = 2
+
+[node name="TributeValue" type="Label" parent="Altar/AltarBox/VBoxContainer/HBoxContainer/AltarTable/MarginContainer/VBoxContainer/HBoxContainer3"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("7_c03e4")
+theme_override_font_sizes/font_size = 24
+text = "1500"
+horizontal_alignment = 1
+
+[node name="Spacer" type="Control" parent="Altar/AltarBox/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+mouse_filter = 2
+
+[node name="Spacer3" type="Control" parent="Altar/AltarBox/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="PlaytestScreen" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+visible = false
+
+[node name="Panel" type="Panel" parent="PlaytestScreen"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_lv5i0")
+script = ExtResource("83_16er4")
+
+[node name="MarginContainer" type="MarginContainer" parent="PlaytestScreen/Panel"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -153.5
+offset_bottom = 153.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 120
+theme_override_constants/margin_right = 120
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PlaytestScreen/Panel/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PlaytestScreen/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/line_spacing = 12
+theme_override_fonts/font = ExtResource("7_c03e4")
+theme_override_font_sizes/font_size = 32
+text = "Thank you for play testing, your time will be invaluable to making this game better. I also hope you had some fun!
+
+The story progress ends here, for now.
+
+However, feel free to keep playing as much as you want. I've added extra recipes just to have fun with!
+
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Button" type="Button" parent="PlaytestScreen/Panel/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+text = "[click here to get back to cooking]"
+
+[node name="MouseCursor" type="CanvasLayer" parent="."]
+process_mode = 3
+layer = 10
+
+[node name="Cursor" type="Control" parent="MouseCursor"]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 0
+mouse_filter = 2
+script = ExtResource("94_or4wd")
+pointer = ExtResource("95_g28sr")
+can_lift = ExtResource("99_75su0")
+dragging = ExtResource("100_2twj2")
+augment = ExtResource("106_emfj3")
+
+[node name="CursorIcon" type="TextureRect" parent="MouseCursor/Cursor"]
+unique_name_in_owner = true
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = -5.0
+offset_top = -3.0
+offset_right = 19.0
+offset_bottom = 21.0
+mouse_filter = 2
+texture = ExtResource("95_g28sr")
+stretch_mode = 2
+
+[node name="AnimatedCursor" type="AnimatedSprite2D" parent="MouseCursor/Cursor"]
+unique_name_in_owner = true
+position = Vector2(6, 7)
+sprite_frames = SubResource("SpriteFrames_j1pg8")
+animation = &"augment"
+autoplay = "point_click"
+
+[connection signal="pressed" from="HUD/Control/Control/VBoxContainer/ShopButton" to="HUD/Control/Control/VBoxContainer/ShopButton" method="_on_pressed"]
+[connection signal="pressed" from="HUD/Control/Control/VBoxContainer/RecipeBookButton" to="HUD/Control/Control/VBoxContainer/RecipeBookButton" method="_on_pressed"]
+[connection signal="pressed" from="HUD/Control/Control/VBoxContainer/ContactsButton" to="HUD/Control/Control/VBoxContainer/ContactsButton" method="_on_pressed"]
+[connection signal="pressed" from="HUD/Control/Control/VBoxContainer/AltarButton" to="HUD/Control/Control/VBoxContainer/AltarButton" method="_on_pressed"]
+[connection signal="pressed" from="HUD/Control/Control/VBoxContainer/Merge" to="HUD/Control/Control/VBoxContainer/Merge" method="_on_pressed"]
+[connection signal="pressed" from="Shop/ShopBox/HBoxContainer/CardButton" to="Shop/ShopBox" method="_on_card_button_pressed"]
+[connection signal="pressed" from="Shop/ShopBox/HBoxContainer/RecipeButton" to="Shop/ShopBox" method="_on_recipe_button_pressed"]
+[connection signal="pressed" from="Shop/ShopBox/HBoxContainer/BlackMarketButton" to="Shop/ShopBox" method="_on_black_market_button_pressed"]
+[connection signal="pressed" from="PlaytestScreen/Panel/MarginContainer/VBoxContainer/Button" to="PlaytestScreen/Panel" method="_on_button_pressed"]

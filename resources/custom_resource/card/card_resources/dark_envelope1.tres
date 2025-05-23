@@ -1,0 +1,53 @@
+[gd_resource type="Resource" script_class="CardResource" load_steps=14 format=3 uid="uid://bm3n3egywfshx"]
+
+[ext_resource type="Script" uid="uid://b1g8xbktqcsx6" path="res://core/cards/actions_clicker/click_spawn.gd" id="1_tdw0o"]
+[ext_resource type="Script" uid="uid://cbotblw4lsjob" path="res://resources/custom_resource/recipe/recipe.gd" id="2_2lnix"]
+[ext_resource type="Script" uid="uid://bdypw102tume0" path="res://resources/custom_resource/card/card_resource.gd" id="2_6h64m"]
+[ext_resource type="Script" uid="uid://d2nwqyg808jry" path="res://resources/custom_resource/letters/letter_resource.gd" id="4_knbrr"]
+[ext_resource type="AudioStream" uid="uid://x3p645xgydy7" path="res://assets/sound/pop_wet.mp3" id="4_l21rp"]
+[ext_resource type="Resource" uid="uid://bhdntwcf3n5xl" path="res://resources/custom_resource/letters/letter_resource/letter_b.tres" id="5_fb2uw"]
+[ext_resource type="Resource" uid="uid://dx6r12f4736cw" path="res://resources/custom_resource/card/card_resources/dough_boy.tres" id="6_8b7pi"]
+[ext_resource type="Resource" uid="uid://j7i38nhkso5g" path="res://resources/custom_resource/card/card_resources/straw_doll.tres" id="7_8poi1"]
+[ext_resource type="Resource" uid="uid://c3rr1dcbj5gmj" path="res://resources/custom_resource/card/card_resources/ritual_dough.tres" id="7_c82cn"]
+[ext_resource type="Resource" uid="uid://c3xk1l72ej3dn" path="res://resources/custom_resource/card/card_resources/bone.tres" id="8_bioqv"]
+[ext_resource type="Resource" uid="uid://dkh0gllqqo145" path="res://resources/custom_resource/card/card_resources/chicken.tres" id="9_5r8cw"]
+[ext_resource type="Resource" uid="uid://uu646i3ogpvd" path="res://resources/custom_resource/card/card_resources/blood.tres" id="9_k62g5"]
+[ext_resource type="Resource" uid="uid://ckjrn48egb2y8" path="res://resources/custom_resource/card/card_resources/egg.tres" id="10_w68mk"]
+
+[resource]
+script = ExtResource("2_6h64m")
+card_name = "DARK_ENVELOPE"
+text_color = Color(0, 0, 0, 1)
+color = Color(0.496812, 0.291333, 0.430992, 1)
+rare_alt = false
+sfx = ExtResource("4_l21rp")
+recipes = Array[ExtResource("2_2lnix")]([])
+value = 0.0
+sellable = false
+has_speech = false
+occult = true
+can_burn = false
+meal = false
+meal_level = 1
+unique_prime_identifier = 269
+extended_class = 0
+character = false
+character_basic = false
+board = false
+progress_max_value = 5
+one_shot = true
+locked = false
+fuel_cards = Array[ExtResource("2_6h64m")]([])
+spawn_cards = Array[ExtResource("2_6h64m")]([])
+spawn_recipes = Array[ExtResource("2_6h64m")]([ExtResource("6_8b7pi"), ExtResource("7_c82cn"), ExtResource("7_8poi1"), ExtResource("8_bioqv"), ExtResource("9_k62g5"), ExtResource("9_5r8cw"), ExtResource("10_w68mk")])
+spawn_letters = Array[ExtResource("4_knbrr")]([ExtResource("5_fb2uw")])
+clicker = true
+click_action = ExtResource("1_tdw0o")
+ticker = false
+auto_on = false
+disable_control = false
+tick_speed = 1.0
+ritual_circle = false
+salts = 2
+is_storage = false
+max_storage = 0

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Letter" load_steps=2 format=3 uid="uid://debyw6e0lunjm"]
+
+[ext_resource type="Script" uid="uid://d2nwqyg808jry" path="res://resources/custom_resource/letters/letter_resource.gd" id="1_4bpm5"]
+
+[resource]
+script = ExtResource("1_4bpm5")
+type = 0
+snippet_owner = ""
+occult = true
+text = "The CONSUMING EYE grabs copies of what it is stacked on-top of.
+	-%#&@#"

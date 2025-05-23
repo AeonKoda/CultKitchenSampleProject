@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://bikse8cearp5o"]
+
+[ext_resource type="Script" uid="uid://bdypw102tume0" path="res://resources/custom_resource/card/card_resource.gd" id="1_dpo2k"]
+[ext_resource type="Resource" uid="uid://c1uu34x72attx" path="res://resources/custom_resource/card/card_resources/batter.tres" id="2_t3xy2"]
+[ext_resource type="Script" uid="uid://cbotblw4lsjob" path="res://resources/custom_resource/recipe/recipe.gd" id="3_taa7v"]
+[ext_resource type="Resource" uid="uid://ctgl2w2mgowq6" path="res://resources/custom_resource/card/card_resources/oven.tres" id="4_7dai6"]
+
+[resource]
+script = ExtResource("3_taa7v")
+index = 0
+tier = 1
+occult = false
+uses_tool = true
+tool = ExtResource("4_7dai6")
+recipe = Array[ExtResource("1_dpo2k")]([ExtResource("2_t3xy2")])
+result_path = "res://resources/custom_resource/card/card_resources/muffin.tres"
+result_uid = 0

@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="CardResource" load_steps=5 format=3 uid="uid://5hfrxlmi0qla"]
+
+[ext_resource type="Script" uid="uid://bdypw102tume0" path="res://resources/custom_resource/card/card_resource.gd" id="1_m47np"]
+[ext_resource type="Script" uid="uid://cbotblw4lsjob" path="res://resources/custom_resource/recipe/recipe.gd" id="2_btxoc"]
+[ext_resource type="Script" uid="uid://d2nwqyg808jry" path="res://resources/custom_resource/letters/letter_resource.gd" id="3_237fp"]
+[ext_resource type="Script" uid="uid://dms60vq4irwfh" path="res://core/cards/actions_ticker/tick_tutorial_3.gd" id="4_btxoc"]
+
+[resource]
+script = ExtResource("1_m47np")
+card_name = "GUIDE_3"
+unique_prime_identifier = 443
+text_color = Color(0, 0, 0, 1)
+color = Color(1, 1, 1, 1)
+rare_alt = false
+recipes = Array[ExtResource("2_btxoc")]([])
+value = 0.0
+sellable = true
+has_speech = true
+occult = false
+can_burn = false
+meal = false
+meal_level = 1
+extended_class = 0
+board = false
+board_lock = false
+progress_max_value = 4
+one_shot = false
+locked = false
+fuel_cards = Array[ExtResource("1_m47np")]([])
+spawn_cards = Array[ExtResource("1_m47np")]([])
+spawn_recipes = Array[ExtResource("1_m47np")]([])
+spawn_letters = Array[ExtResource("3_237fp")]([])
+clicker = false
+ticker = true
+auto_on = true
+disable_control = true
+tick_action = ExtResource("4_btxoc")
+tick_speed = 1.0
+ritual_circle = false
+salts = 2
+is_storage = false
+max_storage = 0

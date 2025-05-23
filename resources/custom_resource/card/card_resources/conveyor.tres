@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="CardResource" load_steps=5 format=3 uid="uid://bo4qnyaumjg6f"]
+
+[ext_resource type="Script" uid="uid://cbotblw4lsjob" path="res://resources/custom_resource/recipe/recipe.gd" id="1_3okgt"]
+[ext_resource type="Script" uid="uid://bdypw102tume0" path="res://resources/custom_resource/card/card_resource.gd" id="1_itwkx"]
+[ext_resource type="Resource" uid="uid://bqa86mlca2kib" path="res://resources/custom_resource/sleeve/conveyor_sleeve/conveyor_sleeve_resources/conveyor_resource_1.tres" id="1_psjw7"]
+[ext_resource type="Script" uid="uid://d2nwqyg808jry" path="res://resources/custom_resource/letters/letter_resource.gd" id="3_42fyw"]
+
+[resource]
+script = ExtResource("1_itwkx")
+card_name = "CONVEYOR"
+unique_prime_identifier = 173
+text_color = Color(0, 0, 0, 1)
+color = Color(0.45098, 0.435294, 0.498039, 1)
+rare_alt = false
+recipes = Array[ExtResource("1_3okgt")]([])
+value = 600.0
+sellable = true
+has_speech = false
+occult = false
+can_burn = false
+meal = false
+meal_level = 1
+extended_class = 2
+extended_class_resource = ExtResource("1_psjw7")
+board = false
+board_lock = false
+progress_max_value = 10
+one_shot = false
+locked = false
+fuel_cards = Array[ExtResource("1_itwkx")]([])
+spawn_cards = Array[ExtResource("1_itwkx")]([])
+spawn_recipes = Array[ExtResource("1_itwkx")]([])
+spawn_letters = Array[ExtResource("3_42fyw")]([])
+clicker = false
+ticker = false
+auto_on = false
+disable_control = false
+tick_speed = 0.1
+ritual_circle = false
+salts = 2
+is_storage = false
+max_storage = 0

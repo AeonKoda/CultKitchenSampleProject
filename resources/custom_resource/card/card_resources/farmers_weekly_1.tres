@@ -1,0 +1,63 @@
+[gd_resource type="Resource" script_class="CardResource" load_steps=9 format=3 uid="uid://c73vbihab5kvm"]
+
+[ext_resource type="Script" uid="uid://bdypw102tume0" path="res://resources/custom_resource/card/card_resource.gd" id="1_r6pjy"]
+[ext_resource type="Script" uid="uid://b1g8xbktqcsx6" path="res://core/cards/actions_clicker/click_spawn.gd" id="1_xw4l7"]
+[ext_resource type="Script" uid="uid://cbotblw4lsjob" path="res://resources/custom_resource/recipe/recipe.gd" id="2_ic1n5"]
+[ext_resource type="Script" uid="uid://d2nwqyg808jry" path="res://resources/custom_resource/letters/letter_resource.gd" id="3_xw4l7"]
+[ext_resource type="Resource" uid="uid://yjf1cosrk8fe" path="res://resources/custom_resource/card/card_resources/soil.tres" id="5_ikn61"]
+[ext_resource type="Resource" uid="uid://ixq5rf83dq1k" path="res://resources/custom_resource/card/card_resources/wild_crops.tres" id="6_nmkos"]
+
+[sub_resource type="Resource" id="Resource_ikn61"]
+script = ExtResource("3_xw4l7")
+type = 0
+snippet_owner = ""
+occult = false
+text = "[center]SELLING CARDS[/center]:
+To sell CARDs, drop them on the PIG in the bottom right."
+metadata/_custom_type_script = "uid://d2nwqyg808jry"
+
+[sub_resource type="Resource" id="Resource_sfw0q"]
+script = ExtResource("3_xw4l7")
+type = 0
+snippet_owner = ""
+occult = false
+text = "[center]FARMING CROPS:[/center]
+When you place a CROP under a FIELD, the FIELD will grow that CROP."
+metadata/_custom_type_script = "uid://d2nwqyg808jry"
+
+[resource]
+script = ExtResource("1_r6pjy")
+card_name = "FARMERS_WEEKLY"
+unique_prime_identifier = 373
+text_color = Color(0, 0, 0, 1)
+color = Color(1, 1, 1, 1)
+rare_alt = false
+recipes = Array[ExtResource("2_ic1n5")]([])
+value = 0.0
+sellable = true
+has_speech = false
+occult = false
+can_burn = false
+meal = false
+meal_level = 1
+extended_class = 0
+board = false
+board_lock = false
+progress_max_value = 5
+one_shot = true
+locked = false
+fuel_cards = Array[ExtResource("1_r6pjy")]([])
+spawn_cards = Array[ExtResource("1_r6pjy")]([])
+spawn_recipes = Array[ExtResource("1_r6pjy")]([ExtResource("6_nmkos"), ExtResource("5_ikn61")])
+spawn_letters = Array[ExtResource("3_xw4l7")]([SubResource("Resource_ikn61"), SubResource("Resource_sfw0q")])
+clicker = true
+click_action = ExtResource("1_xw4l7")
+ticker = false
+auto_on = false
+disable_control = false
+tick_speed = 1.0
+ritual_circle = false
+salts = 2
+is_storage = false
+max_storage = 0
+metadata/_custom_type_script = "uid://bdypw102tume0"

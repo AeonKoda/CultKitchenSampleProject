@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1omnp8s652c7"]
+
+[ext_resource type="Script" uid="uid://cxo018334d7f7" path="res://core/recipe_book.gd" id="1_kffn4"]
+[ext_resource type="Resource" uid="uid://wpsbtpyimd5f" path="res://resources/custom_resource/recipe/recipe_dictionary_resources/primes_recipe_dict.tres" id="8_fckrd"]
+
+[node name="RecipeBook" type="Node"]
+script = ExtResource("1_kffn4")
+primes_recipe_dict = ExtResource("8_fckrd")

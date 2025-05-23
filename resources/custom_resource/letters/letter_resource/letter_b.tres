@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Letter" load_steps=2 format=3 uid="uid://bhdntwcf3n5xl"]
+
+[ext_resource type="Script" uid="uid://d2nwqyg808jry" path="res://resources/custom_resource/letters/letter_resource.gd" id="1_0w3ri"]
+
+[resource]
+script = ExtResource("1_0w3ri")
+type = 0
+snippet_owner = ""
+occult = true
+text = "Something to get [shake rate=20.0 level=6 connected=1]IT[/shake] started.
+	-%#&@#"

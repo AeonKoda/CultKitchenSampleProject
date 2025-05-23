@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://b66eeaji7b7k6"]
+
+[ext_resource type="Script" uid="uid://bglqnd5syywgj" path="res://core/cards/sleeves/conveyor/wheel.gd" id="1_al4nw"]
+[ext_resource type="Texture2D" uid="uid://c60ppad1bidu3" path="res://assets/textures/conveyor_wheel.png" id="1_d33do"]
+[ext_resource type="SpriteFrames" uid="uid://bjjhrso3uoed7" path="res://core/cards/sleeves/conveyor/wheel_frames.tres" id="2_g2w2h"]
+
+[node name="Wheel" type="TextureRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(6.5, 6.5)
+texture = ExtResource("1_d33do")
+stretch_mode = 2
+script = ExtResource("1_al4nw")
+frames = ExtResource("2_g2w2h")

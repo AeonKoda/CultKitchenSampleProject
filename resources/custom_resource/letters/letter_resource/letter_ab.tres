@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Letter" load_steps=2 format=3 uid="uid://4ehurbbkmkdh"]
+
+[ext_resource type="Script" uid="uid://d2nwqyg808jry" path="res://resources/custom_resource/letters/letter_resource.gd" id="1_ls17u"]
+
+[resource]
+script = ExtResource("1_ls17u")
+type = 0
+snippet_owner = ""
+occult = false
+text = "P.S. Drag LETTERS & RECIPES on the book to store them!
+	-Love Mom & Dad"

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://b5tablyap0yok"]
+
+[ext_resource type="Script" uid="uid://bdypw102tume0" path="res://resources/custom_resource/card/card_resource.gd" id="1_s84of"]
+[ext_resource type="Resource" uid="uid://c868f33pjyfer" path="res://resources/custom_resource/card/card_resources/guide_1.tres" id="2_tc7kh"]
+[ext_resource type="Resource" uid="uid://5hfrxlmi0qla" path="res://resources/custom_resource/card/card_resources/guide_3.tres" id="3_noyr0"]
+[ext_resource type="Script" uid="uid://cbotblw4lsjob" path="res://resources/custom_resource/recipe/recipe.gd" id="4_xpgly"]
+
+[resource]
+script = ExtResource("4_xpgly")
+index = 0
+tier = 0
+occult = false
+uses_tool = false
+recipe = Array[ExtResource("1_s84of")]([ExtResource("2_tc7kh"), ExtResource("3_noyr0")])
+result_path = "res://resources/custom_resource/card/card_resources/guide_4.tres"
+result_uid = 0

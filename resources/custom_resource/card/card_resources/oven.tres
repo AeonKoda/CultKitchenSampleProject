@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="CardResource" load_steps=8 format=3 uid="uid://ctgl2w2mgowq6"]
+
+[ext_resource type="Script" uid="uid://cbotblw4lsjob" path="res://resources/custom_resource/recipe/recipe.gd" id="1_7w5nw"]
+[ext_resource type="Texture2D" uid="uid://by3jngl8yw720" path="res://assets/textures/oven.png" id="1_nt52q"]
+[ext_resource type="Script" uid="uid://bdypw102tume0" path="res://resources/custom_resource/card/card_resource.gd" id="1_rgysb"]
+[ext_resource type="Script" uid="uid://dt4twwe2fywe6" path="res://core/cards/actions_ticker/tick_mix.gd" id="2_5mxmf"]
+[ext_resource type="Texture2D" uid="uid://btbotp4is18qi" path="res://assets/textures/oven_off.png" id="2_ymqj7"]
+[ext_resource type="Script" uid="uid://d2nwqyg808jry" path="res://resources/custom_resource/letters/letter_resource.gd" id="3_mwqot"]
+[ext_resource type="AudioStream" uid="uid://x3p645xgydy7" path="res://assets/sound/pop_wet.mp3" id="7_quufj"]
+
+[resource]
+script = ExtResource("1_rgysb")
+card_name = "OVEN"
+unique_prime_identifier = 7
+text_color = Color(0, 0, 0, 1)
+color = Color(0.8, 0.611765, 0.486275, 1)
+art_texture = ExtResource("2_ymqj7")
+alternate_art_texture = ExtResource("1_nt52q")
+rare_alt = true
+sfx = ExtResource("7_quufj")
+recipes = Array[ExtResource("1_7w5nw")]([])
+value = 100.0
+sellable = false
+has_speech = false
+occult = false
+can_burn = false
+meal = false
+meal_level = 1
+extended_class = 0
+board = false
+board_lock = false
+progress_max_value = 5
+one_shot = false
+locked = false
+fuel_cards = Array[ExtResource("1_rgysb")]([])
+spawn_cards = Array[ExtResource("1_rgysb")]([])
+spawn_recipes = Array[ExtResource("1_rgysb")]([])
+spawn_letters = Array[ExtResource("3_mwqot")]([])
+clicker = false
+ticker = true
+auto_on = false
+disable_control = false
+tick_action = ExtResource("2_5mxmf")
+tick_speed = 1.0
+ritual_circle = false
+salts = 2
+is_storage = false
+max_storage = 0

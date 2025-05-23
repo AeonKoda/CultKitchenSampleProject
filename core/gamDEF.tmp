@@ -1,0 +1,821 @@
+[gd_scene load_steps=30 format=3 uid="uid://gpu5ud8v5tiv"]
+
+[ext_resource type="Script" path="res://game/game_menu.gd" id="1_52ut1"]
+[ext_resource type="Texture2D" uid="uid://3uv12nxlyijn" path="res://art/cultkitchen_splash_art.png" id="1_xwosq"]
+[ext_resource type="Texture2D" uid="uid://bdof7xb5f48jb" path="res://art/cultkitchen_splash_art_title.png" id="2_bcpfa"]
+[ext_resource type="FontFile" uid="uid://b5v3erupngsmf" path="res://art/fonts/dogicapixel.otf" id="3_m5pgu"]
+[ext_resource type="Texture2D" uid="uid://cost6svklu4" path="res://art/cultkitchen_splash_art_atlas.png" id="5_jb6t1"]
+[ext_resource type="Texture2D" uid="uid://1usit02tijcy" path="res://art/card_panel.png" id="6_hsmk3"]
+[ext_resource type="Shader" path="res://art/shaders/blur.gdshader" id="6_vjy0s"]
+
+[sub_resource type="Gradient" id="Gradient_0w3fd"]
+colors = PackedColorArray(0.729, 0.9, 0.7746, 1, 0.803922, 0.482353, 0.388235, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_qd01d"]
+gradient = SubResource("Gradient_0w3fd")
+height = 128
+fill_from = Vector2(1, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e5nrf"]
+atlas = ExtResource("5_jb6t1")
+region = Rect2(300, 0, 150, 220)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x6jfi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7y54t"]
+atlas = ExtResource("5_jb6t1")
+region = Rect2(150, 0, 150, 220)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v1pkk"]
+atlas = ExtResource("5_jb6t1")
+region = Rect2(900, 0, 150, 220)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a1vv1"]
+atlas = ExtResource("5_jb6t1")
+region = Rect2(900, 0, 150, 220)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pnuhd"]
+atlas = ExtResource("5_jb6t1")
+region = Rect2(900, 0, 150, 220)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jrwtl"]
+atlas = ExtResource("5_jb6t1")
+region = Rect2(0, 0, 150, 220)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_35s3q"]
+atlas = ExtResource("5_jb6t1")
+region = Rect2(450, 0, 150, 220)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_40qxs"]
+atlas = ExtResource("5_jb6t1")
+region = Rect2(600, 0, 150, 220)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0eakf"]
+atlas = ExtResource("5_jb6t1")
+region = Rect2(750, 0, 150, 220)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8u1wm"]
+bg_color = Color(0.960784, 0.556863, 0.513726, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vnhok"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_p8k5n"]
+shader = ExtResource("6_vjy0s")
+shader_parameter/lod = 0.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xl0cd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gij3x"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lcp2g"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rhybs"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_osn7t"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g8neg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ee152"]
+
+[node name="GameMenu" type="Node2D"]
+process_mode = 3
+script = ExtResource("1_52ut1")
+
+[node name="Menu" type="Node2D" parent="."]
+unique_name_in_owner = true
+scale = Vector2(0.889, 0.889)
+
+[node name="Background" type="TextureRect" parent="Menu"]
+unique_name_in_owner = true
+offset_top = -827.0
+offset_right = 1440.0
+offset_bottom = 957.0
+texture = SubResource("GradientTexture2D_qd01d")
+
+[node name="MenuTexture" type="TextureRect" parent="Menu"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.576471)
+offset_top = -828.0
+offset_right = 1920.0
+offset_bottom = 276.0
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("1_xwosq")
+expand_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="Menu"]
+offset_left = 200.0
+offset_top = -1111.0
+offset_right = 1224.0
+offset_bottom = -87.0
+texture = ExtResource("2_bcpfa")
+
+[node name="Cards" type="Control" parent="Menu"]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 0
+offset_top = 106.0
+offset_right = 40.0
+offset_bottom = 146.0
+
+[node name="SaveCard" type="TextureButton" parent="Menu/Cards"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 630.0
+offset_top = -411.0
+offset_right = 809.0
+offset_bottom = -150.0
+pivot_offset = Vector2(75, 110)
+texture_normal = SubResource("AtlasTexture_e5nrf")
+texture_pressed = SubResource("AtlasTexture_e5nrf")
+texture_hover = SubResource("AtlasTexture_e5nrf")
+texture_disabled = SubResource("AtlasTexture_e5nrf")
+stretch_mode = 4
+
+[node name="SaveGame" type="Label" parent="Menu/Cards/SaveCard"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = -2.31922
+offset_top = 200.399
+offset_right = 180.681
+offset_bottom = 240.399
+rotation = 0.0190179
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_m5pgu")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxEmpty_x6jfi")
+text = "NEW GAME
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LoadCard" type="TextureButton" parent="Menu/Cards"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 418.0
+offset_top = -448.0
+offset_right = 597.0
+offset_bottom = -187.0
+rotation = 0.268543
+pivot_offset = Vector2(75, 110)
+disabled = true
+texture_normal = SubResource("AtlasTexture_7y54t")
+texture_pressed = SubResource("AtlasTexture_7y54t")
+texture_hover = SubResource("AtlasTexture_7y54t")
+texture_disabled = SubResource("AtlasTexture_7y54t")
+stretch_mode = 4
+
+[node name="LoadGame" type="Label" parent="Menu/Cards/LoadCard"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = -5.55333
+offset_top = 200.311
+offset_right = 177.446
+offset_bottom = 240.311
+rotation = -0.0115713
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_m5pgu")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxEmpty_x6jfi")
+text = "LOAD GAME"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ExitCard" type="TextureButton" parent="Menu/Cards"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 845.0
+offset_top = -431.0
+offset_right = 1024.0
+offset_bottom = -170.0
+rotation = -0.186933
+pivot_offset = Vector2(75, 110)
+texture_normal = SubResource("AtlasTexture_v1pkk")
+texture_pressed = SubResource("AtlasTexture_a1vv1")
+texture_hover = SubResource("AtlasTexture_pnuhd")
+stretch_mode = 4
+
+[node name="Exit2" type="Label" parent="Menu/Cards/ExitCard"]
+layout_mode = 0
+offset_left = -5.06205
+offset_top = 199.683
+offset_right = 177.938
+offset_bottom = 239.683
+rotation = -0.00750257
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_m5pgu")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxEmpty_x6jfi")
+text = "EXIT GAME
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect4" type="TextureRect" parent="Menu/Cards"]
+layout_mode = 0
+offset_left = 1208.0
+offset_top = -525.0
+offset_right = 1387.0
+offset_bottom = -264.0
+rotation = -0.447382
+texture = SubResource("AtlasTexture_jrwtl")
+stretch_mode = 4
+
+[node name="TextureRect7" type="TextureRect" parent="Menu/Cards"]
+layout_mode = 0
+offset_left = 95.0
+offset_top = -639.0
+offset_right = 274.0
+offset_bottom = -378.0
+rotation = 0.48946
+texture = SubResource("AtlasTexture_35s3q")
+stretch_mode = 4
+
+[node name="TextureRect8" type="TextureRect" parent="Menu/Cards"]
+layout_mode = 0
+offset_left = 1018.0
+offset_top = -462.0
+offset_right = 1197.0
+offset_bottom = -201.0
+rotation = -0.330752
+texture = SubResource("AtlasTexture_40qxs")
+stretch_mode = 4
+
+[node name="TextureRect9" type="TextureRect" parent="Menu/Cards"]
+layout_mode = 0
+offset_left = 282.0
+offset_top = -542.0
+offset_right = 461.0
+offset_bottom = -281.0
+rotation = 0.411736
+texture = SubResource("AtlasTexture_0eakf")
+stretch_mode = 4
+
+[node name="CenterContainer" type="CenterContainer" parent="Menu"]
+offset_left = 719.0
+offset_top = -433.0
+offset_right = 821.0
+offset_bottom = -367.0
+use_top_left = true
+
+[node name="Play" type="Button" parent="Menu/CenterContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_m5pgu")
+theme_override_font_sizes/font_size = 80
+theme_override_styles/hover = SubResource("StyleBoxFlat_8u1wm")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_vnhok")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_x6jfi")
+text = "PLAY"
+
+[node name="Save" type="Button" parent="Menu"]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 621.0
+offset_top = -351.0
+offset_right = 804.0
+offset_bottom = -330.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_m5pgu")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/hover = SubResource("StyleBoxFlat_8u1wm")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_vnhok")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_x6jfi")
+text = "SAVE GAME"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Menu"]
+visible = false
+offset_left = 512.0
+offset_top = -115.0
+offset_right = 1208.0
+offset_bottom = -75.0
+theme_override_constants/separation = 60
+
+[node name="SaveGame" type="Button" parent="Menu/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_m5pgu")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/hover = SubResource("StyleBoxFlat_8u1wm")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_vnhok")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_x6jfi")
+text = "SAVE GAME"
+
+[node name="LoadGame" type="Button" parent="Menu/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_m5pgu")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/hover = SubResource("StyleBoxFlat_8u1wm")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_vnhok")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_x6jfi")
+text = "LOAD GAME"
+
+[node name="Control" type="Control" parent="Menu/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Exit" type="Button" parent="Menu/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_m5pgu")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/hover = SubResource("StyleBoxFlat_8u1wm")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_vnhok")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_x6jfi")
+text = "EXIT
+"
+
+[node name="Blur" type="ColorRect" parent="Menu"]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_p8k5n")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -828.0
+offset_right = 1440.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_lock_ = true
+
+[node name="PanelCard" type="TextureRect" parent="Menu/Blur"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -219.0
+offset_top = -746.0
+offset_right = 219.0
+offset_bottom = -446.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_hsmk3")
+stretch_mode = 3
+
+[node name="SaveGame" type="Label" parent="Menu/Blur/PanelCard"]
+layout_mode = 0
+offset_left = 103.913
+offset_top = 44.0
+offset_right = 339.913
+offset_bottom = 84.0
+theme_override_colors/font_color = Color(0.0862745, 0.00392157, 0.113725, 1)
+theme_override_fonts/font = ExtResource("3_m5pgu")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxEmpty_x6jfi")
+text = "Exit Game"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SaveGame2" type="Label" parent="Menu/Blur/PanelCard"]
+layout_mode = 0
+offset_left = 47.9128
+offset_top = 103.0
+offset_right = 395.913
+offset_bottom = 151.0
+theme_override_colors/font_color = Color(0.0862745, 0.00392157, 0.113725, 1)
+theme_override_fonts/font = ExtResource("3_m5pgu")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxEmpty_x6jfi")
+text = "Are you sure?
+
+unsved progress will be lost"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="exit" type="Button" parent="Menu/Blur/PanelCard"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 264.913
+offset_top = 222.0
+offset_right = 390.913
+offset_bottom = 244.0
+theme_override_colors/font_hover_color = Color(0.929412, 0.47451, 0.478431, 1)
+theme_override_colors/font_color = Color(0.0862745, 0.00392157, 0.113725, 1)
+theme_override_fonts/font = ExtResource("3_m5pgu")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xl0cd")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_gij3x")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_lcp2g")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rhybs")
+text = "EXIT GAME"
+
+[node name="back" type="Button" parent="Menu/Blur/PanelCard"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 0
+offset_left = 70.0
+offset_top = 221.0
+offset_right = 228.0
+offset_bottom = 243.0
+theme_override_colors/font_hover_color = Color(0.929412, 0.47451, 0.478431, 1)
+theme_override_colors/font_color = Color(0.0862745, 0.00392157, 0.113725, 1)
+theme_override_fonts/font = ExtResource("3_m5pgu")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xl0cd")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_gij3x")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_lcp2g")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rhybs")
+text = "take me back"
+
+[node name="PanelCard2" type="TextureRect" parent="Menu/Blur"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -219.0
+offset_top = -746.0
+offset_right = 219.0
+offset_bottom = -446.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_hsmk3")
+stretch_mode = 3
+
+[node name="SaveGame" type="Label" parent="Menu/Blur/PanelCard2"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -152.0
+offset_top = 20.5174
+offset_right = 152.0
+offset_bottom = 60.5174
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.0862745, 0.00392157, 0.113725, 1)
+theme_override_fonts/font = ExtResource("3_m5pgu")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxEmpty_x6jfi")
+text = "New Game
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SaveGame2" type="Label" parent="Menu/Blur/PanelCard2"]
+layout_mode = 2
+offset_top = 89.1339
+offset_right = 438.0
+offset_bottom = 103.134
+theme_override_colors/font_color = Color(0.0862745, 0.00392157, 0.113725, 1)
+theme_override_fonts/font = ExtResource("3_m5pgu")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxEmpty_x6jfi")
+text = "Select a Save Slot"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="back1" type="Button" parent="Menu/Blur/PanelCard2"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 0
+offset_left = 141.295
+offset_top = 244.364
+offset_right = 299.295
+offset_bottom = 266.364
+theme_override_colors/font_hover_color = Color(0.929412, 0.47451, 0.478431, 1)
+theme_override_colors/font_color = Color(0.0862745, 0.00392157, 0.113725, 1)
+theme_override_fonts/font = ExtResource("3_m5pgu")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xl0cd")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_gij3x")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_lcp2g")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rhybs")
+text = "take me back"
+
+[node name="SaveButtonBox" type="VBoxContainer" parent="Menu/Blur/PanelCard2"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -15.8718
+offset_bottom = 58.1282
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 6
+
+[node name="SaveButton1" type="Button" parent="Menu/Blur/PanelCard2/SaveButtonBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.84, 0.6216, 0.504, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "[SAVE 1: My Game]"
+flat = true
+
+[node name="SaveButton2" type="Button" parent="Menu/Blur/PanelCard2/SaveButtonBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.84, 0.6216, 0.504, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "[SAVE 2: (empty)]"
+flat = true
+
+[node name="SaveButton3" type="Button" parent="Menu/Blur/PanelCard2/SaveButtonBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.84, 0.6216, 0.504, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "[SAVE 3: (empty)]"
+flat = true
+
+[node name="FileNaming" type="TextureRect" parent="Menu/Blur/PanelCard2"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("6_hsmk3")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu/Blur/PanelCard2/FileNaming"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -41.0
+offset_right = 120.0
+offset_bottom = 108.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 24
+
+[node name="SaveGame3" type="Label" parent="Menu/Blur/PanelCard2/FileNaming/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.0862745, 0.00392157, 0.113725, 1)
+theme_override_fonts/font = ExtResource("3_m5pgu")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxEmpty_x6jfi")
+text = "NAME YOUR NEW SAVE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SaveInput" type="LineEdit" parent="Menu/Blur/PanelCard2/FileNaming/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0.422098, 0.244514, 0.151321, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_osn7t")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_g8neg")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ee152")
+placeholder_text = "[enter save name]"
+alignment = 1
+max_length = 10
+expand_to_text_length = true
+flat = true
+caret_blink = true
+
+[node name="SubmitName" type="Button" parent="Menu/Blur/PanelCard2/FileNaming"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 66.2767
+offset_top = -53.3858
+offset_right = 156.277
+offset_bottom = -31.3858
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_hover_color = Color(0.929412, 0.47451, 0.478431, 1)
+theme_override_colors/font_color = Color(0.0862745, 0.00392157, 0.113725, 1)
+theme_override_font_sizes/font_size = 16
+text = "SUBMIT"
+flat = true
+
+[node name="backNaming" type="Button" parent="Menu/Blur/PanelCard2/FileNaming"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -127.199
+offset_top = -48.0
+offset_right = -24.1991
+offset_bottom = -34.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_hover_color = Color(0.929412, 0.47451, 0.478431, 1)
+theme_override_colors/font_color = Color(0.0862745, 0.00392157, 0.113725, 1)
+theme_override_fonts/font = ExtResource("3_m5pgu")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xl0cd")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_gij3x")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_lcp2g")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rhybs")
+text = "CANCEL"
+
+[node name="PanelCard3" type="TextureRect" parent="Menu/Blur"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -219.0
+offset_top = -746.0
+offset_right = 219.0
+offset_bottom = -446.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_hsmk3")
+stretch_mode = 3
+
+[node name="SaveGame" type="Label" parent="Menu/Blur/PanelCard3"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -152.0
+offset_top = 20.5174
+offset_right = 152.0
+offset_bottom = 60.5174
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.0862745, 0.00392157, 0.113725, 1)
+theme_override_fonts/font = ExtResource("3_m5pgu")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxEmpty_x6jfi")
+text = "Load Game
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SaveGame2" type="Label" parent="Menu/Blur/PanelCard3"]
+layout_mode = 2
+offset_top = 89.1339
+offset_right = 438.0
+offset_bottom = 103.134
+theme_override_colors/font_color = Color(0.0862745, 0.00392157, 0.113725, 1)
+theme_override_fonts/font = ExtResource("3_m5pgu")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxEmpty_x6jfi")
+text = "Select a Save File"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="back2" type="Button" parent="Menu/Blur/PanelCard3"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 0
+offset_left = 141.295
+offset_top = 244.364
+offset_right = 299.295
+offset_bottom = 266.364
+theme_override_colors/font_hover_color = Color(0.929412, 0.47451, 0.478431, 1)
+theme_override_colors/font_color = Color(0.0862745, 0.00392157, 0.113725, 1)
+theme_override_fonts/font = ExtResource("3_m5pgu")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xl0cd")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_gij3x")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_lcp2g")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rhybs")
+text = "take me back"
+
+[node name="LoadButtonBox" type="VBoxContainer" parent="Menu/Blur/PanelCard3"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -15.8718
+offset_bottom = 58.1282
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 6
+
+[node name="LoadButton1" type="Button" parent="Menu/Blur/PanelCard3/LoadButtonBox"]
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(0.647059, 0.501961, 0.52549, 1)
+theme_override_colors/font_hover_color = Color(0.84, 0.6216, 0.504, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "[SAVE 1: My Game]"
+flat = true
+
+[node name="LoadButton2" type="Button" parent="Menu/Blur/PanelCard3/LoadButtonBox"]
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(0.647059, 0.501961, 0.52549, 1)
+theme_override_colors/font_hover_color = Color(0.84, 0.6216, 0.504, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "[SAVE 2: (empty)]"
+flat = true
+
+[node name="LoadButton3" type="Button" parent="Menu/Blur/PanelCard3/LoadButtonBox"]
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(0.647059, 0.501961, 0.52549, 1)
+theme_override_colors/font_hover_color = Color(0.84, 0.6216, 0.504, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "[SAVE 3: (empty)]"
+flat = true
+
+[node name="LoadConfirm" type="TextureRect" parent="Menu/Blur/PanelCard3"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_hsmk3")
+stretch_mode = 3
+
+[node name="SaveGame" type="Label" parent="Menu/Blur/PanelCard3/LoadConfirm"]
+layout_mode = 0
+offset_left = 104.174
+offset_top = 48.6389
+offset_right = 340.174
+offset_bottom = 88.6389
+scale = Vector2(1.00416, 1.05064)
+theme_override_colors/font_color = Color(0.0862745, 0.00392157, 0.113725, 1)
+theme_override_fonts/font = ExtResource("3_m5pgu")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxEmpty_x6jfi")
+text = "Load GAME"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SaveGame2" type="Label" parent="Menu/Blur/PanelCard3/LoadConfirm"]
+layout_mode = 0
+offset_left = 47.9128
+offset_top = 103.0
+offset_right = 395.913
+offset_bottom = 151.0
+theme_override_colors/font_color = Color(0.0862745, 0.00392157, 0.113725, 1)
+theme_override_fonts/font = ExtResource("3_m5pgu")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxEmpty_x6jfi")
+text = "Are you sure?
+
+unsved progress will be lost"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="load" type="Button" parent="Menu/Blur/PanelCard3/LoadConfirm"]
+layout_mode = 0
+offset_left = 264.913
+offset_top = 222.0
+offset_right = 390.913
+offset_bottom = 244.0
+theme_override_colors/font_hover_color = Color(0.929412, 0.47451, 0.478431, 1)
+theme_override_colors/font_color = Color(0.0862745, 0.00392157, 0.113725, 1)
+theme_override_fonts/font = ExtResource("3_m5pgu")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xl0cd")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_gij3x")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_lcp2g")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rhybs")
+text = "LOAD GAME"
+
+[node name="back3" type="Button" parent="Menu/Blur/PanelCard3/LoadConfirm"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 0
+offset_left = 70.0
+offset_top = 221.0
+offset_right = 228.0
+offset_bottom = 243.0
+theme_override_colors/font_hover_color = Color(0.929412, 0.47451, 0.478431, 1)
+theme_override_colors/font_color = Color(0.0862745, 0.00392157, 0.113725, 1)
+theme_override_fonts/font = ExtResource("3_m5pgu")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xl0cd")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_gij3x")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_lcp2g")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rhybs")
+text = "take me back"
+
+[connection signal="pressed" from="Menu/CenterContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Menu/Save" to="." method="_on_save_pressed"]
+[connection signal="pressed" from="Menu/Blur/PanelCard/exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Menu/Blur/PanelCard/back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Menu/Blur/PanelCard2/back1" to="." method="_on_back_1_pressed"]
+[connection signal="pressed" from="Menu/Blur/PanelCard2/FileNaming/SubmitName" to="." method="_on_submit_name_pressed"]
+[connection signal="pressed" from="Menu/Blur/PanelCard2/FileNaming/backNaming" to="." method="_on_back_naming_pressed"]
+[connection signal="pressed" from="Menu/Blur/PanelCard3/back2" to="." method="_on_back_2_pressed"]
+[connection signal="pressed" from="Menu/Blur/PanelCard3/LoadConfirm/load" to="." method="_on_load_pressed"]
+[connection signal="pressed" from="Menu/Blur/PanelCard3/LoadConfirm/back3" to="." method="_on_back_3_pressed"]

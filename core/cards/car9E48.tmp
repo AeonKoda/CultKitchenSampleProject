@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://dwwtfxiofo1cn"]
+
+[ext_resource type="Script" path="res://cards/card.gd" id="1_1g5pa"]
+[ext_resource type="Texture2D" uid="uid://bglq5qigvqo02" path="res://art/card.png" id="2_kyyme"]
+[ext_resource type="FontFile" uid="uid://b5v3erupngsmf" path="res://art/dogicapixel.otf" id="3_uy552"]
+
+[node name="Card" type="Control"]
+custom_minimum_size = Vector2(70, 100)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_1g5pa")
+
+[node name="Texture" type="TextureRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_kyyme")
+
+[node name="Label" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 63.0
+offset_bottom = 19.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_uy552")
+theme_override_font_sizes/normal_font_size = 8
+bbcode_enabled = true
+text = "[center]Card Type[/center]"
+autowrap_mode = 0

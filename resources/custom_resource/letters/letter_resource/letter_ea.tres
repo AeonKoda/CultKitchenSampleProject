@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Letter" load_steps=2 format=3 uid="uid://c26eib4wxuowk"]
+
+[ext_resource type="Script" uid="uid://d2nwqyg808jry" path="res://resources/custom_resource/letters/letter_resource.gd" id="1_8f642"]
+
+[resource]
+script = ExtResource("1_8f642")
+type = 0
+snippet_owner = ""
+occult = true
+text = "For this I've granted access to the Black Market in the shop
+	-%#&@#"

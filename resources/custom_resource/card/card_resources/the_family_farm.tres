@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="CardResource" load_steps=4 format=3 uid="uid://bnynos1yk4m4j"]
+
+[ext_resource type="Script" uid="uid://bdypw102tume0" path="res://resources/custom_resource/card/card_resource.gd" id="1_sbsl8"]
+[ext_resource type="Script" uid="uid://cbotblw4lsjob" path="res://resources/custom_resource/recipe/recipe.gd" id="2_hje6a"]
+[ext_resource type="Script" uid="uid://d2nwqyg808jry" path="res://resources/custom_resource/letters/letter_resource.gd" id="4_mj5yp"]
+
+[resource]
+script = ExtResource("1_sbsl8")
+card_name = "THE_FAMILY_FARM"
+unique_prime_identifier = 971
+text_color = Color(0, 0, 0, 1)
+color = Color(0.972549, 0.972549, 0.760784, 1)
+rare_alt = false
+recipes = Array[ExtResource("2_hje6a")]([])
+value = 0.0
+sellable = true
+has_speech = false
+occult = false
+can_burn = true
+meal = false
+meal_level = 1
+extended_class = 0
+board = true
+board_lock = false
+progress_max_value = 0
+one_shot = false
+locked = false
+fuel_cards = Array[ExtResource("1_sbsl8")]([])
+spawn_cards = Array[ExtResource("1_sbsl8")]([])
+spawn_recipes = Array[ExtResource("1_sbsl8")]([])
+spawn_letters = Array[ExtResource("4_mj5yp")]([])
+clicker = false
+ticker = false
+auto_on = false
+disable_control = false
+tick_speed = 1.0
+ritual_circle = false
+salts = 2
+is_storage = false
+max_storage = 0
+metadata/_custom_type_script = "uid://bdypw102tume0"

@@ -1,0 +1,621 @@
+[gd_scene load_steps=26 format=3 uid="uid://cpxm2pyh0nx40"]
+
+[ext_resource type="FontFile" uid="uid://b5v3erupngsmf" path="res://assets/fonts/dogicapixel.otf" id="1_tryxx"]
+[ext_resource type="Script" uid="uid://c0r6pe7jgl3se" path="res://core/scenes/hud/hud.gd" id="1_u4qx2"]
+[ext_resource type="Texture2D" uid="uid://c88xnxqkyfl3o" path="res://assets/textures/shop_icon.png" id="2_u4qx2"]
+[ext_resource type="FontFile" uid="uid://hvgltkctjutu" path="res://assets/fonts/CHNOPixelCodePro-Regular.otf" id="2_xgh7a"]
+[ext_resource type="Texture2D" uid="uid://bjvrjkct07e5n" path="res://assets/textures/shop_icon_hover.png" id="3_8wwqk"]
+[ext_resource type="Texture2D" uid="uid://lswr24scrkbf" path="res://assets/textures/piggy_bank_icon.png" id="12_q8drr"]
+[ext_resource type="Script" uid="uid://sdtblqqghh4c" path="res://core/scenes/hud/pig.gd" id="13_eipt3"]
+[ext_resource type="Texture2D" uid="uid://d1qgk8lsmrl1s" path="res://assets/textures/keyboard_g.png" id="13_ekeb1"]
+[ext_resource type="Texture2D" uid="uid://dnc4q5c46msdy" path="res://assets/textures/keyboard_q.png" id="13_fxi8g"]
+[ext_resource type="Texture2D" uid="uid://gx4ua7kpde7v" path="res://assets/textures/keyboard_w.png" id="13_stpr8"]
+[ext_resource type="Script" uid="uid://b6si5tejr536c" path="res://core/scenes/hud/input_panel.gd" id="14_kbgrf"]
+[ext_resource type="Texture2D" uid="uid://l8vo6hdpj4ho" path="res://assets/textures/keyboard_e.png" id="14_stpr8"]
+[ext_resource type="Texture2D" uid="uid://ba0gnf2g5rbt2" path="res://assets/textures/mouse_left.png" id="15_4k1d6"]
+[ext_resource type="Texture2D" uid="uid://dqk78s2mufpee" path="res://assets/textures/mouse_right.png" id="16_avtu0"]
+[ext_resource type="Texture2D" uid="uid://el5yyeojskp1" path="res://assets/textures/keyboard_space.png" id="17_dxuxq"]
+[ext_resource type="Texture2D" uid="uid://yn1801wpely4" path="res://assets/textures/mouse_scroll.png" id="18_kefxr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2ftm8"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xgh7a"]
+content_margin_left = 4.0
+content_margin_right = 4.0
+bg_color = Color(0.960351, 0.960351, 0.960351, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0lwjp"]
+content_margin_left = 4.0
+content_margin_right = 4.0
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ikjpf"]
+bg_color = Color(1, 0.260006, 0.200835, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_igurr"]
+bg_color = Color(0.94902, 0.74902, 0.74902, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6dpcf"]
+bg_color = Color(0.94902, 0.74902, 0.74902, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0fav4"]
+bg_color = Color(0, 0, 0, 0.572549)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ekeb1"]
+content_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_stpr8"]
+bg_color = Color(0.58, 0.58, 0.58, 0.631373)
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+
+[node name="HUD" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_u4qx2")
+metadata/_edit_use_anchors_ = true
+metadata/_edit_horizontal_guides_ = [535.0]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+theme_override_constants/separation = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 18
+theme_override_constants/margin_bottom = 2
+
+[node name="BoardButton" type="PanelContainer" parent="VBoxContainer/MarginContainer"]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(90, 30)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_2ftm8")
+
+[node name="BoardButtonInput" type="Button" parent="VBoxContainer/MarginContainer/BoardButton"]
+self_modulate = Color(0.972549, 0.972549, 0.760784, 1)
+custom_minimum_size = Vector2(86, 26)
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_xgh7a")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/hover = SubResource("StyleBoxFlat_xgh7a")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_0lwjp")
+theme_override_styles/normal = SubResource("StyleBoxFlat_0lwjp")
+text = "The Family Farm"
+
+[node name="BoardDepth" type="HBoxContainer" parent="VBoxContainer/MarginContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 2
+
+[node name="Control" type="HBoxContainer" parent="VBoxContainer"]
+z_index = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+theme_override_constants/separation = 3
+alignment = 2
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="S" type="Control" parent="VBoxContainer/Control"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 13.25
+mouse_filter = 2
+
+[node name="S1" type="Control" parent="VBoxContainer/Control"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 4.95
+mouse_filter = 2
+
+[node name="ButtonsContainer" type="VBoxContainer" parent="VBoxContainer/Control"]
+layout_mode = 2
+size_flags_stretch_ratio = 1.81
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Control/ButtonsContainer"]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="S2" type="Control" parent="VBoxContainer/Control/ButtonsContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.0
+mouse_filter = 2
+
+[node name="ShopButton" type="TextureButton" parent="VBoxContainer/Control/ButtonsContainer/VBoxContainer"]
+unique_name_in_owner = true
+process_mode = 3
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+tooltip_text = "Click to open the shop. Drag cards out to buy them."
+mouse_default_cursor_shape = 6
+texture_normal = ExtResource("2_u4qx2")
+texture_hover = ExtResource("3_8wwqk")
+texture_focused = ExtResource("2_u4qx2")
+
+[node name="Label" type="Label" parent="VBoxContainer/Control/ButtonsContainer/VBoxContainer/ShopButton"]
+visible = false
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -14.0
+offset_right = 54.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_ikjpf")
+text = "SALE"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="S3" type="Control" parent="VBoxContainer/Control/ButtonsContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 20.0
+mouse_filter = 2
+
+[node name="PigPen" type="VBoxContainer" parent="VBoxContainer/Control/ButtonsContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = -14
+
+[node name="Pig" type="TextureButton" parent="VBoxContainer/Control/ButtonsContainer/VBoxContainer/PigPen"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 60)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+tooltip_text = "Drag cards over the pig to sell them."
+texture_normal = ExtResource("12_q8drr")
+texture_pressed = ExtResource("12_q8drr")
+texture_hover = ExtResource("12_q8drr")
+texture_disabled = ExtResource("12_q8drr")
+texture_focused = ExtResource("12_q8drr")
+ignore_texture_size = true
+script = ExtResource("13_eipt3")
+
+[node name="SellPrice" type="Panel" parent="VBoxContainer/Control/ButtonsContainer/VBoxContainer/PigPen"]
+unique_name_in_owner = true
+visible = false
+show_behind_parent = true
+custom_minimum_size = Vector2(64, 24)
+layout_mode = 2
+size_flags_horizontal = 8
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_igurr")
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Control/ButtonsContainer/VBoxContainer/PigPen/SellPrice"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -9.5
+offset_top = -3.5
+offset_right = 9.5
+offset_bottom = 3.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="PricePreview" type="Label" parent="VBoxContainer/Control/ButtonsContainer/VBoxContainer/PigPen/SellPrice/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_tryxx")
+theme_override_font_sizes/font_size = 8
+text = "0g"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="GoldPanel" type="Panel" parent="VBoxContainer/Control/ButtonsContainer/VBoxContainer"]
+unique_name_in_owner = true
+show_behind_parent = true
+z_index = -1
+texture_filter = 1
+custom_minimum_size = Vector2(150, 30)
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6dpcf")
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Control/ButtonsContainer/VBoxContainer/GoldPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_right = 2
+
+[node name="GoldLabel" type="Label" parent="VBoxContainer/Control/ButtonsContainer/VBoxContainer/GoldPanel/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_tryxx")
+theme_override_font_sizes/font_size = 16
+text = "0g"
+horizontal_alignment = 2
+vertical_alignment = 1
+uppercase = true
+
+[node name="S4" type="Control" parent="VBoxContainer/Control/ButtonsContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.34
+mouse_filter = 2
+
+[node name="S6" type="Control" parent="VBoxContainer/Control"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.0
+mouse_filter = 2
+
+[node name="InputShow" type="Button" parent="."]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 7.0
+offset_top = -29.0
+offset_right = 29.0
+offset_bottom = -7.0
+grow_vertical = 0
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("1_tryxx")
+theme_override_font_sizes/font_size = 16
+text = "?"
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+grow_vertical = 0
+
+[node name="ControlsInfoPanel" type="PanelContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -160.0
+offset_right = 392.0
+offset_bottom = 160.0
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+size_flags_horizontal = 4
+size_flags_vertical = 8
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_0fav4")
+script = ExtResource("14_kbgrf")
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/ControlsInfoPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Control/ControlsInfoPanel/MarginContainer"]
+custom_minimum_size = Vector2(416, 0)
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="InputHide" type="Button" parent="Control/ControlsInfoPanel/MarginContainer/VBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("1_tryxx")
+theme_override_font_sizes/font_size = 16
+text = "X"
+
+[node name="InputStack" type="VBoxContainer" parent="Control/ControlsInfoPanel/MarginContainer/VBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 8
+mouse_filter = 2
+alignment = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/ControlsInfoPanel/MarginContainer/VBoxContainer2/InputStack"]
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control/ControlsInfoPanel/MarginContainer/VBoxContainer2/InputStack/HBoxContainer"]
+texture_filter = 2
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("15_4k1d6")
+
+[node name="Label" type="Label" parent="Control/ControlsInfoPanel/MarginContainer/VBoxContainer2/InputStack/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ekeb1")
+text = "GRAB PILE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Control/ControlsInfoPanel/MarginContainer/VBoxContainer2/InputStack"]
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control/ControlsInfoPanel/MarginContainer/VBoxContainer2/InputStack/HBoxContainer2"]
+texture_filter = 2
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("16_avtu0")
+
+[node name="Label" type="Label" parent="Control/ControlsInfoPanel/MarginContainer/VBoxContainer2/InputStack/HBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ekeb1")
+text = "CLICK PILE/ POWER-ON"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="Control/ControlsInfoPanel/MarginContainer/VBoxContainer2/InputStack"]
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 2
+
+[node name="TextureRect2" type="TextureRect" parent="Control/ControlsInfoPanel/MarginContainer/VBoxContainer2/InputStack/HBoxContainer4"]
+texture_filter = 2
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("17_dxuxq")
+stretch_mode = 2
+
+[node name="Label2" type="Label" parent="Control/ControlsInfoPanel/MarginContainer/VBoxContainer2/InputStack/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ekeb1")
+text = "+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Control/ControlsInfoPanel/MarginContainer/VBoxContainer2/InputStack/HBoxContainer4"]
+texture_filter = 2
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("15_4k1d6")
+
+[node name="Label" type="Label" parent="Control/ControlsInfoPanel/MarginContainer/VBoxContainer2/InputStack/HBoxContainer4"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ekeb1")
+text = "GRAB ONE/ PLACE IN"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Control/ControlsInfoPanel/MarginContainer/VBoxContainer2/InputStack"]
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 2
+
+[node name="TextureRect2" type="TextureRect" parent="Control/ControlsInfoPanel/MarginContainer/VBoxContainer2/InputStack/HBoxContainer3"]
+texture_filter = 2
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("17_dxuxq")
+
+[node name="Label2" type="Label" parent="Control/ControlsInfoPanel/MarginContainer/VBoxContainer2/InputStack/HBoxContainer3"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ekeb1")
+text = "+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Control/ControlsInfoPanel/MarginContainer/VBoxContainer2/InputStack/HBoxContainer3"]
+texture_filter = 2
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("16_avtu0")
+
+[node name="Label" type="Label" parent="Control/ControlsInfoPanel/MarginContainer/VBoxContainer2/InputStack/HBoxContainer3"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ekeb1")
+text = "CLICK ONE/ POWER PILE "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="Control/ControlsInfoPanel/MarginContainer/VBoxContainer2/InputStack"]
+custom_minimum_size = Vector2(400, 4)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_stpr8")
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="Control/ControlsInfoPanel/MarginContainer/VBoxContainer2/InputStack"]
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control/ControlsInfoPanel/MarginContainer/VBoxContainer2/InputStack/HBoxContainer5"]
+texture_filter = 2
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("18_kefxr")
+
+[node name="Label" type="Label" parent="Control/ControlsInfoPanel/MarginContainer/VBoxContainer2/InputStack/HBoxContainer5"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ekeb1")
+text = "DRAG TO MOVE CAMERA /
+DOUBLE CLICK RE-CENTER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer8" type="HBoxContainer" parent="Control/ControlsInfoPanel/MarginContainer/VBoxContainer2/InputStack"]
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control/ControlsInfoPanel/MarginContainer/VBoxContainer2/InputStack/HBoxContainer8"]
+texture_filter = 2
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("13_ekeb1")
+
+[node name="Label" type="Label" parent="Control/ControlsInfoPanel/MarginContainer/VBoxContainer2/InputStack/HBoxContainer8"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ekeb1")
+text = "GRID SNAP"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer7" type="HBoxContainer" parent="Control/ControlsInfoPanel/MarginContainer/VBoxContainer2/InputStack"]
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control/ControlsInfoPanel/MarginContainer/VBoxContainer2/InputStack/HBoxContainer7"]
+texture_filter = 2
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("13_stpr8")
+
+[node name="Label2" type="Label" parent="Control/ControlsInfoPanel/MarginContainer/VBoxContainer2/InputStack/HBoxContainer7"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ekeb1")
+text = "+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect2" type="TextureRect" parent="Control/ControlsInfoPanel/MarginContainer/VBoxContainer2/InputStack/HBoxContainer7"]
+texture_filter = 2
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("15_4k1d6")
+
+[node name="Label" type="Label" parent="Control/ControlsInfoPanel/MarginContainer/VBoxContainer2/InputStack/HBoxContainer7"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ekeb1")
+text = "DRAG TO REMOVE SLEEVE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="Control/ControlsInfoPanel/MarginContainer/VBoxContainer2/InputStack"]
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 2
+
+[node name="TextureRect2" type="TextureRect" parent="Control/ControlsInfoPanel/MarginContainer/VBoxContainer2/InputStack/HBoxContainer6"]
+texture_filter = 2
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("13_fxi8g")
+
+[node name="Label2" type="Label" parent="Control/ControlsInfoPanel/MarginContainer/VBoxContainer2/InputStack/HBoxContainer6"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ekeb1")
+text = "/"
+
+[node name="TextureRect" type="TextureRect" parent="Control/ControlsInfoPanel/MarginContainer/VBoxContainer2/InputStack/HBoxContainer6"]
+texture_filter = 2
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("14_stpr8")
+
+[node name="Label3" type="Label" parent="Control/ControlsInfoPanel/MarginContainer/VBoxContainer2/InputStack/HBoxContainer6"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ekeb1")
+text = "CHANGE BOARD"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AdvancedButton" type="Button" parent="Control/ControlsInfoPanel/MarginContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+focus_mode = 0
+theme_override_font_sizes/font_size = 20
+text = "SHOW ADVANCED"
+
+[connection signal="pressed" from="VBoxContainer/Control/ButtonsContainer/VBoxContainer/ShopButton" to="VBoxContainer/Control/ButtonsContainer/VBoxContainer/ShopButton" method="_on_pressed"]
+[connection signal="pressed" from="Control/ControlsInfoPanel/MarginContainer/VBoxContainer2/AdvancedButton" to="Control/ControlsInfoPanel" method="_on_button_pressed"]

@@ -1,0 +1,66 @@
+[gd_resource type="Resource" script_class="RecipeDictionary" load_steps=22 format=3 uid="uid://dhcyrs6tugbh5"]
+
+[ext_resource type="Script" uid="uid://cbotblw4lsjob" path="res://resources/custom_resource/recipe/recipe.gd" id="1_r55mt"]
+[ext_resource type="Resource" uid="uid://cnq7p0ntl1nxg" path="res://resources/custom_resource/recipe/receipe_resources/blood_recipe.tres" id="2_tphjj"]
+[ext_resource type="Resource" uid="uid://sv22qev6vpry" path="res://resources/custom_resource/recipe/receipe_resources/blood_recipe2.tres" id="3_xnheu"]
+[ext_resource type="Resource" uid="uid://drd0xdpjtdfyg" path="res://resources/custom_resource/recipe/receipe_resources/flour_recipe.tres" id="4_ea431"]
+[ext_resource type="Resource" uid="uid://cb6s668ej8fik" path="res://resources/custom_resource/recipe/receipe_resources/flour_recipe2.tres" id="5_pfqhb"]
+[ext_resource type="Resource" uid="uid://chmqflxlqvfqy" path="res://resources/custom_resource/recipe/receipe_resources/mess_recipe.tres" id="6_hyvl1"]
+[ext_resource type="Resource" uid="uid://be6cnmjox1eil" path="res://resources/custom_resource/recipe/receipe_resources/bone_recipe.tres" id="7_2wj7f"]
+[ext_resource type="Resource" uid="uid://21txk2kmhral" path="res://resources/custom_resource/recipe/receipe_resources/pancake_recipe.tres" id="8_3qfpb"]
+[ext_resource type="Resource" uid="uid://d18wtcjl2m5hj" path="res://resources/custom_resource/recipe/receipe_resources/crepe_recipe.tres" id="9_7py2k"]
+[ext_resource type="Resource" uid="uid://dl3nc85d8kiel" path="res://resources/custom_resource/recipe/receipe_resources/fried_egg_recipe.tres" id="10_44t0t"]
+[ext_resource type="Resource" uid="uid://do7fvgcdlurqe" path="res://resources/custom_resource/recipe/receipe_resources/bread_recipe.tres" id="11_u5dih"]
+[ext_resource type="Resource" uid="uid://cy7n1vq87k1uu" path="res://resources/custom_resource/recipe/receipe_resources/roll_recipe.tres" id="12_esf35"]
+[ext_resource type="Resource" uid="uid://bikse8cearp5o" path="res://resources/custom_resource/recipe/receipe_resources/muffin_recipe.tres" id="13_0yaxg"]
+[ext_resource type="Resource" uid="uid://cmiqy0qu8eydy" path="res://resources/custom_resource/recipe/receipe_resources/chicken_recipe.tres" id="14_uyd01"]
+[ext_resource type="Resource" uid="uid://coat6xotr7o3r" path="res://resources/custom_resource/recipe/receipe_resources/egg_recipe.tres" id="15_e4jp6"]
+[ext_resource type="Script" uid="uid://bdypw102tume0" path="res://resources/custom_resource/card/card_resource.gd" id="16_mhb83"]
+[ext_resource type="Resource" uid="uid://ilkmo5enkm4p" path="res://resources/custom_resource/card/card_resources/guide_2.tres" id="17_c5l6j"]
+[ext_resource type="Resource" uid="uid://2q4vailsufxs" path="res://resources/custom_resource/recipe/receipe_resources/guide_5_recipe.tres" id="18_ux4oo"]
+[ext_resource type="Resource" uid="uid://cdbk3d54j0nxq" path="res://resources/custom_resource/recipe/receipe_resources/pestle_recipe.tres" id="19_2q5u3"]
+[ext_resource type="Script" uid="uid://bcinnfdithjms" path="res://resources/custom_resource/recipe/recipe_dictionary.gd" id="20_k1jmq"]
+
+[sub_resource type="Resource" id="Resource_r0mcm"]
+script = ExtResource("1_r55mt")
+index = 0
+tier = 1
+occult = false
+uses_tool = true
+tool = ExtResource("18_ux4oo")
+recipe = Array[ExtResource("16_mhb83")]([ExtResource("17_c5l6j")])
+result_path = "res://resources/custom_resource/card/card_resources/guide_5.tres"
+result_uid = 0
+metadata/_custom_type_script = "uid://cbotblw4lsjob"
+
+[resource]
+script = ExtResource("20_k1jmq")
+dict = {
+"COOP": {
+"EGG": Array[ExtResource("1_r55mt")]([ExtResource("14_uyd01")]),
+"WHEAT": Array[ExtResource("1_r55mt")]([ExtResource("15_e4jp6")])
+},
+"GUIDE_4": {
+"GUIDE_2": Array[ExtResource("1_r55mt")]([SubResource("Resource_r0mcm")])
+},
+"OVEN": {
+"BATTER": Array[ExtResource("1_r55mt")]([ExtResource("13_0yaxg")]),
+"DOUGH": Array[ExtResource("1_r55mt")]([ExtResource("11_u5dih"), ExtResource("12_esf35")])
+},
+"PESTLE": {
+"CHICKEN": Array[ExtResource("1_r55mt")]([ExtResource("2_tphjj")]),
+"EGG": Array[ExtResource("1_r55mt")]([ExtResource("6_hyvl1")]),
+"RICE": Array[ExtResource("1_r55mt")]([ExtResource("5_pfqhb")]),
+"TOAD": Array[ExtResource("1_r55mt")]([ExtResource("3_xnheu")]),
+"WHEAT": Array[ExtResource("1_r55mt")]([ExtResource("4_ea431")])
+},
+"STONE_HAMMER": {
+"STONE": Array[ExtResource("1_r55mt")]([ExtResource("19_2q5u3")])
+},
+"STOVE": {
+"BATTER": Array[ExtResource("1_r55mt")]([ExtResource("8_3qfpb"), ExtResource("9_7py2k")]),
+"CHICKEN": Array[ExtResource("1_r55mt")]([ExtResource("7_2wj7f")]),
+"EGG": Array[ExtResource("1_r55mt")]([ExtResource("10_44t0t")]),
+"WATER": Array[ExtResource("1_r55mt")]([ExtResource("7_2wj7f")])
+}
+}

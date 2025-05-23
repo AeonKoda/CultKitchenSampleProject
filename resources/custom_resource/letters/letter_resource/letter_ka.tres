@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Letter" load_steps=2 format=3 uid="uid://7kjbnfldtlh"]
+
+[ext_resource type="Script" uid="uid://d2nwqyg808jry" path="res://resources/custom_resource/letters/letter_resource.gd" id="1_mjrp3"]
+
+[resource]
+script = ExtResource("1_mjrp3")
+type = 0
+snippet_owner = ""
+occult = true
+text = "The stack items on the HIDDEN STASH to hide them, buy more if you need
+	-%#&@#"

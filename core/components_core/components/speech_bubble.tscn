@@ -1,0 +1,95 @@
+[gd_scene load_steps=6 format=3 uid="uid://cu0m6e0us06qq"]
+
+[ext_resource type="Texture2D" uid="uid://xgnaaho5d84y" path="res://assets/textures/speech_bubble.png" id="1_2yqwg"]
+[ext_resource type="Script" uid="uid://drr6qmoktw7dm" path="res://core/components_core/components/speech_bubble.gd" id="2_c2i45"]
+[ext_resource type="FontFile" uid="uid://hvgltkctjutu" path="res://assets/fonts/CHNOPixelCodePro-Regular.otf" id="2_ddkkv"]
+[ext_resource type="Script" uid="uid://rpmkrxcm1hip" path="res://core/components_core/components/target_component.gd" id="4_c2i45"]
+[ext_resource type="Texture2D" uid="uid://cpe8rsgebgj72" path="res://assets/textures/exclamation.png" id="4_y0e7t"]
+
+[node name="SpeechBubble" type="NinePatchRect"]
+visible = false
+self_modulate = Color(0.91, 0.91, 0.91, 1)
+offset_right = 138.0
+offset_bottom = 100.0
+pivot_offset = Vector2(0, 94)
+mouse_filter = 0
+texture = ExtResource("1_2yqwg")
+patch_margin_left = 46
+patch_margin_top = 38
+patch_margin_right = 45
+patch_margin_bottom = 38
+script = ExtResource("2_c2i45")
+
+[node name="Exclamation" type="TextureRect" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -48.0
+offset_right = 48.0
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("4_y0e7t")
+stretch_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -63.0
+offset_top = -32.5
+offset_right = 63.0
+offset_bottom = 32.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer"]
+unique_name_in_owner = true
+clip_contents = false
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_ddkkv")
+theme_override_font_sizes/normal_font_size = 10
+bbcode_enabled = true
+text = "Test Font how much can I fit I fit in one bubble text?"
+fit_content = true
+scroll_active = false
+scroll_following = true
+
+[node name="InputWaiting" type="RichTextLabel" parent="MarginContainer"]
+unique_name_in_owner = true
+visible = false
+clip_contents = false
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_ddkkv")
+theme_override_font_sizes/normal_font_size = 10
+bbcode_enabled = true
+text = "[pulse freq=1.0 color=#ffffff40 ease=-2.0]> [/pulse]"
+fit_content = true
+scroll_active = false
+scroll_following = true
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="TargetComponent" type="Node" parent="." node_paths=PackedStringArray("targetable_item")]
+script = ExtResource("4_c2i45")
+targetable_item = NodePath("..")
+metadata/_custom_type_script = "uid://rpmkrxcm1hip"

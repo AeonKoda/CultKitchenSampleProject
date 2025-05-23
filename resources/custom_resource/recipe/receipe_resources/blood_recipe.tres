@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://cnq7p0ntl1nxg"]
+
+[ext_resource type="Script" uid="uid://bdypw102tume0" path="res://resources/custom_resource/card/card_resource.gd" id="1_otfp3"]
+[ext_resource type="Resource" uid="uid://dkh0gllqqo145" path="res://resources/custom_resource/card/card_resources/chicken.tres" id="2_a0obx"]
+[ext_resource type="Script" uid="uid://cbotblw4lsjob" path="res://resources/custom_resource/recipe/recipe.gd" id="3_e73j0"]
+[ext_resource type="Resource" uid="uid://cgico8qwm61k0" path="res://resources/custom_resource/card/card_resources/pestle.tres" id="4_qu838"]
+
+[resource]
+script = ExtResource("3_e73j0")
+index = 0
+tier = 1
+occult = true
+uses_tool = true
+tool = ExtResource("4_qu838")
+recipe = Array[ExtResource("1_otfp3")]([ExtResource("2_a0obx")])
+result_path = "res://resources/custom_resource/card/card_resources/blood.tres"
+result_uid = 0

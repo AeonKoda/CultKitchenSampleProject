@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="CardResource" load_steps=6 format=3 uid="uid://maupffw6l2tf"]
+
+[ext_resource type="Script" uid="uid://cbotblw4lsjob" path="res://resources/custom_resource/recipe/recipe.gd" id="1_3887j"]
+[ext_resource type="Texture2D" uid="uid://dn4m17xh7cmex" path="res://assets/textures/occult_piggy_bank_icon.png" id="1_y4xqx"]
+[ext_resource type="Texture2D" uid="uid://lswr24scrkbf" path="res://assets/textures/piggy_bank_icon.png" id="2_5de0c"]
+[ext_resource type="Script" uid="uid://bdypw102tume0" path="res://resources/custom_resource/card/card_resource.gd" id="2_6sskq"]
+[ext_resource type="Script" uid="uid://d2nwqyg808jry" path="res://resources/custom_resource/letters/letter_resource.gd" id="3_6ojpr"]
+
+[resource]
+script = ExtResource("2_6sskq")
+card_name = "FAMILY_PIG"
+unique_prime_identifier = 359
+text_color = Color(0, 0, 0, 1)
+color = Color(0.976471, 0.74902, 0.74902, 1)
+art_texture = ExtResource("2_5de0c")
+alternate_art_texture = ExtResource("1_y4xqx")
+rare_alt = false
+recipes = Array[ExtResource("1_3887j")]([])
+value = 100.0
+sellable = false
+has_speech = false
+occult = false
+can_burn = false
+meal = false
+meal_level = 1
+extended_class = 0
+board = false
+board_lock = false
+progress_max_value = 0
+one_shot = false
+locked = false
+fuel_cards = Array[ExtResource("2_6sskq")]([])
+spawn_cards = Array[ExtResource("2_6sskq")]([])
+spawn_recipes = Array[ExtResource("2_6sskq")]([])
+spawn_letters = Array[ExtResource("3_6ojpr")]([])
+clicker = false
+ticker = false
+auto_on = false
+disable_control = false
+tick_speed = 1.0
+ritual_circle = false
+salts = 2
+is_storage = false
+max_storage = 0

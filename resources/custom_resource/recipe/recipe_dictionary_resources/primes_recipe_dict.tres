@@ -1,0 +1,63 @@
+[gd_resource type="Resource" script_class="RecipeDictionary" load_steps=28 format=3 uid="uid://wpsbtpyimd5f"]
+
+[ext_resource type="Resource" uid="uid://c1uu34x72attx" path="res://resources/custom_resource/card/card_resources/batter.tres" id="1_alap4"]
+[ext_resource type="Resource" uid="uid://ctxdfrj7mwmck" path="res://resources/custom_resource/card/card_resources/guide_4.tres" id="1_eobrx"]
+[ext_resource type="Script" uid="uid://bcinnfdithjms" path="res://resources/custom_resource/recipe/recipe_dictionary.gd" id="2_6vb5o"]
+[ext_resource type="Resource" uid="uid://uu646i3ogpvd" path="res://resources/custom_resource/card/card_resources/blood.tres" id="2_dqv7j"]
+[ext_resource type="Resource" uid="uid://c3xk1l72ej3dn" path="res://resources/custom_resource/card/card_resources/bone.tres" id="3_3xfp8"]
+[ext_resource type="Resource" uid="uid://bra25cf8fm2dq" path="res://resources/custom_resource/card/card_resources/bread.tres" id="4_8he01"]
+[ext_resource type="Resource" uid="uid://dkh0gllqqo145" path="res://resources/custom_resource/card/card_resources/chicken.tres" id="5_353ua"]
+[ext_resource type="Resource" uid="uid://ctutfbnmkisbi" path="res://resources/custom_resource/card/card_resources/compost.tres" id="6_mokqx"]
+[ext_resource type="Resource" uid="uid://ctinopch3kvga" path="res://resources/custom_resource/card/card_resources/crepe.tres" id="7_pac4x"]
+[ext_resource type="Resource" uid="uid://drpk3mlt286du" path="res://resources/custom_resource/card/card_resources/dough.tres" id="8_vm3st"]
+[ext_resource type="Resource" uid="uid://dx6r12f4736cw" path="res://resources/custom_resource/card/card_resources/dough_boy.tres" id="9_1pwy7"]
+[ext_resource type="Resource" uid="uid://ckjrn48egb2y8" path="res://resources/custom_resource/card/card_resources/egg.tres" id="10_yb6ak"]
+[ext_resource type="Resource" uid="uid://cike4ni3xsl3s" path="res://resources/custom_resource/card/card_resources/fertilizer.tres" id="11_7op2p"]
+[ext_resource type="Resource" uid="uid://c5a0rpe183xui" path="res://resources/custom_resource/card/card_resources/flour.tres" id="12_f40m1"]
+[ext_resource type="Resource" uid="uid://dah5rvn4ylp11" path="res://resources/custom_resource/card/card_resources/fried_egg.tres" id="13_254t3"]
+[ext_resource type="Resource" uid="uid://eyqdk3nyk6f4" path="res://resources/custom_resource/card/card_resources/guide_5.tres" id="15_uj6wj"]
+[ext_resource type="Resource" uid="uid://fd0wburcpcig" path="res://resources/custom_resource/card/card_resources/mess.tres" id="16_8veum"]
+[ext_resource type="Resource" uid="uid://qd1bpegxfe3" path="res://resources/custom_resource/card/card_resources/mud.tres" id="17_sa45t"]
+[ext_resource type="Resource" uid="uid://x51lxuywuqjp" path="res://resources/custom_resource/card/card_resources/muffin.tres" id="18_jxymk"]
+[ext_resource type="Resource" uid="uid://cp30etdixsb60" path="res://resources/custom_resource/card/card_resources/pancake.tres" id="19_d6sx2"]
+[ext_resource type="Resource" uid="uid://cgico8qwm61k0" path="res://resources/custom_resource/card/card_resources/pestle.tres" id="20_quwc2"]
+[ext_resource type="Resource" uid="uid://cmti71jfo1v6d" path="res://resources/custom_resource/card/card_resources/rich_field.tres" id="21_xdjdt"]
+[ext_resource type="Resource" uid="uid://c3rr1dcbj5gmj" path="res://resources/custom_resource/card/card_resources/ritual_dough.tres" id="22_ayfcn"]
+[ext_resource type="Resource" uid="uid://bffyvjqqcftxi" path="res://resources/custom_resource/card/card_resources/roll.tres" id="23_7x745"]
+[ext_resource type="Resource" uid="uid://yjf1cosrk8fe" path="res://resources/custom_resource/card/card_resources/soil.tres" id="24_t5ib6"]
+[ext_resource type="Resource" uid="uid://j7i38nhkso5g" path="res://resources/custom_resource/card/card_resources/straw_doll.tres" id="25_el5mk"]
+[ext_resource type="Resource" uid="uid://ixq5rf83dq1k" path="res://resources/custom_resource/card/card_resources/wild_crops.tres" id="26_v1hlp"]
+
+[resource]
+script = ExtResource("2_6vb5o")
+dict = {
+57: ExtResource("8_vm3st"),
+70: ExtResource("23_7x745"),
+85: ExtResource("1_alap4"),
+350: ExtResource("4_8he01"),
+374: ExtResource("16_8veum"),
+485: ExtResource("22_ayfcn"),
+742: ExtResource("18_jxymk"),
+3278: ExtResource("2_dqv7j"),
+5377: ExtResource("17_sa45t"),
+6154: ExtResource("5_353ua"),
+16283: ExtResource("26_v1hlp"),
+16742: ExtResource("12_f40m1"),
+21802: ExtResource("2_dqv7j"),
+22462: ExtResource("12_f40m1"),
+31246: ExtResource("13_254t3"),
+80089: ExtResource("24_t5ib6"),
+97414: ExtResource("7_pac4x"),
+105163: ExtResource("25_el5mk"),
+160801: ExtResource("21_xdjdt"),
+191819: ExtResource("1_eobrx"),
+369602: ExtResource("10_yb6ak"),
+394222: ExtResource("15_uj6wj"),
+740413: ExtResource("9_1pwy7"),
+4330747: ExtResource("11_7op2p"),
+5162942: ExtResource("19_d6sx2"),
+5203378: ExtResource("3_3xfp8"),
+16624943: ExtResource("6_mokqx"),
+58822289: ExtResource("21_xdjdt"),
+1427198966: ExtResource("20_quwc2")
+}

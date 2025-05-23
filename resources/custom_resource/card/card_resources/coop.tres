@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="CardResource" load_steps=5 format=3 uid="uid://cj610gn2ouohn"]
+
+[ext_resource type="Script" uid="uid://cbotblw4lsjob" path="res://resources/custom_resource/recipe/recipe.gd" id="1_ciopu"]
+[ext_resource type="Script" uid="uid://bdypw102tume0" path="res://resources/custom_resource/card/card_resource.gd" id="1_sru46"]
+[ext_resource type="Script" uid="uid://dt4twwe2fywe6" path="res://core/cards/actions_ticker/tick_mix.gd" id="2_cd0x4"]
+[ext_resource type="Script" uid="uid://d2nwqyg808jry" path="res://resources/custom_resource/letters/letter_resource.gd" id="3_1rr17"]
+
+[resource]
+script = ExtResource("1_sru46")
+card_name = "COOP"
+text_color = Color(0, 0, 0, 1)
+color = Color(0.741176, 0.509804, 0.294118, 1)
+rare_alt = false
+recipes = Array[ExtResource("1_ciopu")]([])
+value = 30.0
+sellable = true
+occult = false
+can_burn = false
+meal = false
+meal_level = 1
+unique_prime_identifier = 181
+extended_class = 0
+character = false
+character_basic = false
+board = false
+progress_max_value = 8
+one_shot = false
+locked = false
+fuel_cards = Array[ExtResource("1_sru46")]([])
+spawn_cards = Array[ExtResource("1_sru46")]([])
+spawn_recipes = Array[ExtResource("1_sru46")]([])
+spawn_letters = Array[ExtResource("3_1rr17")]([])
+clicker = false
+ticker = true
+auto_on = false
+disable_control = false
+tick_action = ExtResource("2_cd0x4")
+tick_speed = 1.0
+ritual_circle = false
+salts = 2
+is_storage = false
+max_storage = 0

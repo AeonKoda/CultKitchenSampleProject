@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="CardResource" load_steps=6 format=3 uid="uid://dx6r12f4736cw"]
+
+[ext_resource type="Script" uid="uid://bdypw102tume0" path="res://resources/custom_resource/card/card_resource.gd" id="1_it0qe"]
+[ext_resource type="Script" uid="uid://cbotblw4lsjob" path="res://resources/custom_resource/recipe/recipe.gd" id="1_o6fvq"]
+[ext_resource type="Script" uid="uid://ciquw4c44uw6c" path="res://core/cards/actions_ticker/tick_help.gd" id="2_06fw2"]
+[ext_resource type="Resource" uid="uid://ciw50lb5v3hur" path="res://resources/custom_resource/recipe/receipe_resources/dough_boy_recipe.tres" id="2_ag6ub"]
+[ext_resource type="Script" uid="uid://d2nwqyg808jry" path="res://resources/custom_resource/letters/letter_resource.gd" id="3_l4txs"]
+
+[resource]
+script = ExtResource("1_it0qe")
+card_name = "DOUGH_BOY"
+unique_prime_identifier = 307
+text_color = Color(0, 0, 0, 1)
+color = Color(1, 0.686275, 0.239216, 1)
+rare_alt = false
+recipes = Array[ExtResource("1_o6fvq")]([ExtResource("2_ag6ub")])
+value = 0.0
+sellable = true
+has_speech = false
+occult = true
+can_burn = true
+meal = false
+meal_level = 1
+extended_class = 0
+progress_max_value = 2
+one_shot = false
+locked = false
+fuel_cards = Array[ExtResource("1_it0qe")]([])
+spawn_cards = Array[ExtResource("1_it0qe")]([])
+spawn_recipes = Array[ExtResource("1_it0qe")]([])
+spawn_letters = Array[ExtResource("3_l4txs")]([])
+clicker = false
+ticker = true
+auto_on = false
+disable_control = false
+tick_action = ExtResource("2_06fw2")
+tick_speed = 1.0
+board = false
+board_lock = false
+ritual_circle = false
+salts = 2
+is_storage = false
+max_storage = 0

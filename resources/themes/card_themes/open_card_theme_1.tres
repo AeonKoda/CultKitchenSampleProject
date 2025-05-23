@@ -1,0 +1,8 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://0wykw4orc0hd"]
+
+[ext_resource type="StyleBox" uid="uid://igf1lflijk87" path="res://resources/themes/card_themes/panel_container_active_oct_1.tres" id="1_ge7g8"]
+[ext_resource type="StyleBox" uid="uid://sqnm5mq8151t" path="res://resources/themes/card_themes/panel_container_disabled_oct_1.tres" id="2_m7ab8"]
+
+[resource]
+PanelContainer/styles/active = ExtResource("1_ge7g8")
+PanelContainer/styles/disabled = ExtResource("2_m7ab8")

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Letter" load_steps=2 format=3 uid="uid://5hdcp21gbpl4"]
+
+[ext_resource type="Script" uid="uid://d2nwqyg808jry" path="res://resources/custom_resource/letters/letter_resource.gd" id="1_olppj"]
+
+[resource]
+script = ExtResource("1_olppj")
+type = 0
+snippet_owner = ""
+occult = true
+text = "P.S. Larger ritual circles use more black salt
+	-%#&@#"

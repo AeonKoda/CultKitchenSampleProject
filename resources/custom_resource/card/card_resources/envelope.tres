@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="CardResource" load_steps=5 format=3 uid="uid://chdn1jmj6c4tf"]
+
+[ext_resource type="Script" uid="uid://b1g8xbktqcsx6" path="res://core/cards/actions_clicker/click_spawn.gd" id="1_8wi5h"]
+[ext_resource type="Script" uid="uid://bdypw102tume0" path="res://resources/custom_resource/card/card_resource.gd" id="2_4ceje"]
+[ext_resource type="Script" uid="uid://cbotblw4lsjob" path="res://resources/custom_resource/recipe/recipe.gd" id="2_rc1to"]
+[ext_resource type="Script" uid="uid://d2nwqyg808jry" path="res://resources/custom_resource/letters/letter_resource.gd" id="4_wt4t8"]
+
+[resource]
+script = ExtResource("2_4ceje")
+card_name = "ENVELOPE"
+text_color = Color(0, 0, 0, 1)
+color = Color(1, 0.948667, 0.89, 1)
+rare_alt = false
+recipes = Array[ExtResource("2_rc1to")]([])
+value = 0.0
+sellable = false
+occult = false
+can_burn = false
+meal = false
+meal_level = 1
+unique_prime_identifier = 317
+extended_class = 0
+character = false
+character_basic = false
+board = false
+progress_max_value = 5
+one_shot = true
+locked = false
+fuel_cards = Array[ExtResource("2_4ceje")]([])
+spawn_cards = Array[ExtResource("2_4ceje")]([])
+spawn_recipes = Array[ExtResource("2_4ceje")]([])
+spawn_letters = Array[ExtResource("4_wt4t8")]([])
+clicker = true
+click_action = ExtResource("1_8wi5h")
+ticker = false
+auto_on = false
+disable_control = false
+tick_speed = 1.0
+ritual_circle = false
+salts = 2
+is_storage = false
+max_storage = 0

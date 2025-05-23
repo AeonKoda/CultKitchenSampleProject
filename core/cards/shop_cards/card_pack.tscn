@@ -1,0 +1,200 @@
+[gd_scene load_steps=13 format=3 uid="uid://diqnne54pyqt5"]
+
+[ext_resource type="Script" uid="uid://tda3wkxdejey" path="res://core/cards/shop_cards/card_pack.gd" id="1_kwvr7"]
+[ext_resource type="Script" uid="uid://dqk26417iduub" path="res://core/cards/card.gd" id="2_5nif5"]
+[ext_resource type="Texture2D" uid="uid://bv03ut61m6nlw" path="res://assets/textures/price_tag.png" id="2_k2ye2"]
+[ext_resource type="Resource" uid="uid://bo4qnyaumjg6f" path="res://resources/custom_resource/card/card_resources/conveyor.tres" id="2_wvwb8"]
+[ext_resource type="FontFile" uid="uid://b5v3erupngsmf" path="res://assets/fonts/dogicapixel.otf" id="3_o7s4b"]
+[ext_resource type="Resource" uid="uid://maupffw6l2tf" path="res://resources/custom_resource/card/card_resources/family_pig.tres" id="3_q48s0"]
+[ext_resource type="Texture2D" uid="uid://bglq5qigvqo02" path="res://assets/textures/card.png" id="4_f7feq"]
+[ext_resource type="Script" uid="uid://dldlgc6k6tvlt" path="res://core/components_core/animation_container.gd" id="4_wvwb8"]
+[ext_resource type="Script" uid="uid://cdbosa1tl14tg" path="res://core/components_core/components/lift_component.gd" id="5_wvwb8"]
+[ext_resource type="Script" uid="uid://rpmkrxcm1hip" path="res://core/components_core/components/target_component.gd" id="6_6dn77"]
+[ext_resource type="FontFile" uid="uid://hvgltkctjutu" path="res://assets/fonts/CHNOPixelCodePro-Regular.otf" id="6_y6vkv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s5w66"]
+bg_color = Color(1, 0.96981, 0.816113, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+anti_aliasing = false
+
+[node name="CardPack" type="Control" node_paths=PackedStringArray("card", "lift_component")]
+custom_minimum_size = Vector2(90, 126)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 90.0
+offset_bottom = 126.0
+pivot_offset = Vector2(45, 55)
+mouse_filter = 2
+mouse_default_cursor_shape = 6
+script = ExtResource("1_kwvr7")
+card_resource = ExtResource("2_wvwb8")
+card = NodePath("Card")
+lift_component = NodePath("Card/LiftComponent")
+
+[node name="Card" type="Control" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(90, 126)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 90.0
+offset_bottom = 126.0
+pivot_offset = Vector2(45, 63)
+mouse_filter = 2
+mouse_default_cursor_shape = 6
+script = ExtResource("2_5nif5")
+card_resource = ExtResource("3_q48s0")
+metadata/_edit_horizontal_guides_ = [811.0, -36.0]
+metadata/_edit_vertical_guides_ = [1440.0]
+
+[node name="TargetComponent" type="Node" parent="Card" node_paths=PackedStringArray("targetable_item")]
+script = ExtResource("6_6dn77")
+targetable_item = NodePath("../AnimationContainer/Texture")
+metadata/_custom_type_script = "uid://rpmkrxcm1hip"
+
+[node name="LiftComponent" type="Node" parent="Card"]
+script = ExtResource("5_wvwb8")
+metadata/_custom_type_script = "uid://cdbosa1tl14tg"
+
+[node name="AnimationContainer" type="Control" parent="Card"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("4_wvwb8")
+
+[node name="Texture" type="NinePatchRect" parent="Card/AnimationContainer"]
+unique_name_in_owner = true
+use_parent_material = true
+custom_minimum_size = Vector2(90, 126)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+texture = ExtResource("4_f7feq")
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+
+[node name="CardContainer" type="MarginContainer" parent="Card/AnimationContainer"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Card/AnimationContainer/CardContainer"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Control" type="Control" parent="Card/AnimationContainer/CardContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="CardArt" type="TextureRect" parent="Card/AnimationContainer/CardContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_filter = 2
+stretch_mode = 2
+
+[node name="TitleLabel" type="RichTextLabel" parent="Card/AnimationContainer/CardContainer/VBoxContainer"]
+unique_name_in_owner = true
+texture_filter = 1
+clip_contents = false
+layout_mode = 2
+size_flags_vertical = 10
+mouse_filter = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = 1
+theme_override_fonts/normal_font = ExtResource("6_y6vkv")
+theme_override_font_sizes/normal_font_size = 10
+bbcode_enabled = true
+text = "[center]FIELD[/center]"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="CardPackSleeve" type="MarginContainer" parent="Card/AnimationContainer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_top = -4
+theme_override_constants/margin_right = -8
+
+[node name="PriceTag" type="TextureRect" parent="Card/AnimationContainer/CardPackSleeve"]
+self_modulate = Color(1, 0.874, 0.16, 1)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+mouse_filter = 2
+texture = ExtResource("2_k2ye2")
+
+[node name="GoldLabel" type="Label" parent="Card/AnimationContainer/CardPackSleeve/PriceTag"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -8.0
+offset_top = -4.0
+offset_right = 8.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_o7s4b")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_s5w66")
+text = "2g"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Label2" type="ColorRect" parent="Card/AnimationContainer/CardPackSleeve/PriceTag"]
+visible = false
+custom_minimum_size = Vector2(20, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 0, 0, 1)

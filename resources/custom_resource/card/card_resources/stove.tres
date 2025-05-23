@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="CardResource" load_steps=6 format=3 uid="uid://bqen7kskci445"]
+
+[ext_resource type="Script" uid="uid://bdypw102tume0" path="res://resources/custom_resource/card/card_resource.gd" id="1_ps82a"]
+[ext_resource type="Script" uid="uid://cbotblw4lsjob" path="res://resources/custom_resource/recipe/recipe.gd" id="1_wgjwi"]
+[ext_resource type="Script" uid="uid://dt4twwe2fywe6" path="res://core/cards/actions_ticker/tick_mix.gd" id="2_m7imv"]
+[ext_resource type="Script" uid="uid://d2nwqyg808jry" path="res://resources/custom_resource/letters/letter_resource.gd" id="3_eq1y1"]
+[ext_resource type="AudioStream" uid="uid://x3p645xgydy7" path="res://assets/sound/pop_wet.mp3" id="3_ndqby"]
+
+[resource]
+script = ExtResource("1_ps82a")
+card_name = "STOVE"
+unique_prime_identifier = 919
+text_color = Color(0, 0, 0, 1)
+color = Color(0.74902, 0.670588, 0.592157, 1)
+rare_alt = false
+sfx = ExtResource("3_ndqby")
+recipes = Array[ExtResource("1_wgjwi")]([])
+value = 50.0
+sellable = true
+has_speech = false
+occult = false
+can_burn = false
+meal = false
+meal_level = 1
+extended_class = 0
+board = false
+board_lock = false
+progress_max_value = 5
+one_shot = false
+locked = false
+fuel_cards = Array[ExtResource("1_ps82a")]([])
+spawn_cards = Array[ExtResource("1_ps82a")]([])
+spawn_recipes = Array[ExtResource("1_ps82a")]([])
+spawn_letters = Array[ExtResource("3_eq1y1")]([])
+clicker = false
+ticker = true
+auto_on = false
+disable_control = false
+tick_action = ExtResource("2_m7imv")
+tick_speed = 1.0
+ritual_circle = false
+salts = 2
+is_storage = false
+max_storage = 0

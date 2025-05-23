@@ -1,0 +1,52 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=6 format=3 uid="uid://sv22qev6vpry"]
+
+[ext_resource type="Script" uid="uid://bdypw102tume0" path="res://resources/custom_resource/card/card_resource.gd" id="1_7c4n0"]
+[ext_resource type="Script" uid="uid://cbotblw4lsjob" path="res://resources/custom_resource/recipe/recipe.gd" id="2_yjtwg"]
+[ext_resource type="Script" uid="uid://d2nwqyg808jry" path="res://resources/custom_resource/letters/letter_resource.gd" id="3_pi3no"]
+[ext_resource type="Resource" uid="uid://cgico8qwm61k0" path="res://resources/custom_resource/card/card_resources/pestle.tres" id="4_kw0gk"]
+
+[sub_resource type="Resource" id="Resource_7agdr"]
+script = ExtResource("1_7c4n0")
+card_name = "TOAD"
+unique_prime_identifier = 991
+text_color = Color(0, 0, 0, 1)
+color = Color(0.3135, 0.57, 0.44175, 1)
+rare_alt = false
+recipes = Array[ExtResource("2_yjtwg")]([])
+value = 0.0
+sellable = true
+has_speech = false
+occult = false
+can_burn = true
+meal = false
+meal_level = 1
+extended_class = 0
+board = false
+board_lock = false
+progress_max_value = 0
+one_shot = false
+locked = false
+fuel_cards = Array[ExtResource("1_7c4n0")]([])
+spawn_cards = Array[ExtResource("1_7c4n0")]([])
+spawn_recipes = Array[ExtResource("1_7c4n0")]([])
+spawn_letters = Array[ExtResource("3_pi3no")]([])
+clicker = false
+ticker = false
+auto_on = false
+disable_control = false
+tick_speed = 1.0
+ritual_circle = false
+salts = 2
+is_storage = false
+max_storage = 0
+
+[resource]
+script = ExtResource("2_yjtwg")
+index = 1
+tier = 1
+occult = true
+uses_tool = true
+tool = ExtResource("4_kw0gk")
+recipe = Array[ExtResource("1_7c4n0")]([SubResource("Resource_7agdr")])
+result_path = "res://resources/custom_resource/card/card_resources/blood.tres"
+result_uid = 0

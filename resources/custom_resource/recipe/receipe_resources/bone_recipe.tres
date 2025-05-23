@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=6 format=3 uid="uid://be6cnmjox1eil"]
+
+[ext_resource type="Script" uid="uid://bdypw102tume0" path="res://resources/custom_resource/card/card_resource.gd" id="1_d8ivm"]
+[ext_resource type="Resource" uid="uid://dkh0gllqqo145" path="res://resources/custom_resource/card/card_resources/chicken.tres" id="2_0qte5"]
+[ext_resource type="Resource" uid="uid://cgy7bonsdxi8a" path="res://resources/custom_resource/card/card_resources/water.tres" id="3_bg0lg"]
+[ext_resource type="Script" uid="uid://cbotblw4lsjob" path="res://resources/custom_resource/recipe/recipe.gd" id="4_88hep"]
+[ext_resource type="Resource" uid="uid://bqen7kskci445" path="res://resources/custom_resource/card/card_resources/stove.tres" id="5_3w1sb"]
+
+[resource]
+script = ExtResource("4_88hep")
+index = 0
+tier = 1
+occult = true
+uses_tool = true
+tool = ExtResource("5_3w1sb")
+recipe = Array[ExtResource("1_d8ivm")]([ExtResource("2_0qte5"), ExtResource("3_bg0lg")])
+result_path = "res://resources/custom_resource/card/card_resources/bone.tres"
+result_uid = 0

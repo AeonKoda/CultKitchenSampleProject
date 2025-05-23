@@ -1,0 +1,45 @@
+[gd_resource type="Resource" script_class="CardResource" load_steps=7 format=3 uid="uid://cgico8qwm61k0"]
+
+[ext_resource type="Script" uid="uid://bdypw102tume0" path="res://resources/custom_resource/card/card_resource.gd" id="1_4tyws"]
+[ext_resource type="Texture2D" uid="uid://0y4mwtyk6b5f" path="res://assets/textures/pestle.png" id="1_7dkjo"]
+[ext_resource type="Script" uid="uid://cxlwdb7unv8rw" path="res://core/cards/actions_clicker/click_mix.gd" id="1_vdf8s"]
+[ext_resource type="Script" uid="uid://cbotblw4lsjob" path="res://resources/custom_resource/recipe/recipe.gd" id="2_qboby"]
+[ext_resource type="Resource" uid="uid://cdbk3d54j0nxq" path="res://resources/custom_resource/recipe/receipe_resources/pestle_recipe.tres" id="4_dch4d"]
+[ext_resource type="Script" uid="uid://d2nwqyg808jry" path="res://resources/custom_resource/letters/letter_resource.gd" id="4_kb1ph"]
+
+[resource]
+script = ExtResource("1_4tyws")
+card_name = "PESTLE"
+text_color = Color(0, 0, 0, 1)
+color = Color(0.827434, 0.822581, 0.80046, 1)
+art_texture = ExtResource("1_7dkjo")
+rare_alt = false
+recipes = Array[ExtResource("2_qboby")]([ExtResource("4_dch4d")])
+value = 3.0
+sellable = true
+occult = false
+can_burn = false
+meal = false
+meal_level = 1
+unique_prime_identifier = 11
+extended_class = 0
+character = false
+character_basic = false
+board = false
+progress_max_value = 4
+one_shot = false
+locked = false
+fuel_cards = Array[ExtResource("1_4tyws")]([])
+spawn_cards = Array[ExtResource("1_4tyws")]([])
+spawn_recipes = Array[ExtResource("1_4tyws")]([])
+spawn_letters = Array[ExtResource("4_kb1ph")]([])
+clicker = true
+click_action = ExtResource("1_vdf8s")
+ticker = false
+auto_on = false
+disable_control = false
+tick_speed = 1.0
+ritual_circle = false
+salts = 2
+is_storage = false
+max_storage = 0

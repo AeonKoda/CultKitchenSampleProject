@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://ce408ax4lr0ht"]
+
+[ext_resource type="Script" uid="uid://5uuhtn0nykop" path="res://core/camera/camera_2d.gd" id="1_w3qv3"]
+
+[node name="Camera2D" type="Camera2D"]
+process_mode = 3
+position = Vector2(640, -360)
+position_smoothing_enabled = true
+position_smoothing_speed = 15.0
+script = ExtResource("1_w3qv3")
+metadata/_edit_group_ = true

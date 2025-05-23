@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://wcagydd88rqb"]
+
+[ext_resource type="Script" uid="uid://bdypw102tume0" path="res://resources/custom_resource/card/card_resource.gd" id="1_pogr0"]
+[ext_resource type="Resource" uid="uid://c5a0rpe183xui" path="res://resources/custom_resource/card/card_resources/flour.tres" id="2_esxs8"]
+[ext_resource type="Resource" uid="uid://cgy7bonsdxi8a" path="res://resources/custom_resource/card/card_resources/water.tres" id="3_3jbes"]
+[ext_resource type="Script" uid="uid://cbotblw4lsjob" path="res://resources/custom_resource/recipe/recipe.gd" id="4_87mxj"]
+
+[resource]
+script = ExtResource("4_87mxj")
+index = 0
+tier = 1
+occult = false
+uses_tool = false
+recipe = Array[ExtResource("1_pogr0")]([ExtResource("2_esxs8"), ExtResource("3_3jbes")])
+result_path = "res://resources/custom_resource/card/card_resources/dough.tres"
+result_uid = 0

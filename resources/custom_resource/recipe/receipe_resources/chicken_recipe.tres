@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://cmiqy0qu8eydy"]
+
+[ext_resource type="Script" uid="uid://bdypw102tume0" path="res://resources/custom_resource/card/card_resource.gd" id="1_ysc3a"]
+[ext_resource type="Resource" uid="uid://ckjrn48egb2y8" path="res://resources/custom_resource/card/card_resources/egg.tres" id="2_jukdj"]
+[ext_resource type="Script" uid="uid://cbotblw4lsjob" path="res://resources/custom_resource/recipe/recipe.gd" id="3_618np"]
+[ext_resource type="Resource" uid="uid://cj610gn2ouohn" path="res://resources/custom_resource/card/card_resources/coop.tres" id="4_qimyy"]
+
+[resource]
+script = ExtResource("3_618np")
+index = 0
+tier = 1
+occult = false
+uses_tool = true
+tool = ExtResource("4_qimyy")
+recipe = Array[ExtResource("1_ysc3a")]([ExtResource("2_jukdj")])
+result_path = "res://resources/custom_resource/card/card_resources/chicken.tres"
+result_uid = 0

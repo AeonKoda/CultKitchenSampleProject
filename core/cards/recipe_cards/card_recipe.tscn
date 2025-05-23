@@ -1,0 +1,76 @@
+[gd_scene load_steps=6 format=3 uid="uid://ntxow0tsast6"]
+
+[ext_resource type="Texture2D" uid="uid://worf65phae2i" path="res://assets/textures/card_recipe.png" id="2_3wnfo"]
+[ext_resource type="Script" uid="uid://cb1s64y34hdba" path="res://core/cards/recipe_cards/card_recipe.gd" id="2_omst1"]
+[ext_resource type="Resource" uid="uid://c05sjm4twkksk" path="res://resources/custom_resource/card/card_resources/recipe.tres" id="2_qb8u8"]
+[ext_resource type="Script" uid="uid://dldlgc6k6tvlt" path="res://core/components_core/animation_container.gd" id="5_3w8j1"]
+[ext_resource type="PackedScene" uid="uid://ctjbhwen44485" path="res://core/cards/recipe_cards/recipe_container.tscn" id="5_vxlde"]
+
+[node name="Card" type="Control"]
+custom_minimum_size = Vector2(140, 100)
+layout_mode = 3
+anchors_preset = 0
+offset_left = 609.0
+offset_top = 271.0
+offset_right = 749.0
+offset_bottom = 371.0
+pivot_offset = Vector2(70, 50)
+focus_mode = 1
+mouse_default_cursor_shape = 6
+script = ExtResource("2_omst1")
+card_resource = ExtResource("2_qb8u8")
+
+[node name="PhantomCard" type="NinePatchRect" parent="."]
+unique_name_in_owner = true
+visible = false
+modulate = Color(0.5, 0.5, 0.5, 0.235294)
+layout_mode = 1
+offset_right = 140.0
+offset_bottom = 100.0
+texture = ExtResource("2_3wnfo")
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+
+[node name="AnimationContainer" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("5_3w8j1")
+
+[node name="Texture" type="NinePatchRect" parent="AnimationContainer"]
+unique_name_in_owner = true
+layout_mode = 1
+offset_right = 140.0
+offset_bottom = 100.0
+texture = ExtResource("2_3wnfo")
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+
+[node name="RecipeContainer" parent="AnimationContainer" instance=ExtResource("5_vxlde")]
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 138.0
+offset_bottom = 98.0
+
+[node name="NewTag" parent="AnimationContainer"]
+_import_path = NodePath("")
+unique_name_in_owner = true
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 0
+auto_translate_mode = 0
+editor_description = ""
+layout_mode = 1
+script = null

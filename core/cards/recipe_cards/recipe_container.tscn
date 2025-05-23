@@ -1,0 +1,156 @@
+[gd_scene load_steps=9 format=3 uid="uid://ctjbhwen44485"]
+
+[ext_resource type="FontFile" uid="uid://b5v3erupngsmf" path="res://assets/fonts/dogicapixel.otf" id="1_5xodg"]
+[ext_resource type="Script" uid="uid://b0xdb6o7xe1xi" path="res://core/cards/recipe_cards/recipe_container.gd" id="1_v8ec5"]
+[ext_resource type="Texture2D" uid="uid://bbgdpxx3naxpn" path="res://assets/textures/recipe_indicator.png" id="2_v8ec5"]
+[ext_resource type="Script" uid="uid://bv3oeu6teiqcq" path="res://core/cards/recipe_cards/recipe_indicator.gd" id="4_5i3im"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ub71n"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+anti_aliasing = false
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hwxuv"]
+atlas = ExtResource("2_v8ec5")
+region = Rect2(0, 0, 3, 0)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_38fb5"]
+atlas = ExtResource("2_v8ec5")
+region = Rect2(4, 0, 3, 0)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6sdpa"]
+atlas = ExtResource("2_v8ec5")
+region = Rect2(8, 0, 3, 0)
+
+[node name="RecipeContainer" type="MarginContainer"]
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 139.0
+offset_bottom = 99.0
+mouse_filter = 2
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 6
+script = ExtResource("1_v8ec5")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 0
+
+[node name="Panel" type="Panel" parent="VBoxContainer"]
+self_modulate = Color(0.942823, 0.942823, 0.942823, 1)
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ub71n")
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="RecipeScroll" type="ScrollContainer" parent="VBoxContainer/Panel/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Panel/MarginContainer/RecipeScroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+alignment = 1
+
+[node name="RecipeLabel" type="RichTextLabel" parent="VBoxContainer/Panel/MarginContainer/RecipeScroll/HBoxContainer"]
+unique_name_in_owner = true
+visible = false
+clip_contents = false
+custom_minimum_size = Vector2(114, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/text_highlight_v_padding = 0
+theme_override_constants/text_highlight_h_padding = 0
+theme_override_constants/line_separation = 4
+theme_override_fonts/normal_font = ExtResource("1_5xodg")
+theme_override_font_sizes/normal_font_size = 8
+bbcode_enabled = true
+text = "<>Oven 
+*Dough"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IndicatorHBox" type="HBoxContainer" parent="VBoxContainer/Panel"]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(0, 8)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = -4.0
+offset_right = 2.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="RecipeIndicator" type="TextureButton" parent="VBoxContainer/Panel/IndicatorHBox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+mouse_filter = 2
+toggle_mode = true
+button_pressed = true
+texture_normal = SubResource("AtlasTexture_hwxuv")
+texture_pressed = SubResource("AtlasTexture_38fb5")
+texture_disabled = SubResource("AtlasTexture_6sdpa")
+stretch_mode = 0
+script = ExtResource("4_5i3im")
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = -2
+
+[node name="TitleLabel" type="RichTextLabel" parent="VBoxContainer/MarginContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = 2
+theme_override_fonts/normal_font = ExtResource("1_5xodg")
+theme_override_font_sizes/normal_font_size = 8
+bbcode_enabled = true
+text = "[center]Bread Recipe if two[/center]"
+fit_content = true

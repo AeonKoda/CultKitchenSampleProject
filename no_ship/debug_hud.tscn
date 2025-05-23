@@ -1,0 +1,120 @@
+[gd_scene load_steps=3 format=3 uid="uid://s4pl608hrhpk"]
+
+[ext_resource type="Script" uid="uid://cyyxuj6m52q8j" path="res://no_ship/debug_hud.gd" id="1_pbrnq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7exm3"]
+bg_color = Color(0, 0, 0, 0.788235)
+
+[node name="DebugHUD" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_pbrnq")
+metadata/_edit_use_anchors_ = true
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+visible = false
+z_index = 1
+custom_minimum_size = Vector2(800, 600)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -300.0
+offset_right = 400.0
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_7exm3")
+
+[node name="DebugOptions" type="VBoxContainer" parent="PanelContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 0
+mouse_filter = 2
+
+[node name="DebugOption" type="HBoxContainer" parent="PanelContainer/DebugOptions"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="CheckBox" type="CheckBox" parent="PanelContainer/DebugOptions/DebugOption"]
+layout_mode = 2
+button_pressed = true
+
+[node name="Name" type="Label" parent="PanelContainer/DebugOptions/DebugOption"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+text = "Data Name"
+
+[node name="Control" type="HBoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+theme_override_constants/separation = 3
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="DebugInfo" type="VBoxContainer" parent="Control"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="InfoLables" type="HBoxContainer" parent="Control/DebugInfo"]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Name" type="Label" parent="Control/DebugInfo/InfoLables"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+text = "Data Name"
+
+[node name="Infol" type="Label" parent="Control/DebugInfo/InfoLables"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+text = "[Info, Info, Info, Info, Info]"
+autowrap_mode = 3
+
+[node name="Button" type="Button" parent="Control"]
+custom_minimum_size = Vector2(48, 36)
+layout_mode = 2
+size_flags_vertical = 0
+text = "ShowDebug"
+
+[node name="TutorialButton" type="Button" parent="Control"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(48, 36)
+layout_mode = 2
+size_flags_vertical = 0
+text = "SkipTutorial"
+
+[node name="S1" type="Control" parent="Control"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 4.95
+mouse_filter = 2
+
+[node name="S6" type="Control" parent="Control"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.0
+mouse_filter = 2
+
+[connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Control/TutorialButton" to="." method="_on_button_2_pressed"]

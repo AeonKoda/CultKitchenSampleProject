@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://chmqflxlqvfqy"]
+
+[ext_resource type="Script" uid="uid://bdypw102tume0" path="res://resources/custom_resource/card/card_resource.gd" id="1_ute80"]
+[ext_resource type="Resource" uid="uid://ckjrn48egb2y8" path="res://resources/custom_resource/card/card_resources/egg.tres" id="2_32sh8"]
+[ext_resource type="Script" uid="uid://cbotblw4lsjob" path="res://resources/custom_resource/recipe/recipe.gd" id="3_yi0n0"]
+[ext_resource type="Resource" uid="uid://cgico8qwm61k0" path="res://resources/custom_resource/card/card_resources/pestle.tres" id="4_cacmx"]
+
+[resource]
+script = ExtResource("3_yi0n0")
+index = 0
+tier = 1
+occult = false
+uses_tool = true
+tool = ExtResource("4_cacmx")
+recipe = Array[ExtResource("1_ute80")]([ExtResource("2_32sh8")])
+result_path = "res://resources/custom_resource/card/card_resources/mess.tres"
+result_uid = 0
